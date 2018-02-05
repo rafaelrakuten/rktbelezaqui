@@ -356,6 +356,7 @@
                        .title{
                            width:100%;
                            text-align:center;
+                           display:inline-block;
                            span{
                                text-transform:uppercase;
                                font-size:18px;
@@ -602,6 +603,10 @@
                     color:#565656;
                     font-size:12px;
                 }
+            }
+
+           @media (max-width: $mobile-w) {
+                padding-bottom:60px;
             }
         }
     }
@@ -1200,6 +1205,10 @@ body .footerbuy #footer .copy{
         .copy {
             background: transparent;
             top: auto;
+            @media (max-width: $mobile-w) {
+                top:0;
+                bottom:0;
+            }
         }
         .info-cli{
             margin-top: 10px;
