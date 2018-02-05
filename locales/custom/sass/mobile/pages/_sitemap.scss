@@ -1,0 +1,33 @@
+// PAGE - SITEMAP - COMPONENTS
+// ====================================================================
+%sitemap-titles {
+    .content h1 {
+        @include remove-textshadow();
+    }
+    #main_content .col>strong {
+		@extend %text-check-title-h1-alt;
+    }
+}
+
+%sitemap-itens {
+    #main_content .col>ul li h2 a {
+		@extend %text-check-title-h1-alt;
+        &:before {
+            color: #217cc0;
+        }
+    }
+    #main_content .col>ul li ul li a,
+    #main_content .col>ul li a {
+        @extend %text-check-text-default;
+        &:before {
+            color: #217cc0;
+        }
+    }
+}
+
+// PAGE - SITEMAP - CALLS
+// ====================================================================
+body.sitemap {
+    @extend %sitemap-titles;
+    @extend %sitemap-itens;
+}

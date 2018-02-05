@@ -1,0 +1,21 @@
+@{
+    var containerId = string.Concat(ViewBag.Prefix, "pnlEmailMarketing");
+    var inputName = string.Concat(ViewBag.Prefix, "txtRecebaNomeMenu");
+    var inputEmail = string.Concat(ViewBag.Prefix, "txtRecebaEmailMenu");
+}
+
+<div id="@containerId" class="newsletter">
+    <fieldset>
+        <legend>
+            <span>CADASTRE SEU E-MAIL E RECEBA</span>
+            <strong>OFERTAS EXCLUSIVAS</strong>
+        </legend>
+        <div class="field first">
+            <input type="text" name="txtRecebaNomeMenu" id="@inputName" class="placeholder" maxlength="128" value="Nome" />
+        </div>
+        <div class="field">
+            <input type="text" name="txtRecebaEmailMenu" id="@inputEmail" class="placeholder" maxlength="128"  value="E-mail" />
+        </div>
+        <a href="#" class="btn ir" title="OK" rel="nofollow">ENVIAR</a>
+    </fieldset>
+</div>

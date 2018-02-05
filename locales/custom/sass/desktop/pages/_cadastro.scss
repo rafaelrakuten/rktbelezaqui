@@ -1,0 +1,131 @@
+// PAGE - CADASTRO - COMPONENTS
+// ====================================================================
+%cad-container{
+	background: none;
+	#main{
+		.container{
+			margin-top: 30px;
+			padding: 0px;
+			width: $page-w;
+			input, select{
+				-webkit-border-radius: 3px !important;
+				-moz-border-radius: 3px !important;
+				-ms-border-radius: 3px !important;
+				-o-border-radius: 3px !important;
+				border-radius: 3px !important;
+			}		
+			.atention{
+				@include fonte($font-one, 400, 12px,#a00);
+			}
+		}
+		.main-content{
+			margin: 0px auto;
+			> h1{
+				margin-left: 0px;
+				display: block;
+				width: 980px;
+				margin: 0px auto;
+				float: none;
+			}
+		}
+		#formcadastro_btnSalvar{
+			left: auto;
+			right: 0px;
+			bottom: 70px;
+		}
+		.form .box.dados-adicionais {
+			width: 100%;
+			.field{
+				//position: absolute;
+				left: 0px;
+			}
+		}
+		.form{
+			padding: 5px 0 10px 0px;
+			width: 980px;
+			margin: 0px auto;
+			position: relative;
+			.box{
+				background: transparent;
+			}
+			.dados{
+				margin-left: 0px;
+				border: 0px;
+			}
+			.endereco{
+				position: relative;
+				left: 64px;
+			}
+			#box_cadastro_dadosacesso{
+				padding:5px 0px;
+			}
+			.box.termos{
+				float: left;
+				width: 100%;
+			}
+
+			input[type=text], input[type=tel], input[type=password], textarea{
+				@include border-radius(0px);
+			}
+			span{
+				@include fonte($font-one, 400, 12px, $color-black);
+			&.validacao{
+				@include fonte($font-one, 400, 10px,#a00);
+				bottom: -3px;
+			}
+			}
+			select{
+				@include select-arrow(ordernar-por-arrow, 90%);
+                @include remove-shadow();
+                @include border-radius(0px);
+				border: 1px solid #ccc;
+				padding-right: 28px;
+				height: 31px;
+			}
+		}
+		.atention{
+			margin-right: 150px;
+		}
+		.form .field.nasc{
+			left: 150px;
+		}
+		.form .input-comp{
+			width: 305px;
+			margin-right: 0;
+			input{
+				width: 280px;
+			}
+		}
+		.form .input-end{
+			width: 120px;
+			select{
+				width: 120px;
+			}
+
+		}
+	}
+}
+%cad-person{
+	.form .field.radio{
+		@include box-sizing();
+		@include border-radius(5px);
+		background: #fff;
+		border: 2px solid $color-blue-light;
+		margin: 20px auto;
+		width: 100%;
+	}
+}
+%cad-bt__salvar{
+	#formcadastro_btnSalvar{
+		@extend %bt-cad__salvar;
+		right: 4px !important;
+	}
+}
+
+// PAGE - CALLS - CALLS
+// ====================================================================
+body.register{
+	@extend %cad-container;
+	@extend %cad-person;
+	@extend %cad-bt__salvar;
+}

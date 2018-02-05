@@ -1,0 +1,160 @@
+// PAGE - NEW CHECKOUT - COMPONENTS
+// ====================================================================
+%opcheck-titles {
+    .op-checkout .opc .opc-content .boxes .box-title,
+    .opc .checkout-title {
+        @extend %text-heading-font;
+        font-family: $font-two !important;
+    }
+    h3.box-title {
+        @extend %text-check-h3-default;
+        font-family: $font-two !important;
+
+    }
+    .payment-methods .payment-accordion .accordion-item.active .accordion-title {
+        color: $color-green;
+    }
+}
+
+%opcheck-icons {
+    #main .opc-content .cols {
+        text-decoration: none;
+        .boxes.available .box-title:after {
+            @include set-icon($icon-check-only, 19px, 300, $check-icon-color-master);
+        }
+        .bt-edit {
+            @include border-radius(5px);
+            background: none;
+            border: 2px solid $check-icon-color-slave;
+            width: 28px;
+            height: 28px;
+            top: 7px;
+            right: 10px;
+            &:before {
+                @include set-icon($icon-pencil, 30px, 300, $check-icon-color-master);
+                float: right;
+                position: relative;
+                left: 3px;
+                bottom: 4px;
+            }
+        }
+    }
+    #main .user-datas .abas-address .item-aba input:checked+label {
+        border-top: solid 2px $check-icon-color-master;
+    }
+    #main .user-datas .form-opc .form-group.rad-list{
+        line-height: 18px;
+    }
+    #main .user-datas .delivery-option .delivery-select.active .lbl-rad {
+        color: $check-icon-color-master;
+    }
+    #main .payment-methods .payment-accordion .accordion-item.active .accordion-title {
+        color: $check-icon-color-slave;
+    }
+    .payment-methods .payment-accordion .accordion-item .accordion-title.icon.pay-card::before,
+    .payment-methods .payment-accordion .item .accordion-title.icon.pay-card::before,
+    .payment-methods .payment-accordion .item .icon.pay-card.title::before {
+        @include set-icon($icon-credit-card, 30px, 300, $check-icon-color-master);
+        background: none;
+        width: 34px;
+        height: 30px;
+        left: 21px;
+        top: 10px;
+    }
+    .payment-methods .payment-accordion .accordion-item.active .accordion-title.icon.pay-card::before,
+    .payment-methods .payment-accordion .active.item .accordion-title.icon.pay-card::before,
+    .payment-methods .payment-accordion .accordion-item.active .item .icon.pay-card.title::before,
+    .payment-methods .payment-accordion .item .accordion-item.active .icon.pay-card.title::before,
+    .payment-methods .payment-accordion .active.item .icon.pay-card.title::before,
+    .payment-methods .payment-accordion .accordion-item.active .accordion-title.icon.pay-boleto::before,
+    .payment-methods .payment-accordion .active.item .accordion-title.icon.pay-boleto::before,
+    .payment-methods .payment-accordion .accordion-item.active .item .icon.pay-boleto.title::before,
+    .payment-methods .payment-accordion .item .accordion-item.active .icon.pay-boleto.title::before,
+    .payment-methods .payment-accordion .active.item .icon.pay-boleto.title::before {
+        color: $check-icon-color-slave;
+    }
+    .payment-methods .payment-accordion .accordion-item .accordion-title.icon.pay-boleto::before,
+    .payment-methods .payment-accordion .item .accordion-title.icon.pay-boleto::before,
+    .payment-methods .payment-accordion .item .icon.pay-boleto.title::before {
+        @include set-icon($icon-barcode, 30px, 300, $check-icon-color-master);
+        background: none;
+        width: 34px;
+        height: 30px;
+        left: 21px;
+        top: 10px;
+    }
+}
+
+%opcheck-buttons {
+    .user-datas .login-head a.bt-login,
+    .send-bt {
+        @extend %bt-opcheck__default;
+    }
+    .user-datas .login-head a,
+    .my-address .address-bt,
+	#btnAddCancelAddress,
+    #btnCancelAccount, 
+    .bt-full {
+        @extend %bt-opcheck__alt;
+    }
+}
+
+%opcheck-summary__itens {
+    .summary .summary-itens {
+        .item-description {
+            .name {
+                @extend %text-basket-desc-name;
+            }
+            .skus {
+                @extend %text-basket-desc-sku;
+            }
+        }
+        .item-quantity {
+            @extend %text-basket-desc-sku;
+        }
+        .item-price {
+            @extend %text-basket-valor-subtotal-por;
+        }
+    }
+}
+
+%opcheck-summary__values {
+    .summary .summary-values {
+        .values {
+            @extend %text-basket-tfoot-subtotal;
+            &:before {
+                @extend %text-basket-tfoot-title;
+            }
+        }
+    }
+}
+
+%opcheck-summary__total {
+    #main .total-price {
+        >span {
+            @extend %text-basket-total-title;
+        }
+        >strong {
+            @extend %text-basket-total-value;
+        }
+    }
+}
+%opcheck-footer {
+    .bottom{  
+        float: left;
+        width: 100%;
+    }
+}
+
+
+// PAGE - NEW CHECKOUT - CALLS
+// ====================================================================
+body.op-checkout {
+    @extend %opcheck-titles;
+    @extend %opcheck-icons;
+    @extend %opcheck-buttons;
+    @extend %opcheck-summary__itens;
+    @extend %opcheck-summary__values;
+    @extend %opcheck-summary__total;
+    @extend %opcheck-footer;
+}

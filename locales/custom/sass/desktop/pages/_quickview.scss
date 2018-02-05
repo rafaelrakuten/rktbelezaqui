@@ -1,0 +1,237 @@
+// PAGE - QUICKVIEW - COMPONENTS
+// ====================================================================
+%quickview-config {
+    #fancybox-overlay{
+        background-color: #000 !important;
+        opacity: .9 !important;
+    }
+    &.catalog,
+    &.vitrine,
+    &.home {
+        #fancybox-wrap {
+            @include box-sizing();
+            @include border-radius(0);
+            width: auto !important;
+            height: auto !important;
+            border: 0px solid #FFF;
+            margin-left: -590px;
+            left: 50% !important;
+            #fancybox-content {
+                @include box-sizing();
+                width: 1180px !important;
+                height: 640px !important;
+                overflow-x: hidden;
+                border-width: 0px !important;                
+            }
+        }        
+    }
+}
+
+%quickview-containers {
+    @include box-sizing();
+    background: none;
+    padding: 30px 20px;
+  
+    #main {
+        .container {
+            padding: 0px;
+            width: 100%;
+            .quick-cont{
+                @include clearfix();
+                width: 100%;
+            }
+            #info-product{
+                padding: 0px;
+            }
+        }
+    }
+}
+
+%quickview-images {
+    #info-product .images {
+        width: 32%;
+        height: auto;
+    }
+    #info-product .photo,
+    #info-product .photo .main {
+        //width: 490px !important;
+        height: auto;
+        float: right;
+        border: 0px !important;
+    }
+    #info-product .images {
+        //width: 527px;
+        margin-right: 10px;
+        height: auto;
+        position: relative;
+    }
+    #info-product .photo{
+            &:after{
+                content:"";
+                background: url(/static/locales/custom/img/zoom.png) no-repeat;
+                width:100px;
+                height:100px;
+                display: block;
+                top: 370px;
+                position: relative;
+                left: 9px;
+        }
+
+        #Zoom1{
+            width:100% !important;
+            max-height: 360px;
+            overflow:hidden;
+        }
+    }
+    #info-product .thumbs > li{
+        margin-bottom: 13px;
+        max-width:82px;
+    }
+}
+
+%quickview-details {
+    #info-product .description{
+        margin:0;
+    }
+    #info-product .details {
+        width: 65%;
+        float: right;
+        //margin: 0 22px 0 10px;
+       
+        
+        .stamp{
+            width: 215px;
+        }
+        .fab-cod{
+            width:100%;
+            li{
+                border: none;
+                margin: 0;
+                padding: 0;
+                &#ghcliBrand{
+                  // display: none;
+                }
+            }
+            li + li {
+                border-left: 1px solid #555555;
+                margin-left:10px;
+                padding-left:10px;
+            }
+        }
+        #ajaxDescriptionPreview{
+            float: left;
+            width: 100%;
+        }
+        #lblDescricaoPreview{
+            display: block;
+            margin-bottom: 10px;
+            text-align:left;
+            > strong{
+                display: none;
+            }
+        }
+        #infoPrices {
+            float: left;
+            width: 100%;
+            .offers {
+                width: 100%;
+                .price{
+                    margin-left: 0px;
+                }
+                .regular{
+                    span{
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+        #ProductBuy {
+            width: 100%;
+            float: left;
+            text-align: left;
+            .txtQuantity{
+                margin-right: 12px;
+                padding-top: 21px;
+                float: left;
+            }
+            #spanSKUComprar{
+                //margin-right: 12px;
+                .buy{
+                    float: right;
+                }
+            }
+            @include flexbox(flex, row, wrap, left);
+            
+        }
+        .indisponivel{
+            width:100% !important;
+            .notifyme {
+                width: 100%;
+                display: inline-block;
+                margin-left: 15px;
+                margin-left:0;
+                padding: 30px 0px 50px;
+                input{
+                    width: 161px !important;
+                    margin: 0;
+                }
+                .btn.send.ir{
+                    position: relative;
+                    left: -18px;
+                    @include border-radius(3px);
+                }
+            }
+        }
+    }
+    #info-product .skus-product {
+        @include box-sizing();
+        width: 100%;
+        border-bottom:1px solid #eaeaea;
+        background:#f1f1f1;
+        margin-top:0;
+        margin-bottom:0;
+        padding:0 15px;
+        &:not([style="display: none;"])+#ProductBuy {
+            width: 100%;
+            margin-top: 0;
+            background:#f1f1f1;
+            padding:15px;
+        }
+        .field{
+            text-align:left;
+        }
+    }
+}
+
+%quicview-details__social {
+    #info-product .social {
+        text-align: center;
+        float: left;
+        width: auto;
+        clear: none;
+        margin-top: 2px;
+        padding-top: 0px;
+        margin-left: 105px;
+        top: 418px;
+        left: 30px;
+    
+    }
+}
+
+// PAGE - QUICKVIEW - CALLS
+// ====================================================================
+body {
+    @extend %quickview-config;
+}
+
+body.quickview {
+    #fancybox-close-2{
+        top: 10px;
+        right: 5px;
+    }
+
+    @extend %quickview-containers;
+    @extend %quickview-details;
+    @extend %quickview-images;
+    @extend %quicview-details__social;
+}

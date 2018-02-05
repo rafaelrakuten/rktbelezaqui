@@ -1,0 +1,60 @@
+@model HeadBaseModel
+
+<div id="basket_pop_container" ng-controller="SummaryBasket" class="basket_pop_container ng-cloak" ng-cloak="">
+    <div class="border_top"></div>
+    <div class="mid" id="basket" ng-if="data.Items.length > 0">        
+        <div class="prod" ng-repeat="item in data.Items">
+            <div class="photo">
+                <img ng-src="{{item.ImageURL}}" />
+            </div>
+            <div class="descr">
+                <p class="name">
+                    {{item.Name}}
+                </p>
+                <p class="cod">
+                    {{item.InternalCode}}
+                </p>
+            </div>
+            <div class="_skus">
+                <p>
+                    {{item.MessageItem}}
+                </p>
+                <p>
+                    <span>
+                        Qtde: 
+                    </span>
+                    {{item.Quantity}}
+                </p>
+                <div class="total">
+                    {{item.Total}}
+                </div>
+            </div>
+        </div>
+
+        <div class="sum_container">
+            <p class="qtde_prod">
+                {{data.QuantityBasket}}
+            </p>
+            <p class="subtotal">
+                <strong>SUBTOTAL:</strong>
+                {{data.TotalBasket}}
+            </p>
+        </div>
+        <div id="btn_checkout">
+            <a class="bt-mini-car-continue" href="#" onclick="closeMiniCar()">CONTINUAR COMPRANDO</a>
+            <a class="bt-mini-car-concluir" href="@ViewBag.CheckoutUrl">FINALIZAR COMPRA</a>
+        </div>
+    </div>
+    <div class="mid" id="emptyBasket" ng-if="data == null">
+        <div class="prod">
+            <p>Seu carrinho de compras está vazio.</p>
+        </div>        
+        <div>
+            <a href="@Url("~/index.aspx")" title="Comprar produtos">
+                Comprar produtos
+            </a>
+        </div>
+    </div>
+    <div class="border_bottom"></div>    
+</div>
+

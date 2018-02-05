@@ -1,0 +1,416 @@
+// PAGE - BASKET - COMPONENTS
+// ====================================================================
+%basket-main{
+   #main{
+    padding-top:30px;
+   } 
+}
+
+
+%basket-buttons {
+    .buttons-basket {
+        @include box-sizing();
+        margin: 0px;
+        background: #FFF;
+
+        .btn.continue {
+            @extend %bt-basket__fecharPedido;
+            width: 100%;
+        }
+        .buy-more {
+            @extend %bt-basket__comprarMais;
+            width: 100%;
+            margin: 0;
+            &:before{
+                color:#fff;
+            }
+        }
+    }
+}
+
+%basket-thead {
+    table tr {
+        td::before {
+            @extend %text-basket-mobile-thead;
+        }
+    }
+}
+
+%basket-icons {
+    &.checkout .basket table tr td.quantity a,
+    &.checkout .basket table tr td.gift span::after,
+    &.checkout .basket table tr td.delete a {
+        color: $basket-mobile-icons-color;
+    }
+    &.checkout .basket table tr td.delete a{
+        &:after{
+            @include bgimg(del-basket, png);
+            width: 16px;
+            height: 14px;
+            content: '';
+            margin-top: 3px;
+            background-repeat:no-repeat;
+        }
+    }
+    &.checkout .basket table tr td.quantity input{
+        border: 1px solid #6d6e70;
+        @include border-radius(0);
+    }
+}
+
+%basket-banner {
+    #banner_promocoes_atingir_pnlBannerPromocoesAtingir {
+        .orbit-wrapper {
+            @include box-sizing();
+            @include border-radius(0);
+            background: url(/static/locales/global/img/bg_banner_basket.png) no-repeat;
+            border: none;
+            margin: 0 10px;
+            #banner-basket>div {
+                padding: 0;
+                -webkit-display: flex;
+                -moz-display: flex;
+                -ms-display: flex;
+                -o-display: flex;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+               // background: $basket-banner-background;
+            }
+            #banner-basket,
+            .promo {
+                @include box-sizing();
+                line-height: 15px;
+                text-align: center;
+                background: url(/static/locales/global/img/bg_banner_basket.png) no-repeat;
+                @extend %text-basket-banner;
+            }
+            #banner-basket span{
+                padding: 3px;
+                font-family: $font-one;
+                color:#fff;
+                font-size:12px;
+                br{
+                    display:none;
+                }
+            }
+            .orbit-bullets {
+                bottom: 5px;
+                right: 5px;
+                z-index: $zindex-basket-orbs;
+                li {
+                    @include border-radius(5px);
+                    background: none;
+                    background: $basket-banner-orbit-background;
+                    @extend %text-basket-banner-orbit;
+                    width: 18px;
+                    height: 18px;
+                    margin: 0px 3px;
+                    line-height: 18px;
+                    color:$font-color-1;
+                    &.active {
+                        margin: 0px 5px;
+                        color:#fff;
+                        background:$font-color-2;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+%basket-tbody__description {
+    table tr td.description {
+        .details>span.name {
+            @extend %text-basket-desc-name;
+        }
+        .details>span.cod,
+        .details>span.brand {
+            @extend %text-basket-desc-cod;
+        }
+        .details>span.brand {
+            @extend %text-basket-desc-cod;
+        }
+        .skus {
+            margin-top: 10px;
+            @extend %text-basket-desc-sku;
+        }
+    }
+}
+
+%basket-tbody__unit {
+    .unit-value {
+        .regular {
+            @extend %text-basket-valor-unit-de;
+        }
+        .sale {
+            @extend %text-basket-valor-unit-por;
+            margin-top:-5px;
+        }
+        .desconto-avista.percent-a-vista{
+            display: none;
+        }
+    }
+
+}
+
+%basket-tbody__subtotal {
+    .subtotal {
+      
+        .regular {
+            @extend %text-basket-valor-subtotal-de;
+        }
+        .sale {
+            @extend %text-basket-valor-subtotal-por;
+        }
+        .desconto-avista.percent-a-vista{
+            display: none;
+        }
+        .price{
+            //font-weight: 500 !important;
+                font-size:19px;
+        }
+    }
+}
+
+%basket-tbody__produtoGratis {
+    td.subtotal,
+    .unit-value {
+        @extend %text-basket-valor-subtotal-por;
+        &:before{
+            line-height:20px;
+        }
+    }    
+}
+
+%basket-tfoot__info {
+    #main .info {
+        &:first-of-type {
+            td {
+                border: 0px;
+            }
+            .title {
+                @extend %text-basket-subtotal-title;
+            }
+            .subtotal {
+                @extend %text-basket-subtotal-price;
+                height: 40px;
+                line-height: 20px;
+            }
+        }
+        border-top: $basket-border;
+        border-bottom: $basket-border;
+        td {
+            background: #FFF;
+        }
+        .title {
+            @extend %text-basket-tfoot-title;
+            line-height: 20px;
+        }
+        .subtotal {
+            @extend %text-basket-tfoot-subtotal;
+        }
+
+        #tdDiscount{
+            font-size:16px;
+            font-weight:700;
+            text-transform: uppercase;
+            padding-top:15px;
+            & + .subtotal{
+                font-size:22px;
+                font-weight:700;
+                color:$color-text-light;
+            }
+        }
+    }
+}
+
+%basket-tfoot__delivery {
+    .delivery {
+        border-bottom: $basket-border;
+        #txtZipCode {
+            @include border-radius(0px);
+            width: 100%;
+            height: 30px;
+            position: relative;
+            top: 1px;    
+            border-radius: 5px;
+            border-color: #999;        
+        }
+        .subtotal{
+            text-align: center;
+            font-weight: 600 !important;
+            font-size:20px;
+            color:$font-color-1 !important;
+        }
+        
+        dt {
+            font-family: $font-one;
+            @extend %text-basket-tfoot-strongs;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .options-tit{
+            text-transform: none;
+            color:#000;
+            font-weight: bold;
+            font-family: $font-one;
+            margin:0 0 10px;
+        }
+        .options>dt {
+            font-size: 0px;
+        }
+        label,
+        .store-address,
+        .service-value li {
+            @extend %text-basket-tfoot-labels;
+            font-weight: 400;
+        }
+        .service-value li {
+            margin-left: 21px;
+        }
+        label{
+            font-weight: normal;
+        }
+        .service-value li:last-child{
+            font-weight: normal;
+        }
+        #ddlStores {
+            @extend %text-filter;
+            @include select-arrow(ordernar-por-arrow, 97%);
+            @include remove-shadow();
+            @include border-radius(3px);
+            border: 1px solid #9A9A9A;
+            padding: 5px 25px 5px 5px;
+        }
+        .btn {
+            @extend %bt-basket__cep;
+            @include box-sizing();
+            margin-top: 10px;
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            line-height: 36px;
+            min-height: 30px;
+        }
+        .title {
+            @extend %text-basket-tfoot-title;
+            text-align: center;
+            font-weight: 600 !important;
+            font-size:20px;
+        }
+        .subtotal {
+            @extend %text-basket-tfoot-subtotal;
+        }
+
+        .delivery-method{
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+}
+
+%basket-tfoot__coupon {
+    #main .coupon {
+        border-bottom: $basket-border;
+        border-top: $basket-border;
+        background: #FFF;
+        fieldset span {
+            width: auto;
+            @extend %text-basket-tfoot-strongs;
+            strong{
+                font-weight: 500;
+            }
+            text-align: center;
+        }
+        .btn {
+            @extend %bt-basket__coupon;
+            text-align: center;
+            width: 100%;
+            font-size: 0;
+            &:after{
+                content:"Validar Cupom";
+                font-size: 16px;
+                display:none;
+            }
+        }
+        #lnkCancelCoupon.btn.cancel {
+            @extend %bt-basket__coupon--cancel;
+            text-align: center;
+            width: 100%;
+        }
+        .coupon-ok {
+            @extend %text-basket-coupon-on;
+            text-align: center;
+            padding: 5px;
+        }
+        .coupon-off {
+            @extend %text-basket-coupon-off;
+            text-align: center;
+            padding: 10px;
+        }
+        input{
+            @include border-radius(5);
+            border-color: #999;
+        }
+    }
+}
+
+%basket-tfoot__total {
+    #main .total {
+        background: $color-white;
+        td {
+            background: transparent;
+            height: 50px;
+            line-height: 28px;
+        }
+        .title {
+            @extend %text-basket-total-title;
+            &:first-letter {
+                text-transform: uppercase;
+			}
+			line-height: 29px;
+        }
+        .value {
+            @extend %text-basket-total-value;
+            .converted-price {
+                display: inline-block;
+            }
+            .desconto-avista.percent-a-vista{
+                display: none;
+            }
+        }
+    }
+}
+%basket-stamp {
+    .basket table tr #tdStamps{
+        padding-left: 0;
+        text-align: center;
+        span{
+            img{
+                margin:5px; 
+            }
+        }
+    }
+}
+
+
+// PAGE - BASKET - CALLS
+// ====================================================================
+body.checkout.basketpage {
+    @extend %basket-main;
+    @extend %basket-buttons;
+    @extend %basket-banner;
+    @extend %basket-thead;
+    @extend %basket-icons;
+    @extend %basket-tbody__description;
+    @extend %basket-tbody__unit;
+    @extend %basket-tbody__subtotal;
+    @extend %basket-tbody__produtoGratis;
+    @extend %basket-tfoot__info;
+    @extend %basket-tfoot__delivery;
+    @extend %basket-tfoot__coupon;
+    @extend %basket-tfoot__total;
+    @extend %basket-stamp;
+}

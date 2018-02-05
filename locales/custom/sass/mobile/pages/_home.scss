@@ -1,0 +1,90 @@
+// PAGE - HOME - COMPONENTS
+// ====================================================================
+%banner-home__main {
+    &.home #main .banners.b-main {
+        width: 100%;
+        border: none;
+        >ul {
+            width: 100%;
+            position: relative;
+            //@include flexbox(flex, row, wrap, space-between);
+          
+            >li {
+                margin: 0px;
+                width: $b-principal-w !important;
+                height: $b-principal-h;
+                &.posicao1,
+                &.posicao2
+                {
+                    width: 100% !important;
+                    height: auto;
+                    margin-bottom: 20px;
+                    //margin-top: 10px;
+                }
+                &.posicao3,
+                &.posicao4,
+                &.posicao5{
+                    width: $b-principal-pos-4-5w !important;
+                    height: $b-principal-pos-4-5h;
+                    margin-bottom: 20px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .banners.b-betweenvit{
+        li{
+            margin:0 0 10px 0;
+        }
+    }
+
+    &.home #main .banners.b-top ,  &.home #main .banners.b-bottom{
+        padding-left:8px;
+        padding-right:8px;
+        ul{
+            text-align:center;
+            li{
+               
+                width: 32%;
+                padding: 3px;
+                @include box-sizing();
+                display:inline-block !important;
+                &.posicao4,  &.posicao5{
+                    width:49%;
+                }
+            }
+        }
+    }
+    &.home #main .banners.b-main{
+        padding-left:8px;
+        padding-right:8px;
+        ul{
+            text-align:center;
+            li{
+               
+                &.posicao2{
+                    margin-bottom:0;
+                }
+            }
+        }
+    }
+}
+
+
+// PAGE - HOME - CALLS
+// ====================================================================
+body.home{
+	@extend %helper-hproduct__tools;
+	@extend %helper-hproduct__name;
+	@extend %helper-hproduct__priceFrom;
+	@extend %helper-hproduct__priceSale;
+	@extend %helper-hproduct__parcel;
+	@extend %helper-hproduct__stamp;
+	@extend %helper-hproduct__reviewaggregate;
+	@extend %helper-hproduct__buy;
+    @extend %banner-home__main;
+    
+	.social-home{
+		display: none;
+	}
+}

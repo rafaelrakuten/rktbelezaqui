@@ -1,0 +1,136 @@
+// PAGE - MEU PEDIDO - COMPONENTS
+// ====================================================================
+%meupedido-containers {
+    background: #FFF;
+    #main {
+        .container {
+            width: 980px !important;
+        }
+    }
+}
+
+%meupedido-bt {
+    .request .actions a {
+        @extend %bt-meupedido__imprimir;
+        margin: 0px auto;
+    }
+}
+
+%meupedido-basket {
+    .basket tr {
+        td {
+            background: #FFF;
+        }
+        .product {
+            padding: 10px;
+        }
+        .quantity,
+        .present {
+            @extend %text-check-text-default;
+        }
+    }
+}
+
+%meupedido-basket__details {
+    .basket .details {
+        .name {
+            margin-top: 20px;
+            @extend %text-basket-desc-name;
+        }
+        .cod,
+        .brand {
+            @extend %text-basket-desc-cod;
+        }
+        .skus {
+            margin-top: 10px;
+            @extend %text-basket-desc-sku;
+        }
+    }
+}
+
+%meupedido-basket__unit {
+    .basket {
+        .unit-value {
+            border-bottom: $basket-border;
+            .regular {
+                @extend %text-basket-valor-unit-de;
+            }
+            .sale {
+                @extend %text-basket-valor-unit-por;
+            }
+        }
+    }
+}
+
+%meupedido-basket__subtotal {
+    .basket {
+        .subtotal {
+            border-bottom: $basket-border;
+            border-right: $basket-border;
+            .regular {
+                @extend %text-basket-valor-subtotal-de;
+            }
+            .sale {
+                @extend %text-basket-valor-subtotal-por;
+            }
+        }
+    }
+}
+
+%meupedido-basket__results {
+    tbody .info {
+        td:first-child {
+            @extend %text-basket-tfoot-title;
+        }
+        td:last-child {
+            @extend %text-basket-tfoot-subtotal;
+        }
+    }
+}
+
+%meupedido-basket__totais {
+    tbody .info:last-child {
+        td:first-child {
+            @extend %text-basket-total-title;
+            &:first-letter {
+                text-transform: uppercase;
+            }
+        }
+        td:last-child {
+            @extend %text-basket-total-value;
+        }
+    }
+}
+
+%meupedido-result{
+    .main-content{
+            .pagination>ul>li{
+                line-height: 15px;
+                @extend %text-pagination-search;
+                a{
+                    @extend %text-pagination-search;
+                    color:#000;
+                }
+            }
+
+        }
+    }
+
+// PAGE - MEU PEDIDO - CALLS
+// ====================================================================
+body.meuspedidos {
+    @extend %meupedido-containers;
+    @extend %pedidos-request;
+    @extend %pedidos-box;
+    @extend %meupedido-bt;
+    @extend %meupedido-basket;
+    @extend %meupedido-basket__details;
+    @extend %meupedido-basket__unit;
+    @extend %meupedido-basket__subtotal;
+    @extend %meupedido-basket__results;
+    @extend %meupedido-basket__totais;    
+}
+
+body.search{
+    @extend %meupedido-result;
+}

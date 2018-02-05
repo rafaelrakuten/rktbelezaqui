@@ -1,0 +1,1011 @@
+// TEXTOS
+/*
+	Aqui será aplicada todo estilo de texto que replicará
+	de desktop para mobile.
+*/
+// ====================================================================
+
+
+
+// HEADER - NAV
+// ====================================================================
+%text-header-nav-font{
+	font-family: $font-two;
+	font-size: 16px;
+	color: $font-color-1;
+	font-weight: 600;
+	text-transform: uppercase;
+	color:$font-color-1;
+	border-bottom:3px solid transparent;
+
+	position: relative;
+	-webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+	
+	&:hover,
+	&.hover{
+		border-bottom: 3px solid $font-color-2;
+
+		background: #fff;
+		color:$font-color-1;
+	}
+}
+
+// HEADER - SUBNAV
+// ====================================================================
+%text-header-subnav-font{
+	font-family: $font-one;
+	font-size: 14px;
+	color: #5a5a5a;
+	font-weight: 400;
+	text-transform: none;
+	line-height: 25px;
+	&:hover,
+	&.hover{
+		font-weight: 600;
+		color: #217cc0;
+		text-decoration: none;
+	}
+}
+
+
+// HEADER - SEARCH
+// ====================================================================
+%text-header-search-font{
+	font-family: $font-two;
+	font-size: 14px;
+	color: #444444;
+	@include placeholder-color(#444444);
+	font-weight: 400;
+	text-transform: none;
+}
+
+// HEADER - HELP
+// ====================================================================
+%text-header-help-font{
+	font-family: $font-one;
+	font-size: 14px;
+	color: $font-color-1;
+	font-weight: 400;
+	text-transform: none;
+	text-decoration: none;
+	letter-spacing: 1px;
+	&:hover{
+		color: $font-color-1;
+		text-decoration: none;
+	}
+}
+
+
+// HEADER - WELCOME
+// ====================================================================
+%text-header-welcome-font{
+	font-family: $font-one;
+	font-size: 14px;
+	color: $font-color-1;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-decoration: none;
+	&:hover{
+		color: $color-black;
+		text-decoration: none;
+	}
+}
+
+// HEADER - CAR
+// ====================================================================
+%text-header-car-title-font{
+	font-family: $font-one;
+	font-size: 14px;
+	color: $color-white;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	&:hover{
+		color: $color-white;
+		text-decoration: none;
+		margin-left:3px; 
+	}
+}
+
+
+%text-header-car-item-font{
+	font-family: $font-one;
+	font-size: 11px;
+	color: $color-black;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+
+// GENERAL - HEADINGS
+// ====================================================================
+%text-heading-font{
+	font-family: $font-two;
+	font-size: 26px;
+	color: $font-color-1;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	@media (max-width: $mobile-w) {
+		font-size:20px;
+	}
+}
+
+// GENERAL - HPRODUCTS
+// ====================================================================
+// Name
+%text-hprod-name{
+	font-family: $font-two;
+	font-size: 14px;
+	color: #000;
+	font-weight: 700;
+	text-transform: none;
+	text-decoration: none;
+}
+// Price From
+%text-hprod-price-from{
+	font-family: $font-one;
+	font-size: 14px;
+	color: #8d8c8c;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-decoration: line-through;
+	line-height: 12px;
+}
+// Price Sale
+%text-hprod-price-sale{
+	font-family: $font-two;
+	font-size: 16px;
+	color: $font-color-1;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+// Parcel
+%text-hprod-parcel{
+	font-family: $font-one;
+	font-size: 16px;
+	color: #000;
+	font-weight: 600;
+	text-transform: lowercase;
+	text-decoration: none;
+}
+// Parcel Strong
+%text-hprod-parcel-strong{
+	font-family: $font-one;
+	font-size: 16px;
+	color: #000;
+	font-weight: 600;
+	text-transform: none;
+	text-decoration: none;
+}
+// Reviewaggregate
+%text-hprod-review{
+	font-family: $font-two;
+	font-size: 0;
+	color: $color-red;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-decoration: underline;
+	color:$color-text;
+}
+//Desconto a vista
+%text-hprod-desconto-a-vista{
+	font-family: $font-one;
+	font-size: 14px;
+	color: #5a5a5a;
+	font-weight: 400;
+	text-transform: lowercase;
+	text-decoration: none;
+}
+//Desconto a vista - strong
+%text-hprod-desconto-a-vista-strong{
+	font-family: $font-one;
+	font-size: 18px;
+	color: $font-color-2;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+//Produto Indisponivel
+%text-hprod-indisponivel{
+	font-family: $font-two;
+	font-size: 12px;
+	color: $color-red;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+
+// ASIDE
+// ====================================================================
+%text-aside-title{
+	font-family:$font-one;
+	font-size:16px;
+	font-weight: 600;
+	color: $font-color-1;
+	text-transform: none;
+	letter-spacing: 1px;
+}
+
+%text-aside-title-span{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:700;
+	color: #5a5a5a;
+	text-transform: none;
+}
+
+%text-aside-first-item{
+	font-family:$font-one;
+	font-size:12px;
+	font-weight:400;
+	color: $color-gray;
+	text-transform: none;
+}
+
+
+%text-aside-second-item{
+	font-family:$font-one;
+	font-size:12px;
+	font-weight:400;
+	color: $color-gray;
+	text-transform: none;
+}
+
+// BREADCRUMB
+// ====================================================================
+%text-bread-desc{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:normal;
+	color: #5a5a5a;
+	text-transform: none;
+}
+
+%text-bread-item{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:normal;
+	color: #5a5a5a;
+	text-transform: none;
+}
+
+%text-bread-last{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:normal;
+	color: $font-color-1;
+	text-transform: none;
+}
+
+// CATALOG
+// ====================================================================
+%text-orderby-title{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:400;
+	color: #5a5a5a;
+	text-transform: none;
+	//letter-spacing: 0.5px;
+}
+
+
+%text-orderby-item{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:400;
+	color: #5a5a5a;
+	text-transform: none;
+}
+
+
+%text-orderby-item-selected{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:600;
+	color: $color-blue-light;
+	text-transform: none;
+}
+
+
+%text-filter{
+	font-family:$font-one;
+	font-size:11px;
+	font-weight:normal;
+	color: $color-gray;
+	text-transform: none;
+}
+
+
+%text-see-category{
+	font-family:$font-one;
+	font-size:16px;
+	font-weight:700;
+	color: $color-blue-light;
+	text-transform: none;	
+	text-align: right;
+	border-bottom: 1px solid #e9e9e9;
+	padding-right:50px;
+	&:hover{
+		text-decoration: none;
+		border-bottom: 1px solid #ccc;
+	}
+	.see-more-txt{
+		font-weight: 300;
+		color: $color-gray;
+	}
+}
+
+
+%text-see-category-link{
+	font-family:$font-one;
+	font-size:16px;
+	font-weight:700;
+	color: $color-blue-light;
+	text-transform: none;	
+	text-align: right;
+	border-bottom: 1px solid #e9e9e9;
+	padding-right:83px;
+}
+
+
+%text-seo-desc{
+	font-family: $font-one;
+	color: $color-gray;
+	font-size:14px;
+	line-height: 24px;
+	text-align:center;
+	text-align: center;
+	padding: 30px 10px;
+	float: left;
+}
+
+
+%text-show-one{
+	font-family:$font-one;
+	font-size:12px;
+	font-weight:normal;
+	color: $color-gray;
+	text-transform: none;
+}
+
+
+%text-show-one-link{
+	font-family:$font-one;
+	font-size:13px;
+	font-weight:bold;
+	color: $color-blue-light;
+	text-transform: uppercase;
+	&:first-letter{
+		text-transform: uppercase;
+	}
+}
+
+// PRODUCT
+// ====================================================================
+%text-prod-name{
+	font-family:$font-two;
+	font-size:20px; 
+	font-weight:700;
+	color: #000;
+	text-transform: uppercase;
+}
+
+
+%text-prod-fab-cod{
+	font-family:$font-one;
+	font-size:12px; 
+	font-weight:400;
+	color: #5a5a5a;
+	text-transform: none;
+}
+
+
+%text-prod-ratting-font{
+	font-family:$font-one;
+	font-size:12px; 
+	font-weight:400;
+	color: $color-black;
+	text-transform: none;
+}
+
+
+%text-prod-ratting-number{
+	font-family:$font-two;
+	font-size:10px; 
+	font-weight:bold;
+	color: $color-red;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+
+
+
+%text-prod-regular{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:400;
+	color: #5a5a5a;
+	text-transform: uppercase;
+	text-decoration: line-through;
+}
+
+%text-prod-sale{
+	font-family:$font-one;
+	font-size:26px;
+	font-weight:600;
+	color: $font-color-1;
+	text-transform: uppercase;
+}
+
+%text-prod-social{
+	font-family:$font-two;
+	font-size:10px;
+	font-weight:normal;
+	color: #666666;
+	text-transform: uppercase;
+}
+
+
+%text-prod-parcel-strong{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:600;
+	color: #000;
+	text-transform: none;
+}
+
+%text-prod-parcel{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:400;
+	color: #000;
+	text-transform: none;
+}
+
+
+%text-prod-save{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:600;
+	color: $font-color-2;
+	text-transform: none;
+}
+
+
+%text-prod-save-strong{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:bold;
+	color: $color-black;
+	text-transform: uppercase;
+}
+
+
+%text-prod-sku-label{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:400;
+	color: #5a5a5a;
+}
+
+
+%text-prod-sku-size{
+	font-family:$font-two;
+	font-size:12;
+	font-weight:normal;
+	color: $color-gray;
+	text-transform: uppercase;
+}
+
+
+%text-prod-tab-medidas{
+	font-family:$font-one;
+	font-size:12px;
+	font-weight:400;
+	color: $color-black;
+	text-transform: none;
+}
+
+
+%text-prod-quantity-label{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:400;
+	color: #5a5a5a;
+	text-transform: none;
+}
+
+%text-prod-notifyme-strong{
+	font-family:$font-one;
+	font-size:18px;
+	font-weight:700;
+	color:$font-color-2;
+	text-transform: uppercase;
+}
+
+
+%text-prod-notifyme-label{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:400;
+	color: #5a5a5a;
+	text-transform: none;
+}
+
+
+%text-prod-tools-link{
+	font-family:$font-one;
+	font-size:12px;
+	font-weight:500;
+	color: $color-black;
+	text-decoration: underline;
+}
+
+%text-prod-minidesc-title{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:700;
+	color: #000;
+	text-transform: uppercase;
+}
+
+
+%text-prod-minidesc{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:400;
+	color: #5a5a5a;
+	text-transform: none;
+}
+
+%text-prod-minidesc-link{
+	font-family:$font-one;
+	font-size:16px;
+	font-weight:700;
+	color:$font-color-1;
+	text-transform: none;
+	text-decoration: none;
+}
+
+
+%text-prod-bigdesc{
+	font-family:$font-one;
+	font-size:13px;
+	font-weight:400;
+	color: $color-gray;
+	text-transform: none;
+}
+
+
+%text-prod-combo-sale{
+	font-family:$font-one;
+	font-size:26px;
+	font-weight:700;
+	color: $color-blue;
+	text-transform: uppercase;
+}
+
+%text-prod-opinion-name{
+	font-family:$font-one;
+	font-size:16px;
+	font-weight:600;
+	color: $color-black;
+	text-transform: none;
+}
+
+%text-prod-opinion-desc{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:400;
+	color: $color-gray;
+	line-height:24px;
+	text-transform: none;
+	display:block;
+	clear:both;
+}
+
+
+
+// MODALS
+// ====================================================================
+%text-modals-title{
+	font-family:$font-one;
+	font-size:20px;
+	font-weight:normal;
+	color: $color-black;
+	text-transform: none;
+	letter-spacing: 1px;
+}
+
+// QUICKBASKET
+// ====================================================================
+%text-qbskt-title{
+	font-family:$font-one;
+	font-size:20px;
+	font-weight:bold;
+	color: $color-black;
+	text-transform: uppercase;
+}
+
+%text-qbskt-subtotal{
+	font-family:$font-two;
+	font-size:20px;
+	font-weight:normal;
+	color: $color-black;
+	text-transform: uppercase;
+}
+
+// LOOK
+// ====================================================================
+%text-look-minidesc{
+	font-family:$font-one;
+	font-size:16px;
+	font-weight:400;
+	color: #5a5a5a;
+	text-transform: none;
+}
+
+%text-look-aside-title{
+	font-family:$font-two;
+	font-size:20px;
+	font-weight:700;
+	color: $color-black;
+	text-transform: uppercase;
+}
+
+%text-look-select-look{
+	font-family:$font-one;
+	font-size:12px;
+	font-weight:400;
+	color: $color-black;
+	text-transform: none;
+	text-decoration: underline;
+}
+
+%text-look-aside-name{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:normal;
+	color: #5a5a5a;
+	text-transform: none;
+}
+
+%text-look-notifyme-strong{
+	font-family:$font-one;
+	font-size:18px;
+	font-weight:normal;
+	color: $color-black;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+
+%text-look-notifyme-label{
+	font-family:$font-two;
+	font-size:10px;
+	font-weight:normal;
+	color: $color-gray;
+	text-transform: uppercase;
+}
+
+
+
+// BASKET
+// ====================================================================
+%text-basket-banner{
+	font-family:$font-one;
+	text-transform: uppercase;
+	font-size:20px;
+	font-weight:500;
+	color: $color-black;
+	@media (max-width: $mobile-w) {
+		font-size:13px;
+		font-weight:700;
+		font-family:$font-one;
+		line-height: 15px;
+	}
+}
+
+%text-basket-banner-orbit{
+	font-family:$font-one;
+	font-size:12px;
+	font-weight:400;
+	color: $color-black;
+	//text-transform: capitalize;
+}
+
+%text-basket-thead{
+	font-family:$font-two;
+	font-size:16px;
+	font-weight:600;
+	color: $color-black;
+	text-transform: uppercase;
+}
+
+%text-basket-mobile-thead{
+	font-family:$font-two;
+	font-size:13px;
+	font-weight:600;
+	color: $color-black;
+	text-transform: uppercase;
+}
+
+
+%text-basket-desc-name{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:700;
+	color: #535353;
+	text-transform: none;
+}
+
+%text-basket-desc-cod{
+	font-family:$font-one;
+	font-size:12px;
+	font-weight:400;
+	color: #a1a1a1;
+	text-transform: none;
+}
+
+%text-basket-desc-sku{
+	font-family:$font-one;
+	font-size:12px;
+	font-weight:400;
+	color: #5a5a5a;
+	text-transform: none;
+}
+
+
+%text-basket-valor-unit-de{
+	font-family:$font-one;
+	font-size:16px;
+	font-weight:400;
+	color: $color-text-light;
+	text-transform: uppercase;
+}
+
+%text-basket-valor-unit-por{
+	font-family:$font-one;
+	font-size:22px;
+	font-weight:700;
+	color: $font-color-1;
+	text-transform: uppercase;
+	@media (max-width: $mobile-w) {
+		font-size:19px;
+	}
+}
+
+%text-basket-valor-subtotal-de{
+	font-family:$font-one;
+	font-size:16px;
+	font-weight:400;
+	color: $color-text-light;
+	text-transform: uppercase;
+}
+
+%text-basket-valor-subtotal-por{
+	font-family:$font-one;
+	font-size:22px;
+	font-weight:700;
+	color: $font-color-1;
+	text-transform: uppercase;
+	@media (max-width: $mobile-w) {
+		font-size:14px;
+	}
+}
+
+%text-basket-valor-subtotal-gift{
+	font-family:$font-one;
+	font-size:13px;
+	font-weight:500;
+	color: $color-black;
+	text-transform: none;
+}
+
+%text-basket-tfoot-info{
+	font-family:$font-one;
+	font-size:12px;
+	font-weight:normal;
+	color: $color-black;
+	text-transform: none;
+}
+
+%text-basket-subtotal-title{
+	font-family:$font-one;
+	font-size:16px;
+	font-weight:700;
+	color: $color-black;
+	text-transform: uppercase;
+}
+
+%text-basket-subtotal-price{
+	font-family:$font-one;
+	font-size:22px;
+	font-weight:700;
+	color: $font-color-1;
+	text-transform: uppercase;
+}
+
+%text-basket-tfoot-title{
+	font-family:$font-one;
+	font-size:13px;
+	font-weight:500;
+	color: $color-black;
+	text-transform: none;
+}
+
+%text-basket-tfoot-subtotal{
+	font-family:$font-one;
+	font-size:13px;
+	font-weight:500;
+	color: $color-black;
+	text-transform: none;
+}
+
+%text-basket-tfoot-strongs{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:400;
+	color: #5a5a5a;
+	text-transform: none;
+}
+
+%text-basket-tfoot-labels{
+	font-family:$font-one;
+	font-size:13px;
+	font-weight:600;
+	color: $color-gray;
+	text-transform: none;
+}
+
+%text-basket-total-title{
+	font-family:$font-one;
+	font-size:20px;
+	font-weight:700;
+	color: $color-black;
+	text-transform: uppercase;
+}
+
+%text-basket-total-value{
+	font-family:$font-one;
+	font-size:26px;
+	font-weight:700;
+	color: $font-color-1;
+	text-transform: uppercase;
+}
+
+%text-basket-coupon-on{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:600;
+	color: #ffffff;
+	background-color: #5cb85c;
+    border-radius: 5px;
+    padding: 10px 15px !important;
+    text-transform: uppercase;
+	margin: 0 auto;
+    display: block;
+	width: 110px;
+	@media (max-width: $mobile-w) {
+		width: auto;
+	}
+}
+
+%text-basket-coupon-off{
+	font-family:$font-one;
+	font-size:14px;
+	font-weight:600;
+	background: $color-red;
+	color:#fff;
+    border-radius: 5px;
+    padding: 10px 15px !important;
+    text-transform: uppercase;
+	margin: 0 auto;
+    display: block;
+	width: 135px;
+	@media (max-width: $mobile-w) {
+		width: auto;
+	}
+}
+
+// LOGIN
+// ====================================================================
+%text-login-link-default{
+	font-family:$font-two;
+	font-size:12px;
+	font-weight:normal;
+	color: $color-gray;
+	text-transform: none;
+}
+
+
+// CHECKOUT - GENERAL
+// ====================================================================
+%text-check-title-h1{
+	font-family:$font-one;
+	font-size:24px;
+	font-weight:600;
+	color: $color-black !important;
+	text-transform: uppercase;
+}
+
+%text-check-title-h1-alt{
+	font-family:$font-one;
+	font-size:16px;
+	font-weight:400;
+	color: $color-black;
+	text-transform: none;
+}
+
+%text-check-text-default{
+	font-family:$font-one;
+	font-size:12px;
+	font-weight:400;
+	color: $color-gray;
+	text-transform: none;
+}
+
+%text-check-text-default-strong{
+	font-family:$font-one;
+	font-size:12px;
+	font-weight:400;
+	color: $color-bg-gray-2;
+	text-transform: none;
+}
+
+%text-check-link-default{
+	font-family:$font-two;
+	font-size:14px;
+	font-weight:500;
+	color: $color-black;
+	text-transform: none;
+}
+
+%text-check-h3-default{
+	font-family:$font-one;
+	font-size:15px;
+	font-weight:bold;
+	color: $color-black;
+	text-transform: uppercase;
+	@media (max-width: 340px) {
+		font-size:14px;
+	 }
+}
+
+%text-check-pedido-number{
+	font-family:$font-one;
+	font-size:30px;
+	font-weight:bold;
+	color: $color-black;
+	text-transform: uppercase;
+}
+
+%text-add-new-card{
+	font-family:$font-one;
+	font-size:13px;
+	font-weight:500;
+	color: $color-black;
+	text-decoration: underline;
+}
+
+%text-pagination-search{
+	font-family:$font-one;
+	font-size:12px;
+	font-weight:600;
+	color: $color-gray;
+	text-transform: none;
+}
+

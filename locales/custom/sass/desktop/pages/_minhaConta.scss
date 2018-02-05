@@ -1,0 +1,47 @@
+// PAGE - MINHA CONTA - COMPONENTS
+// ====================================================================
+%myacc-containers{
+	background: none;
+	#main{
+		.container{
+			padding: 0px;
+			width: $page-w;
+			.main-content{
+				width: $breakpoint;
+				margin: 0px auto;
+			}
+		}
+	}
+}
+%myacc-box{
+	.box{
+		@include box-sizing();
+		@include border-radius(0px);
+		width: 670px;
+		background: #f2f2f2;
+		border: 1px solid #f2f2f2;
+	}
+}
+%nyacc-links{
+	.nav a{
+		@extend %text-check-link-default;
+		&:hover{
+			font-weight: bold;
+			color:$color-blue-light;
+			@extend %text-check-link-default;
+		}
+	}
+}
+%myacc-descriptions{
+	.nav span{
+		@extend %text-check-text-default;
+	}
+}
+// PAGE - MINHA CONTA - CALLS
+// ====================================================================
+body.account {
+	@extend %myacc-containers;
+	@extend %myacc-box;
+	@extend %nyacc-links;
+	@extend %myacc-descriptions;
+}

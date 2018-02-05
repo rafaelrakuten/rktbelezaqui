@@ -1,0 +1,47 @@
+// CONFIGURATION
+// ====================================================================
+@import "config/mixins";
+@import "config/config";
+@import "config/colors";
+@import "config/fonts";
+@import "config/docImages";
+@import "config/docBanners";
+@import "config/rules";
+@import "config/texts";
+@import "config/buttons";
+@import "config/helper";
+@import "config/normalize";
+
+// DESKTOP - COMPONENTS
+// ====================================================================
+@import "desktop/components/footer";
+@import "desktop/components/modals";
+@import "desktop/components/skuQtd";
+@import "desktop/pages/quickbasket";
+
+// MOBILE - COMPONENTS
+// ====================================================================
+@import "mobile/components/header"; 
+@import "mobile/components/aside"; 
+
+// DESKTOP - PAGES
+// ====================================================================
+@import "mobile/pages/home";
+@import "mobile/pages/catalogo";
+@import "mobile/pages/comparar";
+@import "mobile/pages/produto";
+@import "mobile/pages/garantia";
+@import "mobile/pages/detalheLook";
+@import "mobile/pages/basket";
+@import "mobile/pages/presente";
+@import "mobile/pages/login";
+@import "mobile/pages/minhaConta";
+@import "mobile/pages/wishlist";
+@import "desktop/pages/lists";
+@import "mobile/pages/cadastro";
+@import "mobile/pages/enderecos";;
+@import "mobile/pages/institucional";
+@import "mobile/pages/sitemap";
+@import "mobile/pages/afiliados";
+@import "mobile/pages/contato";
+@import "mobile/pages/meuscartoes";

@@ -1,0 +1,79 @@
+// PAGE - MINHA CONTA - COMPONENTS
+// ====================================================================
+%mycards-containers{
+	background: none;
+	#main{
+		.container{
+			.main-content{
+				.mycards-txt{
+                    @extend %text-check-text-default;
+                    text-align: center;
+				}
+				.add-new-card{
+					@extend %text-add-new-card;
+				}
+			}
+        }
+        .new-card{
+			margin: 0px auto;
+			.form-mycards{
+				.actions{
+					.save.btn.ir{
+						@extend %bt-meuscartoes;
+					}
+				}
+			}
+		}
+		.mycards-list{
+			.accordion-cards {
+				@include border-radius(0);
+				.accordion-header{
+					.nm-card, .valid-card{
+						padding: 10px;
+					}					
+				}
+				.accordion-content{
+					.remove-btn{
+						padding-top: 0px;
+					}
+					p{
+						width: 80%;
+					}
+				}
+				
+
+			} 
+		}
+	}
+}
+%mycards-box{
+	.box{
+		@include box-sizing();
+		@include border-radius();
+		width: 670px;
+		background: #FFF;
+	}
+}
+%mycards-links{
+	.nav a{
+		@extend %text-check-link-default;
+		&:hover{
+			font-weight: bold;
+			@extend %text-check-link-default;
+		}
+	}
+}
+%mycards-descriptions{
+	.nav span{
+		@extend %text-check-text-default;
+	}
+}
+
+// PAGE - MINHA CONTA - CALLS
+// ====================================================================
+body.mycards {
+	@extend %mycards-containers;
+	@extend %mycards-box;
+	@extend %mycards-links;
+	@extend %mycards-descriptions;
+}

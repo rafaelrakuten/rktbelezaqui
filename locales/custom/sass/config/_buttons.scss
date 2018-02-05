@@ -1,0 +1,685 @@
+// BUTTONS
+// ====================================================================
+%bt-general__return {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    18px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    width: 325px;
+    height: 55px;
+}
+
+
+// BUTTONS - HEADER
+// ====================================================================
+%bt-header__minicar--empty {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    $bt-font-size, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    width: 200px;
+    height: 50px;
+    line-height: 14px;
+    text-transform: uppercase;
+    
+}
+
+%bt-header__minicar--continue {
+    @include bt-default( $bt-font-family, // Font Family
+    600, // Font Weight			
+    14px, // Font Size	
+    $font-color-2, // Color	
+    $color-white, // BG
+    $color-white, // BG Hover
+    $color-white // BG Active
+    );
+    
+    width: 150px;
+    height: 53px;
+    line-height: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    border:2px solid $font-color-2;
+}
+
+%bt-header__minicar--concluir {
+    @include bt-default( $bt-font-family, // Font Family
+    600, // Font Weight		
+    14px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    width: 150px;
+    height: 53px;
+    line-height: 14px;
+}
+
+// BUTTONS - HOME
+// ====================================================================
+%bt-hproduct__buy {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    14px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    width: 190px;
+    height: 41px;
+    @media (max-width: $mobile-w) {
+        width: 100%;
+    }
+}
+
+%bt-hproduct__quicklook {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    $bt-font-size, // Font Size	
+    $color-white);
+    &:before {
+        line-height: 25px;
+    }
+}
+
+// BUTTONS - CATALOGO
+// ====================================================================
+%bt-catalog__compare {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    $bt-font-size, // Font Size	
+    #FFF, // Color	
+    $color-blue, // BG
+    $color-blue-dark, // BG Hover
+    $color-blue-dark // BG Active
+    );
+    width: 185px;
+    height: 25px;
+    line-height: 14px;
+}
+
+// BUTTONS - PRODUTO
+// ====================================================================
+%bt-prod-buy {
+    @include bt-default( $font-two, // Font Family
+    $bt-font-weight, // Font Weight		
+    22px, // Font Size	
+    #FFF, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    width: 237px;
+    height: 70px;
+}
+
+%bt-prod-notifyme__send {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    $bt-font-size, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    width: 95px;
+    height: 41px;
+}
+
+%bt-prod-combo__buy {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    22px, // Font Size	
+    #FFF, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    padding: 0px 10px;
+    width: 270px;
+    height: 59px;
+    letter-spacing: 0;
+    @include bgimage(ico-button-buy, png);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    padding-left: 45px;
+    &:hover{
+        @include bgimage(ico-button-buy, png);
+        background-repeat: no-repeat;
+        background-position: 15px center;
+    }
+}
+
+// BUTTONS - MODALS
+// ====================================================================
+%bt-modal-default {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    14px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    padding: 5px 10px;
+}
+
+// BUTTONS - QUICKBASKET
+// ====================================================================
+%bt-qkbskt__mais {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    14px, // Font Size	
+    #FFF, // Color	
+    $color-gray-dark, // BG
+    $color-gray-light, // BG Hover
+    $color-gray // BG Active
+    );
+    padding: 5px 10px;
+}
+
+%bt-qkbskt__fechar {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    14px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    padding: 5px 10px;
+}
+
+// BUTTONS - LOOK
+// ====================================================================
+%bt-look__buy {
+    @include bt-default( $bt-font-family, // Font Family
+    600, // Font Weight		
+    22px, // Font Size	
+    #FFF, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    width: 300px;
+    height: 59px;
+    letter-spacing: 0;
+   // @include bgimage(ico-button-buy, png);
+    //background-repeat: no-repeat;
+   //background-position: 172px center;
+   // padding-left: 30px;
+    //&:hover{
+      //  @include bgimage(ico-button-buy, png);
+       // background-repeat: no-repeat;
+       // background-position: 172px center; 
+   // }
+   // @include border-radius(0px);    
+}
+
+%bt-look-notifyme__send {
+    @include box-sizing();
+    @include radiustl(0);
+    @include radiusbl(0);
+    @include radiustr();
+    @include radiusbr();
+    width: 27px;
+    height: 30px;
+    font-size: 0px;
+    float: left;
+    margin-top: 0PX;
+    background: $color-orange;
+    line-height: 21px;
+    border: 0px;
+    &:before {
+        @include set-icon($icon-chevron-right, 19px, 300, $color-white);
+    }
+    &:hover {
+        background: $color-orange-dark;
+    }
+    @media (max-width: $mobile-w) {
+       margin-top: 0px;
+       width: 20%;
+       height: 47px;
+       line-height: 30px;
+    }
+}
+
+// BUTTONS - BASKET
+// ====================================================================
+%bt-basket__fecharPedido {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    16px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    width: 280px;
+    height: 59px;
+    @include bt-before( "Finalizar Compra", $font-two, 600, 18px, #FFF);
+    @include border-radius();
+    text-transform: uppercase;
+    margin-right: 15px;
+    letter-spacing: 1px;
+}
+
+%bt-basket__comprarMais {
+    @include bt-default( $bt-font-family, // Font Family
+    600, // Font Weight		
+    12px, // Font Size	
+    #fff, // Color	
+    #000, // BG
+    #000, // BG Hover
+    #000 // BG Active
+    );
+    width: 278px;
+    height: 53px;
+    border: 0;
+    @include bt-before( "COMPRAR MAIS PRODUTOS", $font-two, 600, 18px, $font-color-2);
+    @include border-radius();
+    margin-left: 15px;
+}
+
+%bt-basket__cep {
+    @include bt-default( $font-two, // Font Family
+    600, // Font Weight		
+    16px, // Font Size	
+    #fff, // Color	
+    #000, // BG
+    #000, // BG Hover
+    #000 // BG Active
+    );
+    border: 2px solid #000;
+    width: 171px;
+    height: 41px;
+}
+
+%bt-basket__coupon {
+    @include bt-default( $font-two, // Font Family
+    600, // Font Weight		
+    16px, // Font Size	
+    #fff, // Color	
+    #000, // BG
+    #000, // BG Hover
+    #000 // BG Active
+    );
+    border: 2px solid #000;
+    width: 171px;
+    height: 41px;
+}
+
+%bt-basket__coupon--cancel {
+    @include bt-default( $font-two, // Font Family
+    600, // Font Weight		
+    16px, // Font Size	
+    $font-color-2, // Color	
+    $color-white, // BG
+    $color-white, // BG Hover
+    $color-white // BG Active
+    );
+    border: 2px solid $font-color-2;
+    width: 171px;
+    height: 41px;;
+}
+
+%bt-mod-cep__sim {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    $bt-font-size, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    width: 55px;
+    height: 35px;
+    text-align: center;
+}
+
+%bt-mod-cep__nao {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    $bt-font-size, // Font Size	
+    $color-white, // Color	
+    $color-gray-dark, // BG
+    $color-gray-light, // BG Hover
+    $color-gray // BG Active
+    );
+    width: 55px;
+    height: 35px;
+    text-align: center;
+}
+
+// BUTTONS - LOGIN
+// ====================================================================
+%bt-login__entrar {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    16px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    height: 34px;
+    width: 150px;
+}
+
+%bt-login__continue {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight	
+    16px, 	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    height: 34px;
+    width: 150px;
+}
+
+// BUTTONS - CADASTRO
+// ====================================================================
+%bt-cad__salvar {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    16px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    padding: 10px 25px;
+}
+
+// BUTTONS - CHECKOUT
+// ====================================================================
+%bt-gift__continue {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    18px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    padding: 10px 25px;
+}
+
+// BUTTONS - WISHLIST
+// ====================================================================
+%bt-wishlist-filter__pesquisar {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    14px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    height: 28px;
+    width: 150px;
+}
+
+%bt-wishlist-box__buy {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    14px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    height: 28px;
+    width: 100px;
+}
+
+%bt-wishlist-coment__save {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    14px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    height: 28px;
+    width: 100px;
+}
+
+// BUTTONS - ENDERECOS
+// ====================================================================
+%bt-enderecos__edit {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    12px, // Font Size	
+    $color-white, // Color	
+    $color-gray, // BG
+    $color-gray-dark, // BG Hover
+    $color-gray-dark // BG Active
+    );
+    width: 145px;
+    height: 40px;
+}
+
+%bt-enderecos__del {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    12px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    width: 145px;
+    height: 40px;
+    &:before {
+        display: none;
+    }
+}
+
+%bt-enderecos__use {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    12px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    width: 145px;
+    height: 40px;
+}
+
+%bt-enderecos__save {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    12px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    height: 40px;
+}
+
+%bt-enderecos__cancel {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    12px, // Font Size	
+    $color-white, // Color	
+    $color-gray, // BG
+    $color-gray-dark, // BG Hover
+    $color-gray-dark // BG Active
+    );
+    line-height: 40px;
+    height: 40px;
+}
+
+// BUTTONS - NEW CHECKOUT
+// ====================================================================
+%bt-opcheck__default {
+    @include radiustl($bt-radius-tl);
+    @include radiustr($bt-radius-tr);
+    @include radiusbl($bt-radius-bl);
+    @include radiusbr($bt-radius-br);
+    border: 0px;
+    background: $font-color-1;
+    font-family: $bt-font-family;
+    font-size: $bt-font-size;
+    color: #fff;
+    font-weight: $bt-font-weight;
+    &:hover,
+    &:active {
+        background: $font-color-1-dark;
+    }
+
+}
+
+%bt-opcheck__alt {
+    @include radiustl($bt-radius-tl);
+    @include radiustr($bt-radius-tr);
+    @include radiusbl($bt-radius-bl);
+    @include radiusbr($bt-radius-br);
+    border: 0px;
+    background: $color-gray-light;
+    font-family: $bt-font-family;
+    font-size: $bt-font-size;
+    color: $bt-font-color;
+    font-weight: $bt-font-weight;
+    &:hover,
+    &:active {
+        background: $color-gray-dark;
+    }
+}
+
+%bt-opcheck__imprimir {
+    @include radiustl($bt-radius-tl);
+    @include radiustr($bt-radius-tr);
+    @include radiusbl($bt-radius-bl);
+    @include radiusbr($bt-radius-br);
+    border: 0px;
+    background: $bt-bg-main;
+    &:hover,
+    &:active {
+        background: $bt-bg-main-hover;
+    }
+    a {
+        font-family: $bt-font-family;
+        font-size: $bt-font-size;
+        color: $bt-font-color;
+        font-weight: $bt-font-weight;
+    }
+}
+
+// BUTTONS - PEDIDOS
+// ====================================================================
+%bt-pedidos__enviar {
+    @include radiustl($bt-radius-tl);
+    @include radiustr($bt-radius-tr);
+    @include radiusbl($bt-radius-bl);
+    @include radiusbr($bt-radius-br);
+    border: 0px;
+    background: $bt-bg-main;
+    font-family: $bt-font-family;
+    font-size: $bt-font-size;
+    color: $bt-font-color;
+    font-weight: $bt-font-weight;
+    &:hover,
+    &:active {
+        background: $bt-bg-main-active;
+    }
+}
+
+%bt-meupedido__imprimir {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    18px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    width: 325px;
+    height: 55px;
+}
+
+// BUTTONS - AFILIADOS
+// ====================================================================
+%bt-afiliado__cadastro--salvar {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    18px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    padding: 10px 25px;
+}
+
+%bt-afiliado__reports--pesquisar {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    18px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    padding: 0px 25px;
+}
+
+// BUTTONS - CONTATO
+// ====================================================================
+%bt-contato__enviar {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    16px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    padding: 10px 25px;
+}
+
+// BUTTONS - CONTA CORRENTE
+// ====================================================================
+%bt-contacorrente__pesqusiar {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    18px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    padding: 10px 25px;
+}
+
+
+// BUTTONS - MEUS CARTÕES
+// ====================================================================
+%bt-meuscartoes {
+    @include bt-default( $bt-font-family, // Font Family
+    $bt-font-weight, // Font Weight		
+    18px, // Font Size	
+    $color-white, // Color	
+    $font-color-2, // BG
+    $font-color-2-light, // BG Hover
+    $font-color-2-light // BG Active
+    );
+    padding: 10px 25px;
+}

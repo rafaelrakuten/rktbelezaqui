@@ -1,0 +1,87 @@
+// PAGE - INSTITUCIONAL - COMPONENTS
+// ====================================================================
+%central-boxes{
+	.nav .box{
+		@include border-radius(0px);
+		background: #FFF;
+		border:none;
+		border-left: 1px solid #efecec;
+	}
+	.nav .box.even{
+		background: #f7f7f7;
+	}	
+}
+%central-boxes__titles{
+	.nav h2{
+		@extend %text-heading-font;
+		color:$color-blue;
+		font-size: 26px;
+	}
+}
+%central-boxes__links{
+	.nav li a{
+		@extend %text-check-link-default;
+		&:hover{
+			font-weight: bold;
+			color:$color-blue-light;
+			text-decoration: none;
+		}
+	}
+	.nav li.televendas{
+		@extend %text-check-link-default;
+	}
+}
+%central-boxes__span{
+	.nav li > span{
+		@extend %text-check-text-default;
+		font-weight: 600;
+	}
+}
+%central-boxes__form{
+	.contactsTitle + .text{
+		padding:25px;
+		.form.box{
+			padding:0;
+			.field{
+				float:left;
+				width:60%;
+				@include box-sizing();
+				label{
+					width:100%;
+					float:left;
+					> span{
+						float:left;
+						width:100%;
+						display:inline-block;
+						text-align:left;
+						span{
+							padding:4px;
+						}
+					}
+				}
+				textarea, input, select{
+					width:100%;
+				}
+				.validacao{
+					float:left;
+					width:100%;
+					position: relative;
+				}
+			}
+			.actions{
+				width:60%;
+				float:left;
+			}
+		}
+	}
+}
+
+// PAGE - INSTITUCIONAL - CALLS
+// ====================================================================
+body.institucional{
+	@extend %central-boxes;
+	@extend %central-boxes__titles;
+	@extend %central-boxes__links;
+	@extend %central-boxes__span;
+	@extend %central-boxes__form;
+}

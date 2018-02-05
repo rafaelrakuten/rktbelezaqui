@@ -1,0 +1,99 @@
+// HISTORY - COMPONENTS
+// ====================================================================
+%history-containers {
+    &.history{
+        width: 100%;
+        float: left;
+        padding-top: 10px;
+        .title span{
+            font-size: 28px !important;
+            &:before{
+                
+            }
+        }
+    }
+    .list-products {
+        margin-top: 40px;
+        .owl-buttons {
+            top: -40px !important;
+        }
+        li{
+            width:auto;
+        }
+    }
+}
+
+%history-hproduct {
+    .hproduct {
+        width: $ft-thumb-w;
+        &:hover {
+            @include box-shadow(1px, 1px, 5px, #CCC, false);
+        }
+        .offers {
+            @include flexbox(flex, row, wrap, space-around);
+            .percent-a-vista {
+                width: 100%;
+            }
+        }
+    }
+}
+
+%history-hproduct__photo {
+    .photo {
+        @include box-sizing();
+        width: $ft-thumb-w;
+        height: $ft-thumb-h;
+    }
+}
+
+%history-hproduct__priceFrom {
+    .regular {
+        @extend %text-hprod-price-from;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        em {
+            @if $hprod-hidden-price-from-em-tag==true {
+                display: none;
+            }
+            @else {
+                text-decoration: none;
+            }
+        }
+        line-height: 20px;
+        text-align: center;
+    }
+}
+
+%history-hproduct__priceSale {
+    .sale {
+        strong {
+            @extend %text-hprod-price-sale;
+        }
+        em {
+            @if $hprod-hidden-price-sale-em-tag==true {
+                display: none;
+            }
+        }
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+// HISTORY - CALLS
+// ====================================================================
+#divHistoricoNavegacao {
+    @extend %history-containers;
+    @extend %history-hproduct;
+    @extend %history-hproduct__photo;
+    @extend %helper-hproduct__btQuicklook;
+    @extend %helper-hproduct__name;
+    @extend %history-hproduct__priceFrom;
+    @extend %history-hproduct__priceSale;
+    @extend %helper-hproduct__parcel;
+    @extend %helper-hproduct__stamp;
+    @extend %helper-hproduct__reviewaggregate;
+    @extend %helper-hproduct__buy;
+}

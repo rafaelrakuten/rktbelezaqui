@@ -1,0 +1,75 @@
+// PAGE - BUSCA PEDIDOS - COMPONENTS
+// ====================================================================
+%pedidos-request {
+    .request span {
+        @extend %text-check-text-default;
+    }
+    .number strong {
+        @extend %text-check-pedido-number;
+    }
+    .request .description {
+         @extend %text-check-link-default;
+    }
+}
+
+%pedidos-box {
+    #panCentro  {
+
+        
+
+        .field{
+            label{
+                float:left;
+            }
+
+            &.search-number{
+                input[type="text"]{
+                    width:212px;
+                    margin-top:0;
+                }
+            }
+
+            &.search-date{
+                .date{
+                    span{
+                        margin-top:8px;
+                    }
+                }
+            }
+
+            input[type="text"],input[type="tel"], input[type="password"], select{
+                height:30px;
+                line-height:30px;
+            }
+        }
+        .actions a {
+            @extend %bt-pedidos__enviar;
+        }
+    }
+}
+
+%pedidos-result {
+    .result {
+        table th span {
+            @extend %text-check-text-default;
+        }
+        table td {
+			@extend %text-check-text-default;
+        }
+        table td a {
+            @extend %text-check-text-default;
+        }
+    }
+}
+
+// PAGE - BUSCA PEDIDOS - CALLS
+// ====================================================================
+body.search {
+    .main-content {
+        width: 980px;
+        margin: 0px auto;
+    }
+    @extend %pedidos-request;
+    @extend %pedidos-box;
+    @extend %pedidos-result;
+}

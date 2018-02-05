@@ -1,0 +1,141 @@
+// PAGE - MEU PEDIDO - COMPONENTS
+// ====================================================================
+%meupedido-request {
+    #main .request span,
+    #main .request .collum .info .title strong {
+        @extend %text-check-text-default;
+    }
+    #main .request .collum .info .number strong {
+        @extend %text-check-pedido-number;
+    }
+    #main .request .collum .info a.description {
+        @extend %text-check-link-default;
+    }
+    #main .internal .return .buy{
+        width: 85%;
+    }
+}
+
+%meupedido-box {
+    .box {}
+    #main .box .form .actions .btn {
+        @extend %bt-pedidos__enviar;
+    }
+}
+
+%meupedido-bt {
+    .request .collum .info .actions a {
+        @extend %bt-meupedido__imprimir;
+        margin: 0px auto;
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+%meupedido-basket {
+    .basket tr {
+        td {
+            background: #FFF;
+        }
+        .product {
+            padding: 10px;
+        }
+        .quantity,
+        .present {
+            @extend %text-check-text-default;
+        }
+    }
+}
+
+%meupedido-basket__details {
+    .basket .details {
+        .name {
+            margin-top: 20px;
+            @extend %text-basket-desc-name;
+        }
+        .cod,
+        .brand {
+            @extend %text-basket-desc-cod;
+        }
+        .skus {
+            margin-top: 10px;
+            @extend %text-basket-desc-sku;
+        }
+    }
+}
+
+%meupedido-basket__unit {
+    .basket {
+        .unit-value {
+            border-bottom: $basket-border;
+            .regular {
+				@extend %text-basket-valor-unit-de;
+            }
+            .sale {
+                @extend %text-basket-valor-unit-por;
+            }
+        }
+    }
+}
+
+%meupedido-basket__subtotal {
+    .basket {
+        .subtotal {
+            border-bottom: $basket-border;
+            border-right: $basket-border;
+            .regular {
+                @extend %text-basket-valor-subtotal-de;
+            }
+            .sale {
+                @extend %text-basket-valor-subtotal-por;
+            }
+        }
+    }
+}
+
+%meupedido-basket__results {
+    tbody .info {
+        td:first-child {
+            @extend %text-basket-tfoot-title;
+        }
+        td:last-child {
+            @extend %text-basket-tfoot-subtotal;
+        }
+    }
+}
+
+%meupedido-basket__totais {
+    tbody .info:last-child {
+        td:first-child {
+            @extend %text-basket-total-title;
+            &:first-letter {
+                text-transform: uppercase;
+            }
+        }
+        td:last-child {
+			@extend %text-basket-total-value;
+        }
+    }
+}
+
+
+
+// PAGE - MEU PEDIDO - CALLS
+// ====================================================================
+body.meuspedidos {
+    @extend %meupedido-request;
+    @extend %meupedido-box;
+    @extend %meupedido-bt;
+    @extend %meupedido-basket;
+    @extend %meupedido-basket__details;
+    @extend %meupedido-basket__unit;
+    @extend %meupedido-basket__subtotal;
+    @extend %meupedido-basket__results;
+    @extend %meupedido-basket__totais;
+    
+
+    .textoNormal{
+        padding: 20px;
+        text-align: center; 
+    }
+}

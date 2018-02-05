@@ -1,0 +1,18 @@
+// PAGE - CADASTRO - COMPONENTS
+// ====================================================================
+%cad-bt__salvar{
+	#formcadastro_btnSalvar{
+		@extend %bt-cad__salvar;
+	}
+}
+
+// PAGE - CALLS - CALLS
+// ====================================================================
+body.register{
+	.atention{
+		display: block;
+		padding: 20px 10px;
+		color: #a00;
+	}
+	@extend %cad-bt__salvar;
+}

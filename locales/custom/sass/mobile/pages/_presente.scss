@@ -1,0 +1,30 @@
+// PAGE - PRESENTE - COMPONENTS
+// ====================================================================
+%gift-box__details {
+    .details {
+        .name {
+            margin-top: 20px;
+            @extend %text-basket-desc-name;
+        }
+        .form {
+            @extend %text-basket-desc-cod;
+        }
+        .skus {
+            margin-top: 10px;
+            @extend %text-basket-desc-sku;
+        }
+    }
+}
+
+%gift-button__continue {
+    #lnkSave {
+        @extend %bt-gift__continue;
+    }
+}
+
+// PAGE - PRESENTE - COMPONENTS
+// ====================================================================
+body.checkout {
+    @extend %gift-box__details;
+    @extend %gift-button__continue;
+}

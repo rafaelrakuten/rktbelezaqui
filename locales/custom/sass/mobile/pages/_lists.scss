@@ -1,0 +1,50 @@
+// PAGE - LISTAS - COMPONENTS
+// ====================================================================
+%mylists-containers{
+    &.my-lists{
+        #main .container{
+            width: 980px;
+        }
+       h2 a{
+           color: $color-blue;
+       }
+        .quantity a{
+            color: $color-black;
+        }
+    }
+}
+%lists-boxes {
+    .list-occasions,
+    .create-list,
+    .main-content {
+        .box {
+            background: #FFF;
+        }
+    }
+}
+
+%list-boxes__titles {
+    .list-occasions fieldset > .title,
+    &.my-lists fieldset > .title {
+        @include fonte( $modal-title-font-family, $modal-title-font-weight, $modal-title-font-size, $modal-title-font-color);
+        text-transform: $modal-title-font-transform;
+    }
+}
+
+%lis-boxes__buttons{
+    .list-occasions .btn.ir,
+    #btnAvancar.btn.ir,
+    .actions #btnSalvar{
+        @include bt-default();
+        padding: 10px;
+    }
+}
+
+// PAGE - NEW CHECKOUT - CALLS
+// ====================================================================
+body {
+    @extend %mylists-containers;
+    @extend %lists-boxes;
+    @extend %list-boxes__titles;
+    @extend %lis-boxes__buttons;
+}

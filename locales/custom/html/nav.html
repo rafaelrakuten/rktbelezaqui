@@ -1,0 +1,50 @@
+@model HeadBaseModel
+<ul id="nav">
+    @foreach (var father in Model.Categories)
+    {
+        <li><a href="@Url(father.Link)">@father.Name</a>
+            @if (father.Children.Count > 0)
+            {
+                <div class="sub-nav">
+                    <div class="cont-sub-nav">
+                        @foreach (var childColumn in father.Children)
+                        {
+                            
+                            <div class="collum">
+                                @if (childColumn.Value.Count > 0)
+                                {
+                                    <ul>
+                                        @foreach (var child in childColumn.Value)
+                                        {
+                                            <li><a href="@Url(child.Link)">@child.Name</a> </li>
+                                        }
+                                    </ul>
+                                }
+                            </div>
+
+                        }
+                        @if (!IsEmpty(father.ImageUrl)) {
+                        <div class="collum imagem">
+                            <a href="@Url(father.ImageLink)">
+                                <img src="@Url(father.ImageUrl)">
+                            </a>
+                        </div>
+                        }
+                    </div>
+                </div>
+            }
+            else if (!IsEmpty(father.ImageUrl))
+            {
+                <div class="sub-nav">
+                    <div class="cont-sub-nav">
+                        <div class="collum imagem">
+                            <a href="@Url(father.ImageLink)">
+                                <img src="@Url(father.ImageUrl)">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </li>
+    }
+</ul>

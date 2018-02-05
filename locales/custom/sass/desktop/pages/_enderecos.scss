@@ -1,0 +1,72 @@
+// PAGE - ENDERECOS - COMPONENTS
+// ====================================================================
+%enderecos-container {
+    #main .container {
+        margin-top: 20px;
+        width: 980px !important;
+        .delivery-opt{
+            margin: 0px;
+        }
+        .field .phone{
+            .number[type="tel"]{
+                width: 100px !important;
+            }
+        }
+        .form fieldset{
+            padding: 20px;
+        }
+    }
+}
+
+%enderecos-info {
+    .adr span {
+        @extend %text-check-text-default;
+    }
+    .adr span strong {
+        @extend %text-check-text-default-strong;
+    }
+}
+
+%enderecos-bts__edit {
+    .btn.ir.edit {
+        @extend %bt-enderecos__edit;
+    }
+}
+
+%enderecos-bts__use {
+    .btn.ir.use {
+        @extend %bt-enderecos__use;
+    }
+}
+
+%enderecos-bts__del {
+    .btn.ir.delete {
+        @extend %bt-enderecos__del;
+    }
+}
+
+%enderecos-bts__cancel {
+    #p_LimparEndereco {
+        @extend %bt-enderecos__cancel;
+        left: 250px;
+    }
+}
+
+%enderecos-bts__save {
+    #hypSalvar {
+        @extend %bt-enderecos__save;
+        line-height: 40px;
+    }
+}
+
+// PAGE - ENDERECOS - CALLS
+// ====================================================================
+body.delivery-address {
+    @extend %enderecos-container;
+    @extend %enderecos-info;
+    @extend %enderecos-bts__edit;
+    @extend %enderecos-bts__use;
+    @extend %enderecos-bts__del;
+    @extend %enderecos-bts__cancel;
+    @extend %enderecos-bts__save;
+}

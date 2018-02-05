@@ -1,0 +1,47 @@
+// PAGE - INSTITUCIONAL - COMPONENTS
+// ====================================================================
+%central-boxes__titles {
+    .nav>ul .box h2,
+    .nav .block .title {
+        @extend %text-heading-font;
+    }
+}
+
+%central-boxes__links {
+    .nav>ul .box ul li a {
+        @extend %text-check-link-default;
+		&:hover{
+			font-weight: bold;
+		}
+        &:before {
+            color: $color-black;
+        }
+    }
+}
+
+%central-boxes__span {
+    .nav li>span {
+        @extend %text-check-text-default;
+    }
+}
+
+%central-campos{
+    .form .field label{
+        input[type="text"], select, textarea{
+            @include border-radius(0);
+            border: 1px solid #ccc;
+        } 
+    } 
+    .text .actions .btn{
+        @include border-radius(0);
+    }
+}
+
+// PAGE - INSTITUCIONAL - CALLS
+// ====================================================================
+body.institucional {
+    @extend %central-boxes__titles;
+    @extend %central-boxes__links;
+    @extend %central-boxes__span;
+    @extend %central-campos;
+}

@@ -1,0 +1,69 @@
+// PAGE - AFILIADOS - COMPONENTS
+// ====================================================================
+%afiliado-boxes {
+    &.affiliates  .atention + .form{
+        float:left;
+        width:100%;
+        max-width:600px;
+    }
+
+    &.affiliates .box {
+        background: #fff;
+        margin-top: 10px;
+        .field{
+            float:left;
+            width:100%;
+            height: auto;
+            label{
+                span{
+                    text-align:left;
+                }
+                input{
+                    margin-left:0;
+                    &.cpf[type="text"], 
+                    &.cep[type="text"], 
+                    &.cpf[type="tel"], 
+                    &.rg[type="text"], 
+                    &.rg[type="tel"] {
+                        width:100%;
+                        max-width:200px;
+                        text-align:center;
+                    }
+                }
+            }
+        }
+    }
+    &.affiliates .box.even {
+        background: #f6f6f6;
+    }
+    &.affiliates.register #main .container {
+        width: 980px;
+        margin: 0px auto;
+    }
+}
+
+%afiliados-titles {
+    &.affiliates .form .title {
+        @extend %text-heading-font;
+        @include remove-textshadow();
+    }
+}
+
+%afiliados-buttons {
+    &.affiliates .btn.ir.save {
+        @extend %bt-afiliado__cadastro--salvar;
+    }
+    .reports .btn.ir.search {
+        @extend %bt-afiliado__reports--pesquisar;
+        height: 27px;
+        width: auto;
+    }
+}
+
+// PAGE - CALLS - CALLS
+// ====================================================================
+body {
+    @extend %afiliado-boxes;
+    @extend %afiliados-titles;
+    @extend %afiliados-buttons;
+}

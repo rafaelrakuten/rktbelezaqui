@@ -1,0 +1,99 @@
+// PAGE - LOGIN e PARTNER - COMPONENTS
+// ====================================================================
+
+%login-form{
+    .form.login{    opacity:1;
+        .collum.box{
+            dl{
+                a{
+                    color:#6d6e70;
+                }
+                .change {
+                    display:inline-block;
+                    text-transform:none;
+                    color:#6d6e70;
+                }
+            }
+        }
+    }
+}
+%login-titles {
+    .form .title {
+        @extend %text-check-title-h1;
+    }
+}
+
+%login-field {
+    .form .field {
+        span{
+			@extend %text-check-text-default;
+		}
+		input{
+            @extend %text-check-text-default;
+            @include border-radius(0);
+        }   
+        .btn{
+            @include border-radius(0);
+        }     
+    }
+    .form .collum fieldset .field label input{
+        @include border-radius(0);
+    }
+}
+
+%login-link-remember {
+    .remember,
+    .change,
+    .field+p {
+		@extend %text-login-link-default;
+    }
+}
+
+%login-info {  
+    .info-login {
+        @extend %text-check-text-default;
+    }
+}
+
+%login-bt__enter {
+    .login .enter {
+        @extend %bt-login__entrar;
+    }
+}
+
+%login-bt__continue {
+    .login .continue {
+        @extend %bt-login__continue;
+    }
+}
+
+%partner-box {
+    .box {
+        background: #FFF;
+    }
+}
+
+%partner-button--enter {
+    #enter {
+        @extend %bt-login__entrar;
+        margin-right: 5px;
+    }
+}
+
+// PAGE - LOGIN e PARTNER- CALLS
+// ====================================================================
+body.loginpage {
+    @extend %login-form;
+    @extend %login-titles;
+    @extend %login-field;
+    @extend %login-link-remember;
+    @extend %login-info;
+    @extend %login-bt__enter;
+    @extend %login-bt__continue;
+}
+
+body.partner {
+    @extend %partner-box;
+    @extend %login-titles;
+    @extend %partner-button--enter;
+}

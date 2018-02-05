@@ -1,0 +1,132 @@
+// QUICKBASKET - COMPONENTS
+// ====================================================================
+%qbskt-container {
+    .item {
+        width: 450px;
+        @media (max-width: $mobile-w) {
+            width: auto;
+            ul{
+                float: left;
+            }
+        }
+    }
+    .resumo{
+        @media (max-width: $mobile-w) {
+            float: left;
+        }
+    }
+}
+
+%qbskt-title {
+    .item .title,
+    .resumo .title,
+    .section h2 {
+        @extend %text-qbskt-title;
+        @include remove-textshadow();
+    }
+}
+
+%qbskt-details__name {
+    .name {
+        @extend %text-prod-name;
+        text-align: left;
+    }
+}
+
+%qbskt-details__fabcod {
+    .name+li,
+    .name+li+li {
+        @extend %text-prod-fab-cod;
+        text-align: left;
+    }
+}
+
+%qbskt-details__price {
+    .item .price {
+		span{
+			text-transform: capitalize;
+		}
+        span:first-of-type {
+            @extend %text-prod-regular;
+		}
+		span:last-of-type{
+			@extend %text-prod-sale;
+		}
+    }
+}
+
+%qbskt-resumo__subtotal {
+    .subtotal {
+        background: #FFF;
+        border: 1px solid #000;
+        strong {
+            @extend %text-qbskt-subtotal;
+        }
+    }
+}
+
+%qbskt-resumo__buttons {
+    .actions .fl a {
+        @extend %bt-qkbskt__mais;
+    }
+    .actions .fr a {
+        @extend %bt-qkbskt__fechar;
+    }
+}
+
+%qbskt-quem-comprou {
+    .section {
+        .details {
+            text-align: center;
+            .name {
+                @extend %text-hprod-name;
+                text-align: center;
+            }
+        }
+        .offers {
+            .regular {
+                @extend %text-hprod-price-from;
+                text-align: center;
+                em {
+                    @if $hprod-hidden-price-from-em-tag==true {
+                        display: none;
+                    }
+                }
+            }
+            .sale {
+                @extend %text-hprod-price-sale;
+                text-align: center;
+                em {
+                    @if $hprod-hidden-price-sale-em-tag==true {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .parcel {
+            @extend %text-hprod-parcel;
+            text-align: $hprod-cont-align;
+            strong {
+                @extend %text-hprod-parcel-strong;
+            }
+            b {
+                @if $hprod-hidden-parcel-b-tag==true {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// QUICKBASKET - CALLS
+// ====================================================================
+body.quickBasquet {
+    @extend %qbskt-container;
+    @extend %qbskt-title;
+    @extend %qbskt-details__name;
+    @extend %qbskt-details__fabcod;
+    @extend %qbskt-details__price;
+    @extend %qbskt-resumo__subtotal;
+    @extend %qbskt-resumo__buttons;
+    @extend %qbskt-quem-comprou;
+}

@@ -1,0 +1,37 @@
+// PAGE - AFILIADOS - COMPONENTS
+// ====================================================================
+%afiliado-boxes {
+    &.affiliates  .atention .form{
+        float:left;
+        width:100%;
+    }
+    &.affiliates .box {
+        background: #fff;
+    }
+    &.affiliates .box.even {
+        background: #f6f6f6;
+    }
+}
+
+%afiliados-titles {
+    &.affiliates .form .title {
+        @extend %text-heading-font;
+    }
+}
+
+%afiliados-buttons {
+    &.affiliates .btn.ir.save {
+        @extend %bt-afiliado__cadastro--salvar;
+    }
+    .reports .btn.ir.search {
+        @extend %bt-afiliado__reports--pesquisar;
+    }
+}
+
+// PAGE - CALLS - CALLS
+// ====================================================================
+body {
+    @extend %afiliado-boxes;
+    @extend %afiliados-titles;
+    @extend %afiliados-buttons;
+}

@@ -1,0 +1,51 @@
+// PAGE - BUSCA PEDIDOS - COMPONENTS
+// ====================================================================
+%pedidos-request {
+    #main #panCentro .request span,
+    #panCentro .request .collum .info .title strong {
+        @extend %text-check-text-default;
+    }
+    #panCentro .request .collum .info .number strong {
+        @extend %text-check-pedido-number;
+    }
+    #panCentro .request .collum .info a.description {
+        @extend %text-check-link-default;
+    }
+}
+
+%pedidos-box {
+    .box {}
+    #panCentro .box .form .actions .btn {
+        @extend %bt-pedidos__enviar;
+    }
+}
+
+%pedidos-result {
+     #panNenhumPedido.internal .return{
+        position: inherit;
+    }
+    #panCentro .result {
+        text-align: center;
+        color: #000;
+        padding-bottom: 10px;
+        .box table tr td::before {
+            @extend %text-check-text-default;
+        }
+        table td {
+            @extend %text-check-text-default;
+        }
+        table td a {
+            @extend %text-check-text-default;
+        }
+    }
+}
+
+
+// PAGE - BUSCA PEDIDOS - CALLS
+// ====================================================================
+body.search {
+    @extend %pedidos-request;
+    @extend %pedidos-box;
+    @extend %pedidos-result;
+
+}

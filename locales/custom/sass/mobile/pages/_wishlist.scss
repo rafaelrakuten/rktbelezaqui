@@ -1,0 +1,309 @@
+﻿// PAGE - WISHLIST - COMPONENTS
+// ====================================================================
+%wishlist-filter {
+    .filter-wish .field .btn {
+        @extend %bt-wishlist-filter__pesquisar;
+        width: 100%;
+    }
+    &:not(.institucional) .aside .block a::before {
+        color: $color-blue-dark;
+    }
+    &:not(.institucional) .aside .block a,
+    &:not(.institucional) .catalog-filters .block a, 
+    &:not(.institucional) .catalog-filters .content-filters .horizontal-list a, 
+    &:not(.institucional) .aside .block span, 
+    &:not(.institucional) .catalog-filters .block span, 
+    &:not(.institucional) .catalog-filters .content-filters .horizontal-list span{
+        font-size:16px;
+    }
+    &:not(.institucional) .aside .block a:before, 
+    &:not(.institucional) .catalog-filters .block a:before, 
+    &:not(.institucional) .catalog-filters .content-filters .horizontal-list a:before, 
+    &:not(.institucional) .aside .block span:before, 
+    &:not(.institucional) .catalog-filters .block span:before, 
+    &:not(.institucional) .catalog-filters .content-filters .horizontal-list span:before{
+        display: none;
+    }
+    &:not(.institucional) .aside .block .title:after,
+    &:not(.institucional) .catalog-filters .block .title:after, 
+    &:not(.institucional) .catalog-filters .content-filters .horizontal-list .title:after, 
+    &:not(.institucional) .catalog-filters .content-filters .horizontal-list li .spnFiltro:after{
+        position: relative;
+        bottom: 0;
+    }
+    &:not(.institucional) .aside .block ul>li, 
+    &:not(.institucional) .catalog-filters .block ul>li, 
+    &:not(.institucional) .catalog-filters .content-filters .horizontal-list ul>li{
+        border:none;
+    }
+    #main #divFilters .type, 
+    #main #divFilters .item, 
+    #main #divSelectedFiltersLooks .type,
+    #main #divSelectedFiltersLooks .item, 
+    #main .block li .sub, 
+    #main .block a {
+        font-size: 13px;
+        font-weight: 700;
+        color: #6d6e70;
+    }
+    #main .block li li a{
+        font-weight: 400;
+    }
+}
+
+%wishlist-figure {
+    .figure {
+        margin-bottom: 10px;
+    }
+}
+
+%wishlist-info {
+    .list-products.desired-products li .details {
+        .name {
+			@extend %text-basket-desc-name;
+        }
+        .cod {
+            @extend %text-basket-desc-cod;
+        }
+        .stamp {
+            a {
+                display: inline-block;
+                clear: none;
+                float: none;
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+            >a>span {
+                width: 100%;
+                text-align: left;
+                >img {
+                    display: inline-block;
+                }
+            }
+        }
+        .skus {
+            margin-top: 10px;
+            @extend %text-basket-desc-sku;
+        }
+        .reviewaggregate {
+            width: 90px;
+            position: relative;
+            left: -10px;
+            .lnkAvaliacao {
+                width: 90px;
+            }
+            .count {
+                @extend %text-prod-ratting-font;
+            }
+        }
+    }
+}
+
+%wishlist-details {
+    .list-products.desired-products li .details.box {
+        @include box-sizing();
+        @include clearfix();
+        @include border-radius(3px);
+        background: #FFF !important;
+        border: 1px solid #d4d4d4;
+        .btn.ir.buy {
+            @extend %bt-wishlist-box__buy;            
+            margin: 10px auto;
+        }
+    }
+}
+
+%wishlist-details__added {
+    .list-products.desired-products li .details.box {
+        .added,
+        .situation {
+			@extend %text-check-text-default;
+            strong {
+                @extend %text-check-text-default;
+            }
+            a {
+                @extend %text-check-text-default;
+            }
+        }
+    }
+}
+
+%wishlist-details__offers {
+    .list-products.desired-products li .details.box {
+        .offers {
+            .regular {
+                @if $hprod-hidden-price-from-em-tag==true {
+                    font-size: 0px;
+                }
+                del {
+                    @extend %text-hprod-price-from;
+                }
+            }
+            .sale {
+                @if $hprod-hidden-price-sale-em-tag==true {
+                    font-size: 0px;
+                } @else {}
+                strong {
+                    @extend %text-hprod-price-sale;
+                }
+            }
+            .price.sale.preco-avista.percent-a-vista{
+                font-size: 12px; 
+                color:$color-gray;
+                font-family: $font-one;
+                strong, em{
+                    font-family: $font-one;
+                    color: $color-blue;
+                    font-weight: 600; 
+                    font-size: 12px;
+                    font-style: initial;
+                }
+            }
+        }
+    }
+}
+
+%wishlist-details__parcel {
+    .list-products.desired-products li .details.box {
+        .parcel {
+            @extend %text-hprod-parcel;
+            strong {
+                @extend %text-hprod-parcel-strong;
+            }
+            b {
+                @if $hprod-hidden-parcel-b-tag==true {
+                    display: none;
+                } @else {}
+            }
+        }
+    }
+}
+
+// %wishlist-details__notifyme {
+//     .list-products.desired-products li .details.box .notifyme {
+//         >span>strong {
+//             font-size: 0px;
+//             &:after {
+//                 content: "Indisponível";
+//                 @extend %text-prod-notifyme-strong;
+//             }
+//         }
+//         >label>input {
+//             width: 100% !important;
+//         }
+//         >label>span {
+//             font-size: 0px;
+//             &:after {
+//                 content: "Avise-me quando chegar";
+//                 @extend %text-prod-notifyme-label;
+//             }
+//         }
+//         .btn.send.ir {
+//             @extend %bt-prod-notifyme__send;
+//             @include border-radius(0);
+//             width: 100%;
+//         }
+//     }
+//     .sucess2{
+//         @include fonte($font-one, 600, 12px, #44a521);
+//         text-align: center;
+//     }
+//     .message{
+//         margin: 0 auto;
+//         @include fonte($font-one, 600, 12px, $color-red-dark);
+//     }
+// }
+
+%wishlist-details__notifyme {
+    .desired-products .details .notifyme {
+        >span{
+            //font-family: $font-one;
+            font-size: 0px !important;
+            // font-weight: 400;
+            // color: #5a5a5a !important;
+            // text-transform:none !important;
+            // margin: 0 0 5px;
+            >strong {
+                font-family: $font-one;
+                font-size: 14px;
+                font-weight: 700;
+                color: #5a5a5a;
+                text-transform: uppercase;
+                display: block;
+                font-size:0;
+                &:before{
+                    content:'Indisponível ';
+                    color:$font-color-2;
+                    font-size:16px;
+                }
+            }
+        }
+
+        input[type="text"] {
+            @include box-sizing();
+            width: 100% !important;
+            height: 41px;
+            line-height: 41px;
+            padding: 0px 8px;
+            margin-right: 0px;
+            font-family: $font-one;
+            margin: 0 5px 0 0;
+            border-radius:4px;
+            font-size: 12px;
+            border-color: #ccc !important;
+        }
+        .btn.send.ir {
+            @extend %bt-prod-notifyme__send;
+            margin-left: 0px;
+            margin-top: 0px;
+            float: left !important;
+            width:100%;
+        }
+        .sucess2{
+            @include fonte($font-one, 600, 12px, #44a521);
+            text-align: center;
+        }
+        .message{
+            margin: 0 auto;
+            @include fonte($font-one, 600, 12px, $color-red-dark);
+        }
+    }
+}
+
+
+%wishlist-coment {
+    .desired-products .actions .btn.ir.save {
+        @extend %bt-wishlist-coment__save;
+        @include border-radius(0);
+        width: 100%;
+    }
+}
+
+%button-return{
+    #main .internal .return .buy{
+        width: 100%;
+    }
+
+    #main .internal{
+        width: 100%;
+        .return{
+            position: inherit
+        }
+    }
+    
+}
+
+// PAGE - WISHLIST - CALLS
+// ====================================================================
+body {
+    @extend %wishlist-filter;
+    @extend %wishlist-figure;
+    @extend %wishlist-info;
+    @extend %wishlist-details;
+    @extend %wishlist-details__added;
+    @extend %wishlist-details__offers;
+    @extend %wishlist-details__parcel;
+    @extend %wishlist-details__notifyme;
+    @extend %wishlist-coment;
+    @extend %button-return;
+}

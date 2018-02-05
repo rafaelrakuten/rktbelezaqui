@@ -1,0 +1,107 @@
+// PAGE - COMPARE - COMPONENTS
+// ====================================================================
+%compare-boxes {
+    .box {
+        background: #FFF;
+    }
+    .compare .even .legend,
+    .compare .even .product {
+        background: #FFF;
+    }
+}
+
+%compare-photo {
+    .compare .figure img {
+        width: auto;
+        height: auto;
+    }
+}
+
+%compare-name {
+    .compare .details .name {
+        @extend %text-hprod-name;
+        text-align: $hprod-cont-align;
+    }
+}
+
+%compare-priceFrom {
+    .compare .regular {
+        @extend %text-hprod-price-from;
+        em {
+            @if $hprod-hidden-price-from-em-tag==true {
+                display: none;
+            }
+            @else {}
+        }
+        display: inline-block;
+        width: auto;
+        line-height: 16px;
+    }
+}
+
+%compare-priceSale {
+    .compare .sale {
+        @extend %text-hprod-price-sale;
+        text-align: center;
+        strong {
+            @extend %text-hprod-price-sale;
+            text-align: center;
+        }
+        em {
+			text-transform: capitalize;
+            @if $hprod-hidden-price-sale-em-tag==true {
+                display: none;
+            }
+            @else {}
+        }
+        display: inline-block;
+        width: auto;
+    }
+}
+
+%compare-parcel {
+    .compare .parcel {
+        @extend %text-hprod-parcel;
+        text-align: $hprod-cont-align;
+        strong {
+            @extend %text-hprod-parcel-strong;
+        }
+        b {
+            @if $hprod-hidden-parcel-b-tag==true {
+                display: none;
+            }
+            @else {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+%compare-percentavista {
+    #spanPrecoAVista {
+        @extend %text-hprod-desconto-a-vista;
+        strong {
+            @extend %text-hprod-desconto-a-vista-strong;
+        }
+    }
+}
+
+%compare-buttom {
+    .btn.ir.delete {
+        @extend %bt-catalog__compare;
+        font-size: 12px;
+    }
+}
+
+// PAGE - COMPARE - CALLS
+// ====================================================================
+body.comparepage {
+    @extend %compare-boxes;
+    @extend %compare-photo;
+    @extend %compare-name;
+    @extend %compare-priceFrom;
+    @extend %compare-priceSale;
+	@extend %compare-parcel;
+	@extend %compare-percentavista;
+    @extend %compare-buttom;
+}

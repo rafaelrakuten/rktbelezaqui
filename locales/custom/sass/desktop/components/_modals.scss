@@ -1,0 +1,311 @@
+// MODALS
+// ====================================================================
+// MODALS - GENERAL
+// ====================================================================
+%modal-general {
+    #fancybox-wrap {
+        border-color: #FFF;
+        @include border-radius(3px);
+    }
+    body:not(.positivo) #fancybox-frame #frm,  body:not(.positivo)#fancybox-frame form{
+        top: 30px;
+        left:0;
+        position: absolute;
+        padding:0 10px;
+   }
+
+   body:not(.positivo) form#rating{
+    top: 0;
+    left:0;
+    position: absolute;
+    padding:0 10px;
+    background:#fff;
+    width:360px;
+   }
+}
+
+%modal-close-button {
+    #fancybox-close-2,
+    #fancybox-close,
+    &.modal-mobile a#fancybox-close-2,
+    &.modal-mobile a#fancybox-close {
+        @include imgbt(close-modal, png, 22, 22);
+    }
+}
+
+%modal-titles {
+    h1 {
+        display: inline-block;
+        width: 95%;
+       @extend %text-modals-title;
+    }
+}
+
+%modal-button {
+    .btn {
+        @extend %bt-modal-default;
+    }
+}
+
+// MODALS - INDIQUE UM AMIGO
+// ====================================================================
+%modal-indique-amigo {
+    &.indicate-friend {
+        h1{
+            margin-bottom: 10px !important;
+        }
+        @extend %modal-titles;
+        @extend %modal-button;
+    }
+}
+
+// MODALS - AVALIE ESTE PRODUTO
+// ====================================================================
+%modal-avaliacao-produto {
+    &.rate {    
+        @extend %modal-titles;
+        #rating {
+            fieldset {
+                padding: 0px 5px;
+                .field{
+                    position: relative;
+                    &.rating{
+                        height: 80px;
+                        margin-bottom: 0;
+                        label{
+                            .validacao{
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                top: auto !important;
+                            }
+                        }
+                    }
+                }
+                .form .field input[type="text"] {
+                    padding: 0px 5px;
+                }
+                span {
+                    font-size: 12px;
+                }
+                select{
+                    display: block;
+                    clear:left;
+                }
+                #spanMsgValidacaoAvaliacao {
+                    display: block;
+                    width: 84px;
+                    line-height: 12px;
+                    margin-top: 2px;
+                    right: -29px;
+                    top: 25px;
+                    @media (max-width: $mobile-w) {
+                        position: absolute;
+                        right: -29px;
+                        top: 25px;
+                        width: 100px;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        @extend %modal-button;
+    }
+}
+
+// MODALS - CALCULO DE ENTREGA
+// ====================================================================
+%modal-prazo-entrega {
+    &.consult-delivery {
+        @extend %modal-titles;
+        #pnlHomeDelivery .result {
+            margin-top: 54px;
+        }
+        #pnlHomeDelivery .form.cep {
+            position: relative;
+            #txtZipCode {
+                @include box-sizing();
+                padding: 3px !important;
+                height: 29px;
+                width: 96% !important;
+            }
+            label span {
+                margin-bottom: 0px;
+                height: 21px;
+                left: 30px;
+                top: 0px;
+                width: 150px;
+            }
+            .field {
+                height: 48px;
+                width: 130px;
+                margin: 0px;
+                position: absolute;
+                top: 0px;
+            }
+            .actions {
+                margin-top: 0px;
+                height: 48px;
+                position: absolute;
+                top: 1px;
+                left: 130px;
+                a {
+                    position: absolute;
+                    bottom: -1px;
+                    height: 29px;
+                }
+            }
+            @extend %modal-button;
+        }
+    }
+}
+
+// MODALS - ESQUECEU SUA SENHA?
+// ====================================================================
+%modal-esqueceu-senha {
+    &.forget{
+		@extend %modal-titles;
+		.form .field + .field{
+			float: left;
+			width: 240px;
+		}
+		.collum{
+			.btn{
+				margin-top: 18px;
+			}
+			@extend %modal-button;
+		}
+	}
+    &.email {
+        @extend %modal-titles;
+        .form .field+.field {
+            float: left;
+            margin-top: -30px;
+            margin-left: 20px;
+            width: 240px;
+        }
+        .collum {
+            #spanMsgValidacaoCPF {
+                position: absolute;
+                left: -5px;
+                top: 57px;
+            }
+            #spanMsgValidacaoDataNascimento {
+                position: absolute;
+                left: -5px;
+                top: 57px;
+            }
+            .actions {
+                margin-top: 24px;
+            }
+            #btnContinuarPJ {
+                clear: none;
+                margin-top: 2px;
+            }
+            .btn {
+                margin-top: 30px;
+            }
+            @extend %modal-button;
+        }
+    }
+}
+
+// MODALS - CEP NÃO CADASTRADO
+// ====================================================================
+%modal-esqueceu-senha {
+    #form1 {
+        @extend %modal-titles;
+        .bt-yes {
+            @extend %bt-mod-cep__sim;
+            float: left;
+        }
+        .bt-no {
+            @extend %bt-mod-cep__nao;
+            float: left;
+        }
+    }
+}
+
+// MODALS - TROCAR SENHA
+// ====================================================================
+%modal-alterar-senha {
+    &.alterarSenha {
+        @extend %modal-titles;
+        #frm {
+            fieldset {
+                padding: 0px 5px;
+                .form .field input[type="text"] {
+                    padding: 0px 5px;
+                }
+                span {
+                    font-size: 12px;
+                }
+            }
+            @extend %modal-button;
+        }
+    }
+}
+
+// MODALS - BASKET GIFT
+// ====================================================================
+%modal-basket-gift {
+    &.basket-gift {
+        .bt-container {
+            @extend %modal-button;
+            float: right;
+        }
+    }
+}
+
+%modal-return-pass{
+    .return-msg-password{
+        p{
+            font-family: $font-one !important;
+        }
+        .btn{
+            @extend %modal-button;
+            font-family: $font-one !important;
+			font-weight: normal !important; 
+			background: #000 !important;
+        }
+    }
+}
+
+
+// MODALS - quick-basket
+// ====================================================================
+%modal-quick-basket {
+    &.quickBasquet {
+        @media (min-width: 950px) {
+            #fancybox-close-2{
+                right: 5px;
+                width: 30px;
+                height: 27px;
+            }
+            .item{
+                width: 44% !important;
+                float: left;
+            }
+            .resumo{
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+
+// MODALS - CALLS
+// ====================================================================
+body {
+    @extend %modal-general;
+    @extend %modal-close-button;
+    @extend %modal-indique-amigo;
+    @extend %modal-avaliacao-produto;
+    @extend %modal-prazo-entrega;
+    @extend %modal-esqueceu-senha;
+    @extend %modal-alterar-senha;
+    @extend %modal-basket-gift;
+    @extend %modal-quick-basket;
+    @extend %modal-return-pass;
+}

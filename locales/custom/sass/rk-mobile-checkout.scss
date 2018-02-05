@@ -1,0 +1,34 @@
+// CONFIGURATION
+// ====================================================================
+@import "config/mixins";
+@import "config/config";
+@import "config/colors";
+@import "config/fonts";
+@import "config/docImages";
+@import "config/docBanners";
+@import "config/rules";
+@import "config/texts";
+@import "config/buttons";
+@import "config/helper";
+@import "config/normalize";
+
+// DESKTOP - COMPONENTS
+// ====================================================================
+@import "desktop/components/footer";
+@import "desktop/components/aside";
+@import "desktop/components/modals";
+@import "desktop/components/skuQtd";
+@import "desktop/pages/quickbasket";
+
+// MOBILE - COMPONENTS
+// ====================================================================
+@import "mobile/components/header"; 
+
+// DESKTOP - PAGES
+// ====================================================================
+@import "mobile/pages/cadastro";
+@import "mobile/pages/enderecos";
+@import "mobile/pages/opCheckout";
+@import "mobile/pages/opConfirmation";
+@import "mobile/pages/buscaPedidos";
+@import "mobile/pages/meuPedido";

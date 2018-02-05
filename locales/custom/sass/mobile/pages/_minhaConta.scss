@@ -1,0 +1,24 @@
+// PAGE - MINHA CONTA - COMPONENTS
+// ====================================================================
+%nyacc-links {
+    .nav a {
+        @extend %text-check-link-default;
+		&:hover{
+			font-weight: bold;
+			@extend %text-check-link-default;
+		}
+    }
+}
+
+%myacc-descriptions {
+    .nav span {
+        @extend %text-check-text-default;
+    }
+}
+
+// PAGE - MINHA CONTA - CALLS
+// ====================================================================
+body.account {
+    @extend %nyacc-links;
+    @extend %myacc-descriptions;
+}

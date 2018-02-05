@@ -1,0 +1,29 @@
+// PAGE - SITEMAP - COMPONENTS
+// ====================================================================
+%sitemap-titles {
+    .content h1 {
+        @include remove-textshadow();
+        margin: 15px 0!important;
+    }
+    .col strong {
+        @extend %text-check-title-h1-alt;
+    }
+}
+
+%sitemap-itens {
+    .title {
+        @extend %text-check-title-h1-alt;
+    }
+}
+
+// PAGE - SITEMAP - CALLS
+// ====================================================================
+body.sitemap {
+    #main{
+        .container{
+            width: 1180px;
+            @extend %sitemap-titles;
+            @extend %sitemap-itens;
+        }
+    }
+}

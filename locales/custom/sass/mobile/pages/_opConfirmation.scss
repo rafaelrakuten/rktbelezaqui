@@ -1,0 +1,86 @@
+// PAGE - NEW CHECKOUT CLOSE - COMPONENTS
+// ====================================================================
+%opconfirm-titles {
+    .confirmacao-pedido .confirm-title {
+        @extend %text-heading-font;
+    }
+    .confirmacao-tipo .title-type,
+    .list-address .title-address,
+    .summary-confirm .summary-title {
+        @extend %text-check-h3-default;
+    }
+}
+
+%opconfirm-icons {
+    .confirmacao-pedido .confirm-title::before {
+        @include set-icon($icon-ok-circle, 51px, 300, #217cc0);
+        background: none;
+        width: 34px;
+        height: 30px;
+        left: 13px;
+        top: 13px;
+    }
+}
+
+%opconfirm-summary__itens {
+    .summary-confirm .summary-itens {
+        .item-description {
+            .name {
+                @extend %text-basket-desc-name;
+            }
+            .skus {
+                @extend %text-basket-desc-sku;
+            }
+        }
+        .item-quantity {
+			@extend %text-basket-desc-sku;
+        }
+        .item-price {
+            &.price {
+                @extend %text-basket-valor-subtotal-de;
+            }
+            &.sale {
+                @extend %text-basket-valor-subtotal-por;
+            }
+        }
+    }
+}
+
+%opconfirm-summary__values {
+    .summary .summary-values {
+        .values {
+            @extend %text-basket-tfoot-subtotal;
+            &:before {
+				@extend %text-basket-tfoot-subtotal;
+            }
+        }
+    }
+}
+
+%opconfirm-summary__total {
+    #main .total-price {
+        >span {
+			@extend %text-basket-total-title;
+        }
+        >strong {
+            @extend %text-basket-total-value;
+        }
+    }
+}
+
+%opconfirm-summary__buttons {
+    .confirmacao-tipo.boleto-type .print-boleto {
+        @extend %bt-opcheck__imprimir;
+    }
+}
+
+// PAGE - NEW CHECKOUT CLOSE - CALLS
+// ====================================================================
+body.op-confirmation {
+    @extend %opconfirm-titles;
+    @extend %opconfirm-icons;
+    @extend %opconfirm-summary__itens;
+    @extend %opconfirm-summary__values;
+    @extend %opconfirm-summary__total;
+    @extend %opconfirm-summary__buttons;
+}

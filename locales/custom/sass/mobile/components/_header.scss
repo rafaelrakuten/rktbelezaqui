@@ -1,0 +1,272 @@
+// HEADER - BASE - COMPONENTS
+// ====================================================================
+%mobile-hreader__containers {
+    #header{
+       
+        top:0;
+        left:0;
+
+        &.active{
+            min-height:110px;
+        }
+        border-bottom: 1px solid #ddd;
+    }
+
+    #header,
+    #floatToolbar {
+        background: $color-white;
+        .foneFT {
+            display: none;
+        }
+        .headerPhone {
+            display: none;
+        }
+        .box-top{
+            display: none;
+        }      
+    }
+}
+
+%mobile-header__logo {
+    #header .container #logo,
+    #floatToolbar .logoFT {
+        padding: 0 !important;
+        a {
+            padding-top: 0px !important;
+            text-align: left;
+            padding-left: 53px;
+        
+            img{
+                max-height: 42px;
+                margin-top: 20px;
+                margin-right: 10px;
+                max-width:140px;
+            }
+        }
+    }
+}
+
+%mobile-header__icons {
+    #header {
+        .container .btn-nav-mobile .nav-click,
+        #floatToolbar .btn-nav-mobile .nav-click {
+            background: none;
+            position: relative;
+            top: 9px;
+            left: 11px;
+            width: auto;
+            height: auto;
+            font-size: 0px;
+            text-indent: 0;
+            &:before {
+                @include set-icon($icon-reorder, 30px, 300, $color-blue-light);
+            }
+        }
+        .container .header-btn-mobile .btn-search-top,
+        #floatToolbar .header-btn-mobile-float .btn-search-top {
+            @include imgbt(bt-home-header-busca, png, 40, 28);
+            background-size:none;
+            font-size: 0px;
+            text-indent: 0;
+            position: relative;
+            top: 19px;
+            left: 0;
+            right: auto;
+        }
+        .container .header-btn-mobile .btn-cart-mobile,
+        #floatToolbar .header-btn-mobile-float .btn-cart-mobile {
+            @include imgbt(ico-header-car, png, 50, 28);
+            background-size: 27px 25px;
+            position: relative;
+            top: 15px;
+            right: 5px;
+            .qtd-cart.active {
+                @include border-radius(50px);
+                font-family: $font-one;
+                display: block;
+                height: 8px;
+                line-height: 7px;
+                padding: 7px;
+                text-align: center;
+                width: 8px;
+                color: #000;
+                font-weight: bold;
+                font-size: 11px;
+                background: none;
+                text-indent: 0;
+                position: absolute;
+                right: 8px;
+                top: -10px;
+            }
+        }
+    }
+}
+
+%mobile-header__searchInput {
+    #header .container .search input[type="text"],
+    #floatToolbar .search input[type="text"] {
+        @extend %text-header-search-font;
+        text-transform: none;
+        border: 1px solid #B3B3B3;
+        background: #FFF;
+        margin-top: 5px;
+    }
+    #floatToolbar .search .btn.ir,
+    #header .search .btn.ir {
+        margin-top: 5px;
+    }
+    #floatToolbar .search input[type="text"] {
+        position: relative;
+        //top: 25px;
+    }
+    #floatToolbar .search .btn {
+        margin-top: 5px;
+        top: 2px;
+    }
+    #floatToolbar.active{
+        height: 100px;
+        .list{
+            display: none;
+        }
+    }
+}
+
+%mobile-header__welcome {
+    .wrap-nav-mobile .welcome {
+        strong:after{
+            display: none;
+        }
+        background: $color-bg-gray;
+        li {
+            width: auto;
+            display: inline-block;
+
+        }
+    }
+}
+
+%mobile-header__nav {
+    .wrap-nav-mobile {
+        width: 100%;
+        background: #FFF;
+    }
+    .wrap-nav-mobile #nav {
+        >li {
+            background: $header-nav-bg;
+            >a:not(.sub-parent) {
+                @extend %text-header-nav-font;
+                height: auto !important;
+                border-bottom: none !important;
+            }
+            &:hover {
+                background: $color-white;
+                .sub-parent {
+                    color: $color-black;
+                }
+            }
+            .sub-parent {
+                color: $header-nav-mobile-cross-bg;
+            }
+        }
+    }
+}
+
+%mobile-header__subnav {
+    .wrap-nav-mobile #nav .sub-nav.active {
+        >li {
+            background: $header-subnav-bg;
+        }
+        li>a:not(.sub-parent) {
+            @extend %text-header-subnav-font;
+        }
+    }
+}
+
+%mobile-header__help {
+    .wrap-nav-mobile .help {
+        padding-top: 0px;
+        a,
+        span {
+            @extend %text-header-help-font;
+            color: $color-gray;
+            background: none;
+            margin: 0px;
+            strong {
+                font-size: 15px;
+            }
+            &:hover{
+                color: #6d6e70; 
+            }
+        }
+        &:nth-child(2){
+            display: none;
+        }
+    }
+    .wrap-nav-mobile .help + .help{
+        display:none;
+    }
+}
+%mobile-autocomplete-mais-buscadas {
+   div.autocomplete-mais-buscadas {
+        width: calc(100% - 20px);
+        border: 1px solid #ccc;
+        margin: -6px 0 0;
+        .count {
+            
+        }
+         ul li a {
+            .count {
+                background: #6d6e70;
+            }
+         }
+   }
+   div.panel-multicomplete-results {
+        background: #fff;
+        box-sizing: border-box;
+        width: calc(100% - 20px);
+        margin: 16px 0 0;
+        font-family: arial;
+        border: 1px solid #ccc;
+        .panel-no-results {
+            padding: 0 10px 10px;
+        }
+        .autocomplete-details {
+            width: calc(100% - 80px) !important;
+            .autocomplete-name {
+                font-weight: normal !important;
+                font-family: $font-one;
+                .highlight {
+                    font-weight: bold !important;
+                }
+            }
+            .autocomplete-price {
+                text-align: left !important;
+                color: #000 !important;
+            }
+        }
+   }
+}
+
+%mobile-main{
+    #header + #main{
+        padding-top:42px;
+    }
+    #header.active + #main{
+        padding-top:82px;
+    }
+}   
+
+// HEADER - CALLS
+// ====================================================================
+body {
+    @extend %mobile-hreader__containers;
+    @extend %mobile-header__logo;
+    @extend %mobile-header__icons;
+    @extend %mobile-header__searchInput;
+    @extend %mobile-header__welcome;
+    @extend %mobile-header__nav;
+    @extend %mobile-header__subnav;
+    @extend %mobile-header__help;
+    @extend %mobile-autocomplete-mais-buscadas;
+    @extend %mobile-main;
+}

@@ -1,0 +1,208 @@
+@model FooterBaseModel
+@{
+var containerId = string.Concat(ViewBag.Prefix, "pnlEmailMarketing");
+var inputName = string.Concat(ViewBag.Prefix, "txtRecebaNomeMenu");
+var inputEmail = string.Concat(ViewBag.Prefix, "txtRecebaEmailMenu");
+}
+
+
+<div class="instagram">
+    <h2 class="title t-instagram">
+        <strong>maria valentina</strong> <br>
+        <span>compartilhe sua foto no instagram e utilize a hashtag!</span>
+    </h2>
+   <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/c70d5a94c5765a939650cf46b7e22aec.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+</div>
+
+
+<div class="footer-middle">
+
+    <div class="footer-middle-cont">
+
+        <div class="morena-rosa collum">
+            <span>CONHEÇA</span>
+            <ul>
+                <li><a class="morena-rosa" href="#"></a></li>
+                <li><a class="leboh" href="#"></a></li>
+                <li><a class="zinco" href="#"></a></li>
+            </ul>
+        </div>
+
+        <div class="institucional collum">
+            <h4 class="title">
+                <span>Institucional</span>
+            </h4>
+            <ul>
+                @if(Model.ShowWhoWeAre)
+                {
+                    <li>
+                        <a href="@Url("~/institucionais/AntesCompra/QuemSomos.aspx")" rel="nofollow">
+                            Sobre a Empresa
+                        </a>
+                    </li>
+                }
+                @if(Model.ShowPrivacyPolicy)
+                {
+                    <li>
+                        <a href="@Url("~/institucionais/AntesCompra/PoliticaPrivacidade.aspx")" rel="nofollow">
+                            Politica de Privacidade
+                        </a>
+                    </li>
+                }
+                <li>
+                    <a href="@Url("~/afiliados/index.aspx")" rel="nofollow">
+                        Afiliados
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url("~/loginpedido.aspx")" rel="nofollow">
+                        Portal de pedidos
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url("~/institucionais/AntesCompra/NossasLojas.aspx")" rel="nofollow">
+                        Nossas Lojas
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url("~/institucionais/faleconosco.aspx")" rel="nofollow">
+                        Trabalhe Conosco
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="atendimento collum">
+            <h4 class="title">
+                <span>Atendimento</span>
+            </h4>
+            <ul>
+                <li>
+                    <a href="@Url("~/institucionais/index.aspx")" rel="nofollow">
+                        Central de Atendimento
+                    </a>
+                </li>
+                @if(Model.ShowExchangesReturns)
+                {
+                    <li>
+                        <a href="@Url("~/institucionais/PosCompra/TrocasDevolucoes.aspx")" rel="nofollow">
+                            Trocas e Devoluções
+                        </a>
+                    </li>
+                }
+                @if(Model.ShowSecureShopping)
+                {
+                    <li>
+                        <a href="@Url("~/institucionais/Antescompra/CompraSegura.aspx")" rel="nofollow">
+                            Compra Segura
+                        </a>
+                    </li>
+                }
+                <li>
+                    <a href="@Url("~/institucionais/Comprando/ServicoEntrega.aspx")" rel="nofollow">
+                        Envio e Entrega
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url("~/institucionais/AntesCompra/ComoNavegar.aspx")" rel="nofollow">
+                        Navegando e Comprando
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url("~/institucionais/faleconosco.aspx")" rel="nofollow">
+                        Fale Conosco
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url("~/mapa-do-site.aspx")" rel="nofollow">
+                        Mapa do Site
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="@containerId" class="newsletter collum">
+            <fieldset>
+                <div class="news-description">
+                    maria valentina news
+                </div>
+                <div class="field first">
+                    <input type="text" name="txtRecebaNomeMenu" id="@inputName" class="placeholder" maxlength="128" value="Nome" />
+                </div>
+                <div class="field second">
+                    <input type="text" name="txtRecebaEmailMenu" id="@inputEmail" class="placeholder" maxlength="128"  value="E-mail" />
+                </div>
+                <a href="#" class="btn ir" title="ENVIAR" rel="nofollow">CADASTRAR</a>
+            </fieldset>
+        </div>
+
+        <div class="social collum">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/" target="_blank">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                    </a>
+                </li>
+                 <li>
+                    <a href="https://br.pinterest.com/" target="_blank">
+                        <i class="fa fa-pinterest" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="footer-bottom">
+
+    <div class="collum footer-payment">
+        <ul>
+            <li class="sprite-aura"></li>
+            <li class="sprite-bb"></li>
+            <li class="sprite-banrisul"></li>
+            <li class="sprite-boleto"></li>
+            <li class="sprite-bradesco"></li>
+            <li class="sprite-dinners"></li>
+            <li class="sprite-elo"></li>
+            <li class="sprite-hipercard"></li>
+            <li class="sprite-hsbc"></li>
+            <li class="sprite-hsbc"></li>
+            <li class="sprite-itau"></li>
+            <li class="sprite-mastercard"></li>
+            <li class="sprite-paypal"></li>
+            <li class="sprite-visa"></li>
+            <li class="sprite-amex"></li>
+        </ul>
+    </div>
+
+    <div class="footer-bottom-cont">
+        <div class="info-cli">
+            <span>Razao Social CNPJ [xx.xxx.xxx/xxxx-xx] [Rua LOGRADOURO], [111] [CIDADE]-[UF] CEP: [11111-111] TEL: [111-1111], @ViewBag.StoreName. &copy;  @Model.ReleaseYear - Todos os direitos reservados.</span>
+        </div>
+    </div> 
+
+    <ul class="security">
+        <li>
+            <img src="@Url("~/static/locales/custom/img/selo-security.jpg")" alt="">
+        </li>
+    </ul>
+
+</div>

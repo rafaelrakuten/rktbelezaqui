@@ -1,0 +1,46 @@
+// PAGE - ENDERECOS - COMPONENTS
+// ====================================================================
+%enderecos-info {
+    #main .container .content .adr span {
+        @extend %text-check-text-default;
+    }
+    #main .container .content .adr span strong {
+        @extend %text-check-text-default-strong;
+    }
+    #main .container .content .main-content .cadaster.form.box .field label{
+        span{
+            font-family: $font-one;
+        }
+        input[type="text"], input[type="tel"], select{
+            @include border-radius(0);
+            border: solid 1px #ccc;
+            &.ddd, &.number, &.ramal {
+                @include border-radius(0);
+                border: solid 1px #ccc;
+            }
+        }
+
+    }
+}
+
+%enderecos-bts__save {
+    #hypSalvar {
+        @extend %bt-enderecos__save;
+        @include border-radius(4px);
+    }
+}
+
+%enderecos-bts__cancel {
+    #p_LimparEndereco {
+        @extend %bt-enderecos__cancel;
+        @include border-radius(4px);
+    }
+}
+
+// PAGE - ENDERECOS - CALLS
+// ====================================================================
+body.delivery-address.mobile-state {
+    @extend %enderecos-info;
+    @extend %enderecos-bts__save;
+    @extend %enderecos-bts__cancel;
+}

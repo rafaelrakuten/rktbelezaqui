@@ -1,0 +1,49 @@
+// CONFIGURATION
+// ====================================================================
+@import "config/mixins";
+@import "config/config";
+@import "config/colors";
+@import "config/fonts";
+@import "config/docImages";
+@import "config/docBanners";
+@import "config/rules";
+@import "config/texts";
+@import "config/buttons";
+@import "config/helper";
+@import "config/normalize";
+
+
+// DESKTOP - COMPONENTS
+// ====================================================================
+@import "desktop/components/header";
+@import "desktop/components/footer";
+@import "desktop/components/banners";
+@import "desktop/components/history";
+@import "desktop/components/aside";
+@import "desktop/components/modals";
+@import "desktop/components/skuQtd";
+@import "desktop/components/instagram";
+
+// DESKTOP - PAGES
+// ====================================================================
+@import "desktop/pages/home"; 
+@import "desktop/pages/catalogo";
+@import "desktop/pages/comparar";
+@import "desktop/pages/produto";
+@import "desktop/pages/quickview";
+@import "desktop/pages/quickbasket";
+@import "desktop/pages/detalheLook";
+@import "desktop/pages/basket";
+@import "desktop/pages/presente"; 
+@import "desktop/pages/garantia";
+@import "desktop/pages/login";
+@import "desktop/pages/minhaConta";
+@import "desktop/pages/meuscartoes";
+@import "desktop/pages/wishlist";
+@import "desktop/pages/lists";
+@import "desktop/pages/cadastro";
+@import "desktop/pages/institucional";
+@import "desktop/pages/sitemap";
+@import "desktop/pages/afiliados";
+@import "desktop/pages/contato";
+

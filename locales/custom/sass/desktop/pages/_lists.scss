@@ -1,0 +1,52 @@
+// PAGE - LISTAS - COMPONENTS
+// ====================================================================
+%mylists-containers{
+    &.my-lists{
+       h2 a{
+           color: $color-blue;
+       }
+        .quantity a{
+            color: $color-black;
+        }
+    }
+    .list-occasions .collum ul li a,
+    .create-list .collum ul li a{
+        color: $color-blue;
+    }
+}
+%lists-boxes {
+    .list-occasions,
+    .create-list,
+    .main-content {
+        .box {
+            background: $color-white;
+        }
+    }
+}
+
+%list-boxes__titles {
+    .list-occasions fieldset > .title,
+    &.my-lists fieldset > .title {
+       @extend %text-modals-title;
+    }
+}
+
+%lis-boxes__buttons{
+    .list-occasions .collum .actions .btn,
+    #btnAvancar.btn.ir,
+    .actions #btnSalvar,
+    &.results .main-content .new-search,
+    &.results .form .field .btn{
+        @include bt-default();
+        padding: 10px;
+    }
+}
+
+// PAGE - NEW CHECKOUT - CALLS
+// ====================================================================
+body {
+    @extend %mylists-containers;
+    @extend %lists-boxes;
+    @extend %list-boxes__titles;
+    @extend %lis-boxes__buttons;
+}

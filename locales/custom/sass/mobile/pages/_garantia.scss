@@ -1,0 +1,60 @@
+// PAGE - GARANTIA - COMPONENTS
+// ====================================================================
+%garantia-box__figure{
+	#info-product{
+        .collum.images{
+            width: 100%;
+			height: auto; 
+			.photo{
+				width: 100%;
+				height: auto; 
+			}
+        }
+    }
+}
+%garantia-box__details{
+	#info-product .details{
+		.offers{
+			text-align: center;
+		}
+		#spanPreco{
+			text-align: center;
+			display: inline-block;
+			@extend %text-prod-sale;
+			text-transform: capitalize;
+			text-decoration: none;
+			em{
+				@extend %text-prod-sale;
+				text-decoration: none;
+			}
+		}
+		#spanPrecoPor{
+			display: inline-block;
+		}
+	}
+	#info-product .field.checkbox{
+		.price strong{
+			font-size: 12px;
+		}
+	}
+}
+%garantia-bt{
+	#info-product .details{
+		.btn.ir.continue{
+			@extend %bt-prod-buy;
+		}
+	}
+}
+
+
+// PAGE - GARANTIA - COMPONENTS
+// ====================================================================
+body.garantia{
+	@extend %garantia-box__details;
+	@extend %product-details__name;
+	@extend %product-details__fabcod;
+	@extend %product-details__priceRegular;
+    @extend %product-details__priceSale;
+	@extend %product-details__parcel;
+	@extend %garantia-bt;
+}

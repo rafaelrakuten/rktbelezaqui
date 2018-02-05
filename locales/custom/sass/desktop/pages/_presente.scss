@@ -1,0 +1,52 @@
+// PAGE - PRESENTE - COMPONENTS
+// ====================================================================
+%gift-containers{
+	background: none;
+	#main{
+		.container{
+			padding: 0px;
+			width: $page-w;
+		}
+	}
+	.box{
+		background: #FFF;
+	}
+}
+%gift-box__figure{
+	.gift .figure{
+		width: 170px;
+		img{
+			width: 100% !important;
+			height: auto !important;
+		}
+	}
+}
+%gift-box__details{
+	.details{
+		.name{
+			@extend %text-basket-desc-name;
+		}
+		.form{
+			@extend %text-basket-desc-cod;
+		}
+		.skus{
+			margin-top: 10px;
+			@extend %text-basket-desc-sku;
+		}
+	}
+}
+%gift-button__continue{
+	#lnkSave{
+		@extend %bt-gift__continue;
+	}
+}
+
+
+// PAGE - PRESENTE - COMPONENTS
+// ====================================================================
+body.checkout{
+	@extend %gift-containers;
+	@extend %gift-box__figure;
+	@extend %gift-box__details;
+	@extend %gift-button__continue;
+}

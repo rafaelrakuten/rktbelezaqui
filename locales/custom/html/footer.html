@@ -1,0 +1,164 @@
+@model FooterBaseModel
+
+<div class="instagram">
+	<h2 class="title t-instagram">
+		<strong>MM_TOYZ</strong> <br>
+		<span>Compartilhe sua foto no instagram e utilize a <span>hashtag</span>!</span>
+	</h2>
+	<script src="//lightwidget.com/widgets/lightwidget.js"></script>
+	<iframe src="//lightwidget.com/widgets/c70d5a94c5765a939650cf46b7e22aec.html" scrolling="no" allowtransparency="true" class="lightwidget-widget"
+	 style="width: 100%; border: 0; overflow: hidden;"></iframe>
+</div>
+
+<div class="fmid">
+	<div class="fbox b1">
+		<div class="social collum">
+			<ul>
+				<li>
+					<a href="https://www.facebook.com/" target="_blank">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+				</li>
+				<li>
+					<a href="https://twitter.com/" target="_blank">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+				</li>
+				<li>
+					<a href="https://br.pinterest.com/" target="_blank">
+                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/" target="_blank">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+				</li>
+				<li>
+					<a href="https://www.youtube.com/" target="_blank">
+                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                    </a>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="institucional collum">
+            <ul>
+                @if(Model.ShowWhoWeAre)
+                {
+                    <li>
+                        <a href="@Url("~/institucionais/AntesCompra/QuemSomos.aspx")" rel="nofollow">
+                            Quem Somos
+                        </a>
+                    </li>
+                }
+                @if(Model.ShowPrivacyPolicy)
+                {
+                    <li>
+                        <a href="@Url("~/institucionais/AntesCompra/PoliticaPrivacidade.aspx")" rel="nofollow">
+                            Politica de Privacidade
+                        </a>
+                    </li>
+                }
+                <li>
+                    <a href="@Url("~/institucionais/AntesCompra/NossasLojas.aspx")" rel="nofollow">
+                        Nossas Lojas
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url("~/institucionais/faleconosco.aspx")" rel="nofollow">
+                        Fale Conosco
+                    </a>
+                </li>
+            </ul>
+		</div>
+
+		<div class="atendimento collum">
+            <ul>
+                @if(Model.ShowExchangesReturns)
+                {
+                    <li>
+                        <a href="@Url("~/institucionais/PosCompra/TrocasDevolucoes.aspx")" rel="nofollow">
+                            Política de troca
+                        </a>
+                    </li>
+                }
+                <li>
+                    <a href="@Url("~/institucionais/Comprando/ServicoEntrega.aspx")" rel="nofollow">
+                        Prazo de Entrega
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url("~/institucionais/AntesCompra/ComoNavegar.aspx")" rel="nofollow">
+                        Formas de pagamento
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url("~/afiliados/index.aspx")" rel="nofollow">
+                        Afiliados
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url("~/mapa-do-site.aspx")" rel="nofollow">
+                        Mapa do Site
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-payment">
+            <ul>
+                <li class="sprite-aura"></li>
+                <li class="sprite-bb"></li>
+                <li class="sprite-banrisul"></li>
+                <li class="sprite-boleto"></li>
+                <li class="sprite-bradesco"></li>
+                <li class="sprite-dinners"></li>
+                <li class="sprite-elo"></li>
+                <li class="sprite-hipercard"></li>
+                <li class="sprite-hsbc"></li>
+                <li class="sprite-hsbc"></li>
+                <li class="sprite-itau"></li>
+                <li class="sprite-mastercard"></li>
+                <li class="sprite-paypal"></li>
+                <li class="sprite-visa"></li>
+                <li class="sprite-amex"></li>
+            </ul>
+        </div>
+		
+	</div>
+
+	<div class="fbox b2">
+		@IncludePrefix("newsLetter", "top_", Model, ViewBag)
+	</div>
+
+	<div class="fbox b3">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <div class="fb-page" data-href="https://www.facebook.com/mmtoysbrinquedos/videos" data-width="300" data-height="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/mmtoysbrinquedos/videos" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/mmtoysbrinquedos/videos">MM Toys Comercio de Brinquedos Ltda</a></blockquote></div>
+
+    </div>
+    <div class="fbot">
+        <div class="info-cli">
+            <span>
+                © @ViewBag.StoreName. &copy;  @Model.ReleaseYear - Todos os direitos reservados. <br>
+                MM TOYS COMERCIO DE BRINQUEDOS LTDA ME CNPJ: 17568659000141 <br>
+                Rua Goncalves Dias 75, Sao Paulo, São Paulo
+            </span>
+        </div>
+        <ul class="security">
+            <li>
+                <img src="@Url("~/static/locales/custom/img/selo-security.jpg")" alt="">
+            </li>
+        </ul>
+    </div>
+</div>
+

@@ -1,0 +1,27 @@
+// PAGE - CONTATO - COMPONENTS
+// ====================================================================
+%contato-boxes{
+	&.institucional .box{
+		background: #fff;
+	}
+	&.institucional .box.even{
+		background: #f6f6f6;
+	}
+}
+%contatos-buttons{
+	&.institucional .text .actions .btn{
+		@extend %bt-contato__enviar;
+	}
+	.return .buy{
+		@extend %bt-general__return;
+		margin: 0px auto;
+		width: 85% !important;
+	}
+}
+
+// PAGE - CONTATO - CALLS
+// ====================================================================
+body.internal{
+	@extend %contato-boxes;
+	@extend %contatos-buttons;
+}

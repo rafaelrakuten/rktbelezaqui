@@ -1,0 +1,185 @@
+// PAGE - HOME - COMPONENTS
+// ====================================================================
+%home-containers {
+    #main {
+        .container {
+            padding: 0px;
+            width: $page-w;
+            .social-home{
+                position: fixed;
+                right: 0;
+                top: 50%;
+                z-index: 999;
+                li{
+                    background-color: #6d6e70;
+                    width: 32px;
+                    height: 32px;
+                    margin-bottom: 3px;
+                    a {
+                        i {
+                            font-size: 18px;
+                            color: #fff;
+                            background: $color-bg-gray;
+                            height: 34px;
+                            width: 34px;
+                            line-height: 34px;
+                            text-align: center;
+                            margin-top: 0px;
+                            margin-right: 3px;
+                            &:hover {
+                                color: #FFF;
+                                &.fa-facebook {
+                                    background: $facebook_color;
+                                }
+                                &.fa-twitter {
+                                    background: $twitter_color;
+                                }
+                                &.fa-instagram {
+                                    background: $instagram_color;
+                                }
+                                &.fa-pinterest-p,
+                                &.fa-pinterest {
+                                    background: $pinterest_color;
+                                }
+                                &.fa-tumblr {
+                                    background: $tumblr_color;
+                                }
+                                &.fa-youtube,
+                                &.fa-youtube-play {
+                                    background: $youtube_color;
+                                }
+                            }
+                            &:hover {
+                                transition: all 0.3s ease;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section{
+            position: relative;
+            .owl-controls{
+                top: 0px;
+                left: 0px;
+                width: 1260px;
+                .owl-buttons{
+                    width: 150px;
+                    height: 50px;
+                    position: absolute;
+                  
+                    top: -42px !important;
+                    left: auto;
+                    right:0;
+                    .owl-prev{
+                        left:30px;
+                    }
+                    .owl-next{
+                        right:30px;
+                    }
+                }
+            }
+        }
+        .content {
+            width: $page-w;
+            margin: 0px auto;
+            .chaordic.offers{
+                padding: 0px;
+            }
+        }
+        .aside {
+            display: none;
+        }
+        .list-products {
+            width: $page-w - 9;
+            padding-left: 9px;
+        }
+        .section {
+            border: none;
+            padding: 0px;
+        }
+    }
+}
+
+%home-banners{
+    .banners{
+        &.b-top{
+            ul{
+                display:block;
+                li{
+                    width:19%;
+                    float:left;
+                    @include box-sizing;
+                    margin:0 1% 0 0;
+                    > a, > div{
+                        width:100%;
+                    }
+                    img{
+                        width:100%;
+                        height: auto;
+                    }
+                    .owl-controls{
+                        .owl-buttons{
+                            > div{
+                                margin-top:90px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.b-main{
+            > ul{
+                > li{   
+                    .owl-controls{
+                        .owl-buttons{
+                            > div{
+                                margin-top:230px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.b-bottom{
+            > ul{
+                > li{   
+                    .owl-controls{
+                        .owl-buttons{
+                            > div{
+                                margin-top:90px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+%home-hproduct__parcel{
+    .parcel,
+    .list-products .hproduct .details .parcel {
+        display:none;
+    }
+}
+
+// PAGE - HOME - CALLS
+// ====================================================================
+body.home {
+    background: #FFF;
+    @extend %home-containers;
+    @extend %helper-hproduct;
+    @extend %helper-hproduct__tools;
+    @extend %helper-hproduct__photo;
+    @extend %helper-hproduct__btQuicklook;
+    @extend %helper-hproduct__name;
+    @extend %helper-hproduct__priceFrom;
+    @extend %helper-hproduct__priceSale;
+    @extend %helper-hproduct__parcel;
+    @extend %home-hproduct__parcel;
+    @extend %helper-hproduct__stamp;
+    @extend %helper-hproduct__reviewaggregate;
+    @extend %helper-hproduct__buy;
+    @extend %home-banners;
+}

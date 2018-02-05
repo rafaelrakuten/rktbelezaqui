@@ -1,0 +1,115 @@
+// RULES
+/*
+	Aqui será aplicada toda regra de estilo que replicará
+	de desktop para mobile.
+*/
+// ====================================================================
+
+// Z-INDEX
+// ====================================================================
+$zindex-header-logo: 1;
+$zindex-header-car: 1;
+$zindex-header-minicar: 11;
+$zindex-header-user-submenu: 1;
+$zindex-product-zoom: 10;
+$zindex-basket-orbs: 3;
+
+// BUTTONS
+// ====================================================================
+$bt-radius-tl: 5px;
+$bt-radius-tr: 5px;
+$bt-radius-bl: 5px;
+$bt-radius-br: 5px;
+$bt-color-base: $color-white;
+$bt-bg-main: $color-blue-light;
+$bt-bg-main-hover: $color-blue-light-hover;
+$bt-bg-main-active: $color-blue-light-hover;
+$bt-font-family: $font-one;
+$bt-font-size: 14px;
+$bt-font-color: $color-white;
+$bt-font-weight: 600;
+
+// HEADER - NAV
+// ====================================================================
+$header-nav-height: 40px;
+$header-nav-bg: $color-white;
+$header-nav-bg-hover:$font-color-1;
+$header-nav-mobile-cross-bg:$font-color-1;
+$header-nav-mobile-cross-bg-hover:$font-color-1-dark;
+
+
+// HEADER - SUBNAV
+// ====================================================================
+$header-subnav-bg:$color-white;
+$header-subnav-bg-hover:$color-white;
+
+
+// HEADER - SEARCH
+// ====================================================================
+$header-search-height: 34px;
+$header-search-bg: transparent;
+$header-search-bg-hover:$color-white;
+
+
+// HEADER - HELP
+// ====================================================================
+$header-help-height: 15px;
+
+// GENERAL - HPRODUCTS
+// ====================================================================
+// Config
+$carousel-arrow-w: 40px;
+$hprod-hidden-price-from-em-tag: true;
+$hprod-hidden-price-sale-em-tag: true;
+$hprod-hidden-stars: true;
+$hprod-hidden-parcel-b-tag: false;
+$hprod-hidden-stamp: false;
+$hprod-hidden-reviewaggregate: false;
+$hprod-hidden-buy: false;
+$hprod-cont-align: center;
+
+
+
+// ASIDE
+// ====================================================================
+$aside-w: 245px;
+$aside-background: $color-white;
+
+
+// CATALOG
+// ====================================================================
+$hprod-hidden-compare: true;
+
+
+// PRODUCT
+// ====================================================================
+$prod-hidden-regular-em-tag: true;
+$prod-hidden-sale-em-tag: true;
+$prod-hidden-parcel-b-tag: false;
+$prod-hidden-partnumber: true;
+
+
+// LOOK
+// ====================================================================
+$look-hide-parcel-sem-juros: false;
+
+
+// BASKET
+// ====================================================================
+$basket-border: 1px solid #f2f2f2;
+$basket-no-border: 1px solid $color-white;
+$basket-td-background: $color-white;
+$basket-mobile-icons-color: $color-gray-dark;
+
+$basket-banner-background: $color-yellow;
+
+$basket-banner-orbit-background: $color-white;
+$basket-banner-orbit-background-active: $color-white;
+
+$basket-thead-background: #f2f2f2;
+
+
+// CHECKOUT - GENERAL
+// ====================================================================
+$check-icon-color-master: $color-blue-light;
+$check-icon-color-slave: $color-blue;

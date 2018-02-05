@@ -1,0 +1,211 @@
+@model FooterBaseModel
+
+<fieldset id="footer_busca_container" class="search">
+	<legend>Busca</legend>
+	<label for="fldFooterBusca">
+		Busca
+	</label>
+	<input type="text" id="rodape_txtBusca" value="Digite o que você procura" class="placeholder ico" />
+	@if(ViewBag.AdvancedSearchEnabled)
+    {
+    <span id="spanEmInferior">
+        em
+    </span>
+	<select id="rodape_DropLojas" title="LOJAS"></select>
+    }
+	<a id="rodade_Buscar_Rodape" href="#" class="@string.Concat("btn ir", ViewBag.CssClassSearch)">Buscar</a>
+</fieldset>
+	        
+<a id="hypAtendimentoOnline" class="btn ir online">
+    Atendimento Online
+</a>
+            
+<span class="btn tel">
+	<span>Atendimento <br /> por telefone</span>
+	<span class="phone">0800-0000</span>
+</span>
+
+<div class="payment collum">
+	<h4 class="title">
+		<span>Formas de Pagamento</span>
+	</h4>
+	<ul>
+		<li class="cards">
+			<span>Visa, Mastercard, American Express, Dinners Club</span>
+			Cartões de Créditos
+		</li>
+		<li class="debit">
+			<span>Itáu, Bradesco, Banco do Brasil</span>
+			Débito Online
+		</li>
+		<li class="boleto">
+			<span>Boleto</span>
+			Boleto
+		</li>
+	</ul>
+</div>
+<div class="social collum social-icons">
+	<h4 class="title">
+		<span>Acompanhe</span>
+	</h4>
+	<ul>
+        @if (!string.IsNullOrWhiteSpace(Model.BlogUrl))
+        {
+		    <li class="blog ico">
+			    <a href="@Model.BlogUrl" target="_blank">Blog <br />Empresa</a>
+		    </li>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.FacebookUrl))
+        {
+		    <li class="facebook ico">
+			    <a href="@Model.FacebookUrl" target="_blank">Facebook <br />Torne-se Fã!</a>
+		    </li>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.TwitterUrl))
+        {
+		    <li class="twitter ico">
+			    <a href="@Model.TwitterUrl" target="_blank">Twitter <br />Empresa</a>
+		    </li>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.PinterestUrl))
+        {
+		    <li class="pinterest-social ico">
+			    <a href="@Model.PinterestUrl" target="_blank">Pinterest <br />Empresa</a>
+		    </li>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.TumblrUrl))
+        {
+		    <li class="tumblr-social ico">
+			    <a href="@Model.TumblrUrl" target="_blank">Tumblr <br />Empresa</a>
+		    </li>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.GooglePlusUrl))
+        {
+		    <li class="googleplus-social ico">
+			    <a href="@Model.GooglePlusUrl" target="_blank">GooglePlus <br />Empresa</a>
+		    </li>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.YoutubeUrl))
+        {
+		    <li class="youtube-social ico">
+			    <a href="@Model.YoutubeUrl" target="_blank">Youtube <br />Empresa</a>
+		    </li>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.InstagramUrl))
+        {
+		    <li class="instagram-social ico">
+			    <a href="@Model.InstagramUrl" target="_blank">Instagram <br />Empresa</a>
+		    </li>
+        }
+
+	</ul>
+</div>
+
+<div class="help institucional collum">
+	<h4 class="title">
+		<span>Ajuda e Suporte</span>
+	</h4>
+	<ul>
+		<li>
+		    <a href="@Url("~/institucionais/index.aspx")" rel="nofollow">
+		        Central de Atendimento
+		    </a>
+		</li>
+        @if(Model.ShowExchangesReturns)
+        {
+		<li>
+		    <a href="@Url("~/institucionais/PosCompra/TrocasDevolucoes.aspx")" rel="nofollow">
+		        Trocas e Devoluções
+		    </a>
+		</li>
+        }
+        @if(Model.ShowSecureShopping)
+        {
+		<li>
+		    <a href="@Url("~/institucionais/Antescompra/CompraSegura.aspx")" rel="nofollow">
+		        Compra Segura
+		    </a>
+		</li>
+        }
+		<li>
+		    <a href="@Url("~/institucionais/Comprando/ServicoEntrega.aspx")" rel="nofollow">
+		        Envio e Entrega
+		    </a>
+		</li>
+		<li>
+		    <a href="@Url("~/institucionais/AntesCompra/ComoNavegar.aspx")" rel="nofollow">
+		        Navegando e Comprando
+		    </a>
+		</li>
+		<li>
+		    <a href="@Url("~/institucionais/faleconosco.aspx")" rel="nofollow">
+		        Fale Conosco
+		    </a>
+		</li>
+		<li>
+		    <a href="@Url("~/mapa-do-site.aspx")" rel="nofollow">
+		        Mapa do Site
+		    </a>
+		</li>
+	</ul>
+</div>
+
+<div class="institucional collum">
+	<h4 class="title">
+		<span>Institucional</span>
+	</h4>
+	<ul>
+        @if(Model.ShowWhoWeAre)
+        {
+		<li>
+		    <a href="@Url("~/institucionais/AntesCompra/QuemSomos.aspx")" rel="nofollow">
+		        Quem Somos
+		    </a>
+		</li>
+        }
+		<li>
+		    <a href="@Url("~/institucionais/AntesCompra/NossasLojas.aspx")" rel="nofollow">
+		        Nossas Lojas
+		    </a>
+		</li>
+        @if(Model.ShowPrivacyPolicy)
+        {
+		<li>
+		    <a href="@Url("~/institucionais/AntesCompra/PoliticaPrivacidade.aspx")" rel="nofollow">
+		        Politica de Privacidade
+		    </a>
+		</li>
+        }
+		<li>
+            <a href="@Url("~/afiliados/index.aspx")" rel="nofollow">
+                Afiliados
+            </a>
+		</li>
+		<li>
+		    <a href="@Url("~/institucionais/faleconosco.aspx")" rel="nofollow">
+		        Duvidas sobre a loja?
+		    </a>
+		</li>
+        @if(ViewBag.IsWholeSale == true)
+        {
+		<li>
+		    <a href="@Url("~/institucionais/AntesDaCompra/Revendedor.aspx")" rel="nofollow">
+		        Revendedor
+		    </a>
+		</li>
+        }
+	</ul>
+</div>
+
+<div class="security collum">
+	<h4 class="title">
+		<span>Certificados</span>
+	</h4>
+	<ul>
+		<li><img src="@Url("~/locales/global/img/img_verisign.png")" alt="VeriSign Secured" /></li>
+	</ul>
+</div>
+
+<div class="info-cli">
+    <span>Razao Social CNPJ [xx.xxx.xxx/xxxx-xx] [Rua LOGRADOURO], [111] [CIDADE]-[UF] CEP: [11111-111] TEL: [111-1111], @ViewBag.StoreName. &copy;  @Model.ReleaseYear - Todos os direitos reservados.</span>
+</div>
