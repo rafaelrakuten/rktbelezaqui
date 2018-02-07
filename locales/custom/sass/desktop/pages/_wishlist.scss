@@ -1,6 +1,9 @@
 ﻿// PAGE - WISHLIST - COMPONENTS
 // ====================================================================
 %wishlist-filter {
+    .main-content h1{
+        margin-top:24px;
+    }
     .main-content .filter-wish {
         @include box-sizing();
         @include clearfix();
@@ -286,9 +289,12 @@
             }
             ul{
                 margin-top: 15px;
+                padding:15px;
+                margin-left:0;
                 >li{
                     padding: 3px 0px;
-                    margin: 0px;
+                    margin: 0 0 15px 0;
+
                     >a{
                        padding: 0px;  
                        height: 25px;
@@ -296,9 +302,11 @@
                     }
                     >ul{
                         margin-top: 0;
-                        margin-left: 10px;
+                        margin-left: 0;
+                        margin-top:10px;
                         >li{
                             padding: 0px;
+                            line-height:22px;
                             >a{
                                 font-weight: 500;
                             }

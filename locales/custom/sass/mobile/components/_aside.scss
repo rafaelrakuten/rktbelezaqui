@@ -27,6 +27,19 @@
             font-size:18px;
             color:$color-black;
             font-weight:700;
+            text-transform: none;
+ 
+             color: $font-color-1;
+             font-family: $font-one;
+             font-size: 16px;
+             font-weight: bold;
+             margin: 0px;
+      
+             height: 39px;
+             line-height: 39px;
+             padding: 0 15px;
+             text-transform: uppercase;
+             border-bottom:1px solid #c3c3c3;
         }
         ul{
             padding:0;

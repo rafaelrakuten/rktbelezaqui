@@ -345,6 +345,11 @@
 	.see-more-txt{
 		font-weight: 300;
 		color: $color-gray;
+		font-size:0;
+		&:before{
+			font-size:14px;
+			content:'Veja mais em >>'
+		}
 	}
 }
 
@@ -573,11 +578,15 @@
 
 %text-prod-minidesc-link{
 	font-family:$font-one;
-	font-size:16px;
 	font-weight:700;
-	color:$font-color-1;
+	color:#000;
 	text-transform: none;
 	text-decoration: none;
+	font-size:0;
+	&:before{
+		font-size:15px;
+		content:'Veja mais';
+	}
 }
 
 
@@ -891,14 +900,15 @@
 	font-family:$font-one;
 	font-size:14px;
 	font-weight:600;
-	color: #ffffff;
-	background-color: #5cb85c;
-    border-radius: 5px;
-    padding: 10px 15px !important;
+	color:#5cb85c;
+	background-color: #fff;
+    border-radius: 0;
+    padding: 70px 15px !important;
     text-transform: uppercase;
 	margin: 0 auto;
     display: block;
 	width: 110px;
+	border:1px dashed #5cb85c;;
 	@media (max-width: $mobile-w) {
 		width: auto;
 	}
@@ -908,14 +918,16 @@
 	font-family:$font-one;
 	font-size:14px;
 	font-weight:600;
-	background: $color-red;
-	color:#fff;
-    border-radius: 5px;
-    padding: 10px 15px !important;
+	background: #fff;
+	color:$color-alert;
+	border:1px dashed $color-alert;
+    border-radius: 0;
+    padding: 7px 15px !important;
     text-transform: uppercase;
 	margin: 0 auto;
     display: block;
 	width: 135px;
+
 	@media (max-width: $mobile-w) {
 		width: auto;
 	}

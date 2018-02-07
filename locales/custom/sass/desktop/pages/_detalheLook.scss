@@ -336,6 +336,10 @@
     }
 }
 
+body.lookDetalhe #info-product .reviewaggregate #hplAmountAssessments{
+    font-size:0;
+}
+
 %look-details__social {
   
     #info-product .social{
@@ -393,7 +397,7 @@
         text-align: center;
         width: 350px;
         float: left;
-        margin-top: 20px;
+        margin-top: 0;
         position: relative;
         right: 0;
         bottom: 0;
@@ -699,6 +703,9 @@
 }
 
 %look-aside-bt-selecionarTodos {
+    .hplSelectAllbefore{
+        display:none;
+    }
     .pieces .select-look {
         background: none;
         margin-top: 0px;

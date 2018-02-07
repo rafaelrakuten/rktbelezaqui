@@ -142,9 +142,57 @@
             display: inline-block;
 
         }
+
+        #identificacao{
+            float:left;
+            padding-right:5px;
+        }
+
+        .identificacao-2{
+            > span {
+                display:none;
+            }
+        }
     }
 }
 
+%mobile-header__welcome-deslogado {
+    .wrap-nav-mobile .welcome {
+    
+
+        #identificacao{
+            display:none;
+        }
+
+        .identificacao-2{
+            > span {
+                display:none;
+            }
+            span +  a{
+                float: left;
+                font-size: 0;
+                width: 54px;
+                position: relative;
+                display: inline-block;
+                min-height: 10px;
+                &:before{
+                    content:'Entre';
+                    font-size:13px;
+                    position: absolute;
+                    top:0;
+                    left:0;
+                }
+                &:after{
+                    content:'ou';
+                    font-size:13px;
+                    position: absolute;
+                    top:0;
+                    right:5px;
+                }
+            }
+        }
+    }
+}
 %mobile-header__nav {
     .wrap-nav-mobile {
         width: 100%;
@@ -185,6 +233,7 @@
 %mobile-header__help {
     .wrap-nav-mobile .help {
         padding-top: 0px;
+        opacity:1;
         a,
         span {
             @extend %text-header-help-font;
@@ -201,6 +250,29 @@
         &:nth-child(2){
             display: none;
         }
+
+        > div{
+            float:left;
+            width:100%;
+            &.left,  &.right{
+              
+                width:100%;
+                float:left;
+                a, span{
+                    display: inline-block;
+                    padding: 16px 0 16px 14px;
+                    width: 96%;
+                    border-bottom: solid 1px #999;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    color: #3563a2;
+                    font-weight:600;
+                }
+                
+            }
+        
+        }
+
     }
     .wrap-nav-mobile .help + .help{
         display:none;
@@ -269,4 +341,9 @@ body {
     @extend %mobile-header__help;
     @extend %mobile-autocomplete-mais-buscadas;
     @extend %mobile-main;
+
+    &.deslogado{
+        @extend %mobile-header__welcome-deslogado;
+    }
 }
+

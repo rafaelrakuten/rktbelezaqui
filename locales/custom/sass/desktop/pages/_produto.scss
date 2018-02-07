@@ -787,10 +787,10 @@
         }
         .first.field+input+.field ul {
             overflow: visible;
-            width: 360px;
+            width: 100%;
             li {
-                width: 40px;
-                height: 40px;
+                width: 23px;
+                height: 23px;
                 text-align: center;
                 margin-bottom: 10px;
                 border: none;
@@ -861,7 +861,7 @@
                 left: 0;
             }
             ul{
-                padding-bottom:50px;
+                padding-bottom:0;
                 clear: both;
                 overflow: hidden;
             }
@@ -906,7 +906,7 @@
         width: 100%;
         float: right;
         margin-right:0;
-        margin-top: 15px;
+        margin-top:0;
         padding:15px;
         @include box-sizing();
 
@@ -1167,9 +1167,12 @@
         a {
             display: inline;
             @extend %text-prod-minidesc-link;
+            
         }
         #anchor-description{
             display:none;
+            color:#000;
+           
         }
     }
 }

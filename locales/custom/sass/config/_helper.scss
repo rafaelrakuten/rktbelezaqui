@@ -619,12 +619,12 @@
                 border-radius: 4px;
             }
             .stamp{
-                display:block;
+                display:inline-block;
                 a{
                     clear:none;
                     display:inline-block;
                     float:none;
-                    width:40%;
+                    //width:40%;
                     img{
                         width:100%;
                     }
@@ -825,19 +825,30 @@
     .stamp {
         width: 100%;
         text-align: center;
-        display: none;
+        display: inline-block;
         height: auto;
         left: 0;
-        text-align: center;
+        text-align: right !important;
         position: absolute;
         top:0px;
         background: none;
+
+       
+        
         >a {
-            display: block;
+            display: inline-block;
             width: auto;
-            float: left;
+            float: none;
             margin: 5px 0px 0px 0px;
             clear: both;
+            padding:0;
+
+            @media (max-width: $mobile-w) {
+                margin-top:0;
+                img{
+                    max-width:90px;
+                }
+            }
         }
         @if $hprod-hidden-stamp==true {
             display: none;

@@ -94,6 +94,12 @@
             * {
                 padding-left: 0px;
             }
+            > .item{
+                width:210px;
+                .item{
+                    width:195px;
+                }
+            }
         }
         p {
             @extend %text-aside-first-item;
@@ -435,6 +441,7 @@ body:not(.lookDetalhe) #main {
     @extend %aside-newsletter;
     @extend %aside-subfilters-link;
     @extend %aside-horizontal-list;
+   
 }
 body.vitrine, body.vitrine-look #main{
     .aside #divFiltersLooks h3.title{

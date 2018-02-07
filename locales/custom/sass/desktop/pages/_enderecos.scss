@@ -59,6 +59,21 @@
     }
 }
 
+%meus-enderecos{
+	#pnlHomeDelivery{
+		.address{
+			.info{
+				.details{opacity:0.5;
+					& + .actions{
+						margin-top:5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
 // PAGE - ENDERECOS - CALLS
 // ====================================================================
 body.delivery-address {
@@ -69,4 +84,5 @@ body.delivery-address {
     @extend %enderecos-bts__del;
     @extend %enderecos-bts__cancel;
     @extend %enderecos-bts__save;
+    @extend %meus-enderecos;
 }

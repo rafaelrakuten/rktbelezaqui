@@ -20,28 +20,30 @@
 		}
 		.main-content{
 			margin: 0px auto;
+			
 			> h1{
 				margin-left: 0px;
 				display: block;
 				width: 980px;
 				margin: 0px auto;
 				float: none;
+				margin-top:25px;
 			}
 		}
 		#formcadastro_btnSalvar{
-			left: auto;
-			right: 0px;
-			bottom: 70px;
+			//left: auto;
+			//right: 0px;
+			//bottom: 70px;
 		}
 		.form .box.dados-adicionais {
-			width: 100%;
+			//width: 100%;
 			.field{
 				//position: absolute;
-				left: 0px;
+				//left: 0px;
 			}
 		}
 		.form{
-			padding: 5px 0 10px 0px;
+			//padding: 5px 0 10px 0px;
 			width: 980px;
 			margin: 0px auto;
 			position: relative;
@@ -49,15 +51,27 @@
 				background: transparent;
 			}
 			.dados{
-				margin-left: 0px;
+				//margin-left: 0px;
 				border: 0px;
 			}
 			.endereco{
-				position: relative;
-				left: 64px;
+				//position: relative;
+				//left: 64px;
+				.input-tel, .input-cel{
+					.phone{
+						.ddd{
+							width:30px;
+							padding-left:2px;
+						}
+						.number{
+							width:80px;
+							padding-left:2px;
+						}
+					}
+				}
 			}
 			#box_cadastro_dadosacesso{
-				padding:5px 0px;
+				//padding:5px 0px;
 			}
 			.box.termos{
 				float: left;
@@ -87,7 +101,17 @@
 			margin-right: 150px;
 		}
 		.form .field.nasc{
-			left: 150px;
+			//left: 150px;
+			.date{
+				.day,.month {
+					width:30px;
+					padding-left:2px;
+				}
+				.year {
+					width:50px;
+					padding-left:2px;
+				}
+			}
 		}
 		.form .input-comp{
 			width: 305px;
@@ -119,6 +143,32 @@
 	#formcadastro_btnSalvar{
 		@extend %bt-cad__salvar;
 		right: 4px !important;
+		width:100px;
+	}
+}
+
+
+%form-cadastre-se{
+	#FormInclusaoCadastro{
+		h1:first-child{
+			display:none !important;
+			
+		}
+		h1{opacity:0.5;
+			&:before{
+				content:'Cadastre-se';
+				font-size:24px;
+				display:inline-block !important;
+			}
+			span{
+				font-size:0;
+				display:none;
+			
+			}
+		}
+		.atention{
+			margin-top:-20px;
+		}
 	}
 }
 
@@ -128,4 +178,6 @@ body.register{
 	@extend %cad-container;
 	@extend %cad-person;
 	@extend %cad-bt__salvar;
+	@extend %form-cadastre-se;
+	
 }

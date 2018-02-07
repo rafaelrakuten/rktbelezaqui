@@ -46,6 +46,22 @@
 				float:left;
 				width:60%;
 				@include box-sizing();
+				margin-bottom:0;
+				margin-top:-2px;
+				&.first + .field {
+					margin-bottom:16px;
+				}
+
+				.phone{
+					float:left;
+					.ddd{
+						width:30px;
+					}
+					.number{
+						width:90px;
+					}
+				}
+
 				label{
 					width:100%;
 					float:left;
@@ -66,6 +82,7 @@
 					float:left;
 					width:100%;
 					position: relative;
+					height:18px;
 				}
 			}
 			.actions{

@@ -206,10 +206,17 @@
         }
         .title {
             @extend %text-basket-tfoot-title;
-            line-height: 20px;
+            line-height: 25px;
+            text-transform:uppercase;
+            font-weight:700;
+            font-size:16px;
         }
         .subtotal {
             @extend %text-basket-tfoot-subtotal;
+            font-size: 22px;
+            font-weight: 700;
+            color: #848484;
+            line-height:20px;
         }
 
         #tdDiscount{
@@ -221,6 +228,7 @@
                 font-size:22px;
                 font-weight:700;
                 color:$color-text-light;
+                line-height:30px;
             }
         }
     }
@@ -332,7 +340,7 @@
             &:after{
                 content:"Validar Cupom";
                 font-size: 16px;
-                display:none;
+                display:inline-block;
             }
         }
         #lnkCancelCoupon.btn.cancel {
@@ -393,6 +401,13 @@
             }
         }
     }
+}
+
+.coupon-on{
+    @extend %text-basket-coupon-on;
+}
+.coupon-off{
+    @extend %text-basket-coupon-off;
 }
 
 

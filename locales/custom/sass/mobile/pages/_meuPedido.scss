@@ -17,7 +17,13 @@
 }
 
 %meupedido-box {
-    .box {}
+    .box {
+        .number{
+            & + span{
+                display:inline-block;
+            }
+        }
+    }
     #main .box .form .actions .btn {
         @extend %bt-pedidos__enviar;
     }
@@ -28,7 +34,8 @@
         @extend %bt-meupedido__imprimir;
         margin: 0px auto;
         width: 100%;
-        border-radius: 0;
+        @include border-radius(4px);
+        margin-top:10px;
     }
 }
 

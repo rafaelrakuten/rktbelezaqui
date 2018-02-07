@@ -98,6 +98,7 @@
         padding: 0;
         height: 54px;
         border-top:0;
+        width:100%;
         span{
             @extend %text-orderby-title;
         }
@@ -293,11 +294,16 @@
         background-color:none;
         border-top:none;
         margin-bottom: 40px;
-        color: $color-blue-light !important;
+        color: $font-color-2 !important;
         text-decoration: none !important;
         font-weight: bold !important;
+        text-align:center;
+        text-transform:uppercase!important;
         strong {
             @extend %text-see-category;
+        }
+        em{
+            text-transform:none!important;
         }
         // &[href="/look.aspx"] {
         //     text-transform: none;
@@ -497,11 +503,14 @@
         clear: both;
     }
     #main .reviewaggregate {
-        width: 150px;
+        width: 120px;
         display: inline-block;
         margin: 0px auto;
         .count {
             top: -1px;
+            .value{
+                margin-top:2px;
+            }
         }
     }
 }
@@ -543,13 +552,14 @@
                 right: 0;
                 top: inherit;
                 left:inherit;
-                display:none;
+                display:inline-block;
                 span{
                     @extend %text-orderby-title;
                  
                 }
                 select{
                     height: 23px;
+                    width:50px;
                     color:$color-gray;
                     font-family: $font-one;
                     border-radius:4px;
@@ -568,16 +578,20 @@
         a {
             text-decoration: none;
             @extend %text-orderby-item;
+            width:102px;
             &:hover,
             &.selected {
                 @extend %text-orderby-item-selected;
             }
+
+
         }
     }
     .content .filter-details .vs-mode {     
         margin-right: 0;   
         padding: 15px 0px 15px 10px;
         width: 35%;
+        display:inline-block;
         >span {
             @extend %text-orderby-title;
             line-height: 15px;
@@ -868,6 +882,19 @@ body.vitrine, body.vitrine-look{
     }
 }
 
+%aside-arrows{
+    .aside{
+        .banners{
+            .owl-carousel {
+                .owl-controls{
+                    .owl-next{
+                        left:150px!important;
+                    }
+                }
+            }
+        }
+    }
+}
 
 body.look:not(.lookDetalhe){
     background: #FFF;
@@ -900,4 +927,10 @@ body.look:not(.lookDetalhe){
     @extend %catalog-filters__itenspage;
     @extend %catalog-seo;
     @extend %pagination-look;
+   
+}
+
+
+body.catalog {
+    @extend %aside-arrows;
 }

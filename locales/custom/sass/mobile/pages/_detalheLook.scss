@@ -605,6 +605,18 @@
         @extend %text-look-select-look;
         display:none;
     }
+     .hplSelectAllbefore  #hplSelectAll{
+         display:block;
+         background: none;
+         margin-top: 0px;
+         margin-left: 0px;
+         margin-bottom: 20px;
+         width: 100%;
+         text-align: center;
+         padding: 0px;
+         background: #FFF;
+         @extend %text-look-select-look;
+     }
 }
 
 %look-pieces__image {
@@ -656,12 +668,13 @@
         overflow: visible;
     }
     .pieces label>select {
-        width: 142px;
+        width: 100%;
         @include fonte($font-one, 400, 12px, $color-gray);
         @include select-arrow(ordernar-por-arrow, 95%);
         @include remove-shadow();
         @include border-radius(4px);
         padding: 6px;
+        line-height:12px;
     }
     #main .pieces .jcarousel-skin-tango {
         @include box-sizing();

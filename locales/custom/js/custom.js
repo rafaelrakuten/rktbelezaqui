@@ -138,6 +138,9 @@ jQuery(window).load(function () {
               });
         }        
     };    
+
+    selecionarTodos();
+    //filtroOrdenaProdutos();
 });
 
 
@@ -280,7 +283,57 @@ jQuery('#header .basket-count-number strong').each(function(){
     jQuery('body.lookDetalhe #info-product ul.thumbs .ultimo').html(video);
  })();
 
+ // link selecionar todos
+ function selecionarTodos(){
+    jQuery('#piecesLook').each(function(){
+        jQuery(this).find('.title').after('<div class="hplSelectAllbefore" />');
+     });
 
+     jQuery('#hplSelectAll').clone().appendTo( jQuery('.hplSelectAllbefore' ));
+    
+ };
+
+// ordenar produtos
+function filtroOrdenaProdutos(){
+    
+    // jQuery('#ordena_produtos ul').each(function() {
+    //     var list = jQuery(this), select = jQuery(document.createElement('select')).insertBefore(jQuery(this).hide());
+    
+    //     jQuery('>li a', this).each(function() {
+    //         var target = jQuery(this).attr('target'),
+    //         option = jQuery(document.createElement('option'))
+    //             .appendTo(select)
+    //             .val(this.href)
+    //             .html(jQuery(this).html())
+    //             .click(function(){
+    //                 if(target==='_blank') {
+    //                     window.open(jQuery(this).val());
+    //                 }
+    //                 else {
+    //                     window.location.href = jQuery(this).val();
+    //                 }
+    //             });
+    //     });
+    //     list.remove();
+    // });
+
+    jQuery('#ordena_produtos ul').each(function() {
+        var select = jQuery(document.createElement('select')).insertBefore(jQuery(this).hide());
+        jQuery('>li a', this).each(function() {
+            var a = jQuery(this).click(function() {
+                if (jQuery(this).attr('target')==='_blank') {
+                    window.open(this.href);
+                }
+                else {
+                    window.location.href = this.href;
+                }
+            }),
+            option = jQuery(document.createElement('option')).appendTo(select).val(this.href).html(jQuery(this).html()).click(function() {
+                a.click();
+            });
+        });
+    });
+}
 
 // // avaliacoes
 //  (function avaliacoes(){
@@ -295,8 +348,19 @@ jQuery('#header .basket-count-number strong').each(function(){
 //  })();
 
 
- console.log('2018')
+// quickview
 
+if (jQuery('body').hasClass('quickview')) {
+    jQuery('#descriptionSection').css("display", "block");
+    jQuery('#abaDescricao').click(function (event) {
+        jQuery('#descriptionSection').css("display", "block");
+        jQuery('#characteristicSection').css("display", "none");
+    });
+    jQuery('#abaCaracteristica').click(function (event) {
+        jQuery('#descriptionSection').css("display", "none");
+        jQuery('#characteristicSection').css("display", "block");            
+    })
 
+}
 
 

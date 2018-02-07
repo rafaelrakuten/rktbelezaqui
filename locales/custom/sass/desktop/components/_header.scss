@@ -216,6 +216,7 @@
         border: 0px;
         padding: 30px;
         top: $header-nav-height;
+        margin-top:9px;
         width: 100% !important;
         min-width: 400px;
         .collum {
@@ -652,7 +653,8 @@ body.deslogado #header .help>div>div.help-welcome .identificacao-2 a{
         top:32px;
         width: 242px;
         height:34px;
-        float: right;     
+        float: right;  
+        z-index:10;  
         label{
 
         }
@@ -839,7 +841,7 @@ body.deslogado #header .help>div>div.help-welcome .identificacao-2 a{
                 width: auto;
             }
             ._skus .total {
-                @include fonte($font-one, 700, 16px, $color-blue);
+                @include fonte($font-one, 700, 14px, $color-blue);
                 display: block;
                 line-height: 12px;
                 margin-top: 0px;
@@ -878,6 +880,19 @@ body.deslogado #header .help>div>div.help-welcome .identificacao-2 a{
                 margin-bottom: 0px;
                 @include flexbox(flex, row, wrap, space-around);
                 background: #FFF;
+                a{
+                    background:$font-color-2;
+                    color:#fff;
+                    height:30px;
+                    font-size:14px;
+                    text-indent:0;
+                    font-weight:600;
+                    width:136px;
+                    @include border-radius(4px);
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
             }
             .bt-mini-car-continue {
                 display: flex;

@@ -437,10 +437,11 @@
                 border-left: 1px solid transparent;
                 background: $color-white;
                 @include fonte($font-one, 700, 16px, $color-black);
+                text-transform:uppercase;
             }
             .subtotal {
                 background: $color-white;
-                @include fonte($font-one, 700, 20px,#5a5a5a);
+                @include fonte($font-one, 700, 20px,#848484);
             }
         }
         #tdGift{
