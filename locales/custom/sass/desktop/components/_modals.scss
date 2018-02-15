@@ -72,6 +72,7 @@
                     &.rating{
                         height: 80px;
                         margin-bottom: 0;
+                        float:left;
                         label{
                             .validacao{
                                 position: absolute;
@@ -81,6 +82,16 @@
                             }
                         }
                     }
+                    
+                    &.checkbox{
+                        position: absolute;
+                        left:0;
+                        margin-top:70px;
+                    }
+                }
+                .actions{
+                    float:right;
+                    padding-top:14px;
                 }
                 .form .field input[type="text"] {
                     padding: 0px 5px;

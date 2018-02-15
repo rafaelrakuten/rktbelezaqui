@@ -9,14 +9,14 @@
 
     &.affiliates .box {
         background: #fff;
-        margin-top: 10px;
+        //margin-top: 10px;
         .field{
             float:left;
             width:100%;
             height: auto;
             label{
                 span{
-                    text-align:left;
+                   // text-align:left;
                 }
                 input{
                     margin-left:0;
@@ -60,10 +60,88 @@
     }
 }
 
+%afiliados-form{
+  .atention + .form{
+      #form_container{
+          padding-bottom:0;
+          .field.radio{
+              margin:0;
+              &.person{
+                  padding-top:3px;
+                  label{
+                      float:left;
+                      display:inline-block;
+                      min-width:115px;
+                      input{
+                        width:20px;
+                      }
+                  }
+              }
+          }
+      }
+
+      .box{
+          padding:0 18px;
+          .field{
+            height: 30px;
+            label input{
+                margin-left:1%;
+                width:45%;
+                &.cnpj, &.tel{
+                    width:115px;
+                }
+            }
+            input[type="text"], input[type="tel"], input[type="password"],  select {
+                height:28px;
+                line-height:28px;
+            }
+            select{
+                width:120px;
+            }
+            &.newsletter{
+                margin-left:140px;
+                label{
+                    input{
+                        width:20px;
+                    }
+                }
+            }
+          }
+      }
+      .actions{
+          margin-left:156px;
+          .btn.ir{
+            display:inline-block;
+            float:left !important;
+          }
+      }
+
+      #DadosPessoaFisica{
+
+      }
+
+      #DadosPessoaJuridica{}
+  }
+}
+%afiliados-menu-lateral{
+    .aside{
+        .nav{
+            .block> ul{
+                padding-left:15px;
+                padding-top:10px;
+            }
+        }
+    }
+}
 // PAGE - CALLS - CALLS
 // ====================================================================
 body {
     @extend %afiliado-boxes;
     @extend %afiliados-titles;
     @extend %afiliados-buttons;
+}
+
+body.pagina-afiliados{
+    @extend    %afiliados-form;
+    @extend   %afiliados-menu-lateral;
 }

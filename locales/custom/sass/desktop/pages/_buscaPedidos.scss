@@ -60,13 +60,16 @@
             @extend %text-check-text-default;
         }
     }
+    #hlkVoltar{
+        margin-top:15px !important;
+    }
 }
 
 // PAGE - BUSCA PEDIDOS - CALLS
 // ====================================================================
 body.search {
     .main-content {
-        width: 980px;
+        width: 1200px;
         margin: 0px auto;
     }
     @extend %pedidos-request;

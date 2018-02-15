@@ -108,7 +108,12 @@ jQuery(window).load(function () {
 
     priceTo();
     cassrosselArrows();
-   
+    opniaoMobileAnchor();
+    thumbVideo();
+    btnFreteResponsivo();
+    headerBotoesBarra();
+    lookFiltros();
+    carrinhoNumber();
 
 });
 
@@ -176,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 // header welcome
-jQuery('#header .help-welcome').each(function(){
+jQuery('#header .wrap-help .right > .help-welcome').each(function(){
     jQuery(this).find('#identificacao').after('<div class="identificacao-2" />')
     var txtWelcome1 = jQuery(this).find('a:eq(0)').html();
    
@@ -218,6 +223,12 @@ jQuery('#header .basket-count-number strong').each(function(){
         return res;
     }
 });
+
+function headerBotoesBarra(){
+    var bt = jQuery('#header .help-welcome').html();
+    jQuery('#header .botoes_ .help-welcome').append(jQuery(bt));
+   
+}
 
 
 
@@ -283,6 +294,26 @@ jQuery('#header .basket-count-number strong').each(function(){
     jQuery('body.lookDetalhe #info-product ul.thumbs .ultimo').html(video);
  })();
 
+function thumbVideo(){
+    jQuery('.images ul.thumbs').each(function(){
+        var primeiroH = jQuery(this).find('li:eq(0) img').height();
+        jQuery(this).find('.ultimo a').height(primeiroH - 2);
+    });
+}
+
+// botao frete responsivo
+function btnFreteResponsivo(){
+    jQuery('.lookDetalhe.mobile-state').each(function(){
+        jQuery(this).find('#hplBuy').before('<div class="only-mobile before-frete" />');
+        jQuery(this).find('ul.tools').appendTo(jQuery('.before-frete'));
+    });
+};
+
+
+
+
+
+
  // link selecionar todos
  function selecionarTodos(){
     jQuery('#piecesLook').each(function(){
@@ -335,21 +366,8 @@ function filtroOrdenaProdutos(){
     });
 }
 
-// // avaliacoes
-//  (function avaliacoes(){
-//      //opiniao
-//      jQuery('.hreview').each(function(){
-//          var dtreviewed = jQuery(this).find('.dtreviewed').html();
-//          jQuery(this).find('.item .fn').after('<span class="ponto">•</span><span class="data"> data</span>');
-//          jQuery(this).find('.item .data').html(dtreviewed);
-
-//         // jQuery(this).find(' strong.fn').html('teste')
-//      });
-//  })();
-
 
 // quickview
-
 if (jQuery('body').hasClass('quickview')) {
     jQuery('#descriptionSection').css("display", "block");
     jQuery('#abaDescricao').click(function (event) {
@@ -363,4 +381,118 @@ if (jQuery('body').hasClass('quickview')) {
 
 }
 
+// (function quickViewVejaMaisAncor(){
 
+
+//     jQuery(document).ready(function(){
+        
+//     });
+    
+
+
+//     jQuery('.hproduct.show-quickview').each(function(){
+
+//         var url = window.location.href;
+//         console.log('url', url);
+//         var link = jQuery(this).find('a.url').attr('href');
+//         // jQuery(this).mouseenter(function(){
+//         //     console.log('o link é ' + link)
+//         // });
+
+//         console.log('link', url + link);
+
+//         jQuery(this).mouseenter(function(){
+//             var teste = link;
+//         });
+
+//        // target( link );
+//        jQuery(this).find('.bt-quick-look').on('click', function(){
+//            console.log('2018');
+
+       
+          
+//             jQuery('.veja-mais_').attr('href' , link);
+//         }); 
+//     });
+
+// function target( url ){
+//     jQuery('.quickview .tab-content .veja-mais_').on('click', function(){
+//         jQuery('#fancybox-close, #fancybox-close-2').trigger('click');
+//        window.location = url;
+      
+//      });
+//     }
+
+
+    
+// })();
+
+// afiliados
+(function(){
+    if(window.location.href.indexOf("afiliados") > -1) {
+        jQuery('body').addClass('pagina-afiliados');
+     }
+})();
+
+
+// link opiano detalhe no responsivo
+function opniaoMobileAnchor(){
+    jQuery('.product.mobile-state').each(function(){
+        var opiniao = jQuery(this).find('.responsive-abas-description .aba-0').offset();
+       
+        jQuery('#info-product .reviewaggregate #hplAmountAssessments.anchor-opinion').on('click', function(){
+
+            if( ! jQuery('.aba-0').hasClass('active')){
+                jQuery('.resp-abas.aba-0 h2').trigger('click');
+            
+            }
+
+            jQuery('html, body').animate({scrollTop:opiniao.top + 100 }, 800);
+            
+
+        });
+    });
+}
+
+
+// look filtros
+
+ function lookFiltros(){
+//     jQuery('body.look .content #ordena_produtos fieldset').each(function(){
+//         jQuery(this).append('<select />');
+//         var li = jQuery(this).find('ul li');
+
+//         for(var i = 0; i < li.length; i++){
+//             console.log('i' + i);
+//             var txt = jQuery(this).find('li').eq(i).text();
+//             var option = document.createElement('option');
+//             jQuery(this).find('select').append('<option />');
+//             jQuery(this).find('select option').eq(i).text(txt);
+//         }
+//         for(var i = 0; i < li.length; i++){
+
+//         }
+//     });
+    jQuery('.look .filters .itens-page span').text('Itens por página');
+
+ }
+
+
+ jQuery('body.look').each(function(){
+    if( jQuery(this).find('#opinion').size() > 0){
+        jQuery('body').addClass('avaliado');
+    }else{
+        jQuery('body').addClass('nao-avaliado');
+    }
+ });
+
+ function carrinhoNumber(){
+     
+    var el = jQuery(' .basket-count-number  strong').eq(0).text();
+    jQuery(' .btn-cart-mobile .qtd-cart').text(el);
+ }
+
+
+
+
+ 

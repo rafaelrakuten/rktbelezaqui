@@ -90,12 +90,13 @@
                 font-family: $font-one;
                 color:#fff;
                 font-size:12px;
+                padding:15px 20px 0 20px;
                 br{
                     display:none;
                 }
             }
             .orbit-bullets {
-                bottom: 5px;
+                bottom: 19px;
                 right: 5px;
                 z-index: $zindex-basket-orbs;
                 li {
@@ -227,7 +228,7 @@
             & + .subtotal{
                 font-size:22px;
                 font-weight:700;
-                color:$color-text-light;
+                color:$font-color-1;
                 line-height:30px;
             }
         }
@@ -347,6 +348,9 @@
             @extend %bt-basket__coupon--cancel;
             text-align: center;
             width: 100%;
+            &:after{
+                display:none;
+            }
         }
         .coupon-ok {
             @extend %text-basket-coupon-on;

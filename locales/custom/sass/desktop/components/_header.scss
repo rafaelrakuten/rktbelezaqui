@@ -148,6 +148,9 @@
                a{
                  padding:0;
                }
+               .sub-nav{
+                   display:block !important;
+               }
             }
 
           /*  &:before{
@@ -216,13 +219,15 @@
         border: 0px;
         padding: 30px;
         top: $header-nav-height;
-        margin-top:9px;
-        width: 100% !important;
+        margin-top:7px;
+        width:760px !important;
         min-width: 400px;
+        max-width:1000px;
         .collum {
             width: auto;
             &.imagem {
                 float: right;
+                padding:15px;
                 >a:before {
                     display: none;
                 }
@@ -563,6 +568,7 @@ body.deslogado #header .help>div>div.help-welcome .identificacao-2 a{
                     strong{
                         font-size:14px;
                         color:#000;
+                        margin-left:-9px;
                     }
                     &.plural{
                         font-size:14px;
@@ -633,6 +639,111 @@ body.deslogado #header .help>div>div.help-welcome .identificacao-2 a{
                 }
                 #cabecalho_lblResumoCesta {
                     display: none;
+                }
+            }
+        }
+    }
+}
+
+%desktop-header__car-float{
+  
+    #header #floatToolbar .car {
+        position: absolute;
+        right: 0px;
+        top:74px;
+        top:-2px;
+        height: 40px;
+        line-height: 30px;
+        padding: 0px;
+        width: 60px;  
+        left:28px;
+        > p{
+            width:100%;
+            position: relative;
+            > a{
+                position: absolute;
+                top:0;
+                left:0;
+            }
+        }             
+        .basket {
+            @include bgimg(ico-header-car, png);
+         
+            @include box-sizing();
+            background-position: 10px center;
+            background-repeat: no-repeat;
+            display: inline-block;
+            height: 25px;
+            line-height: 30px;
+            padding-left: 42px;
+            position: relative;
+            right: 0px;
+            text-align: right;
+            top: 0px;
+            width: 30px;
+            z-index: $zindex-header-car;
+            .basket-count-number{
+                @include fonte($font-one, 700, 14px, $color-black);
+                strong{
+                    @include fonte($font-one, 700, 14px, $color-blue-light);
+                    margin:0 5px 0 0;
+                }
+            }
+           
+            .title {
+                @extend %text-header-car-title-font;
+
+                display: none;
+                padding-top: 14px;
+            }
+            .itens {
+                display: inline-block;
+                margin: 0;
+                padding: 0px;
+                text-align: left;
+                background: none;
+                margin-top:0;
+                span,
+                label {
+                    @extend %text-header-car-item-font;
+                    background: none;
+                }
+                .basket-count-number,
+                .basket-count-label {
+                    font-family: $font-one;
+                    display: block;
+                    line-height: 14px;
+                    text-align: center;
+                    width: auto;
+                    color: #000;
+                    font-weight: 600;
+                    font-size: 14px;
+                    padding: 7px 10px 0 0;
+                }
+                .basket-count-number{
+                    font-size:0;
+                    strong{
+                        font-size:14px;
+                        color:#000;
+                        position: absolute;
+                        top:5px;
+                        margin-left:0;
+                    }
+                    &.plural{
+                        font-size:14px;
+                    }
+                }
+                .basket-count-label {
+                    display: none;
+                }
+                .zero-item {
+                    display: block;
+                    //font-size: 0;
+                   // &:before {
+                     //   content: "0";
+                       // @extend %text-header-car-item-font;
+                   // }
+
                 }
             }
         }
@@ -916,9 +1027,106 @@ body.deslogado #header .help>div>div.help-welcome .identificacao-2 a{
 
         //@include remove-shadow;
         background: $color-white;
-        height: 60px;
+        height: 50px;
         padding: 0px;
         border: 0px;
+        .itens_{
+            margin:0 auto;
+            width:1260px;
+        }
+        .item{
+            float:left;
+            width:33%;
+            position: relative;
+            min-height:40px;
+            &.botoes_{
+                padding-top:11px;
+
+                float: right;
+      
+                width: 26%;
+                .help-welcome{
+                    float: none;
+                    background:$font-color-2;
+                    @include border-radius(4px);
+                    height:26px;
+                    line-height:26px;
+                    color:#fff;
+                    text-align:left;
+                
+                    width:210px;
+                    a,span{
+                    color:#fff;
+                    text-transform: uppercase;
+                    font-size:14px;
+                    font-weight:600;
+                    display:inline-block;
+                    text-transform:uppercase;
+                    margin:0;
+                    padding:0;
+                    top:0;
+                    background:transparent;
+                    margin-left:10px;
+                    }
+                    .welcome{
+                        border:0;
+                        //min-width:210px;
+                        text-align:center;
+                        width:100%;
+                        margin:0;
+                    }
+                    span{
+                        font-size:12px  !important;
+                        display: inline-block;
+             
+                        text-indent: 0;
+                    }
+
+                    body #header .help>div>div.help-welcome a, body #header .help>div>div.help-welcome span {
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 600;
+                    display: inline-block;
+                    text-transform: uppercase;
+                    margin: 0;
+                    padding: 0;
+                    }
+
+                    #identificacao{
+                    display:inline-block;
+                    float:none;
+                    margin:0;
+                    vertical-align: top;
+                     strong{
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size:14px;
+                     }
+                    }
+
+                    .identificacao-2 {
+                        float:none;
+                        padding:0;
+                        display:inline-block;
+                            span{
+                                padding:0 2px 0 0 ;
+                                margin:0;
+                                text-indent:-999px;
+                                overflow:hidden;
+                            }
+                            a{
+                                margin-left:0;
+                                vertical-align: top;
+                            }
+                        }
+
+
+
+                }
+            }
+        }
         .search{
             .placeholder{
                 @include box-sizing();
@@ -933,12 +1141,18 @@ body.deslogado #header .help>div>div.help-welcome .identificacao-2 a{
         }
         .list{
             position: absolute;
-            top: 19px;
-            right: 135px;
+            top:14px;
+            right: auto;
             line-height: 25px;
+            display:inline-block;
+            left:230px;
+            width:40px;
+            > a{
+                margin-left:6px;
+            }
             a{
                 text-transform: uppercase;
-                @include fonte($font-two, 600, 14px, #000);
+                @include fonte($font-two, 600, 0, #000);
                 display: inline-block;
                 text-indent: 0;
                 &:before{
@@ -948,6 +1162,29 @@ body.deslogado #header .help>div>div.help-welcome .identificacao-2 a{
                     display: inline-block;
                     width: 30px;
                     vertical-align: middle;
+                }
+            }
+            .car{
+                a{
+                    background: url(/static/locales/custom/img/ico-header-car.png);
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -o-box-sizing: border-box;
+                    -ms-box-sizing: border-box;
+                    box-sizing: border-box;
+                    background-position: left center;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    &:before{
+                        content:"";
+                        @include imgbt(ico-wishlist, png, auto,25);
+                        background-position: 0 center;
+                        display: inline-block;
+                        width: 30px;
+                        vertical-align: middle;
+                        background:$font-color-1;
+                        display:none;
+                    }
                 }
             }
         }
@@ -1013,7 +1250,7 @@ body.deslogado #header .help>div>div.help-welcome .identificacao-2 a{
             }
         }
         .logoFT {
-            top: 23px;
+            top: 13px;
             position: absolute;
             width: 100%;
             margin: 0;
@@ -1030,9 +1267,9 @@ body.deslogado #header .help>div>div.help-welcome .identificacao-2 a{
             }
         }
         .buscaFT {
-            top: 6px;
-            right: 28%;
-            left: auto;
+            top:2px;
+          
+            left: 0;
             width: 242px;
             right:0;
             .placeholder{
@@ -1093,13 +1330,16 @@ body.deslogado #header .help>div>div.help-welcome .identificacao-2 a{
         .help {
             position: absolute;
             width: auto;
-            right: 330px;
-            top: 25px;
-            display: none;
+            right: auto;
+            top: 0;
+            display: inline-block;
         }
         .car .basket .itens .basket-count-number{
             padding: 1px 7px;
         }
+
+
+       
     }
 }
 
@@ -1150,6 +1390,34 @@ body.deslogado #header .help>div>div.help-welcome .identificacao-2 a{
         }
    }
 }
+body #floatToolbar .item.botoes_ .help-welcome {
+   margin-left:13px;
+}
+body.deslogado #floatToolbar .item.botoes_ .help-welcome #identificacao{
+    display:none;
+}
+body.deslogado #floatToolbar .item.botoes_ .help-welcome #identificacao-2{
+    float:none;
+}
+body.deslogado  #floatToolbar .item.botoes_ .help-welcome .identificacao-2 a:first-child{
+    float:right;
+}
+body.deslogado  #floatToolbar .item.botoes_ .help-welcome .identificacao-2 span
+{
+    display: inline-block;
+    padding: 1px 5px 0 5px;
+    text-indent: 0;
+    text-indent:0;
+}
+body.deslogado  #floatToolbar .item.botoes_ .help-welcome .identificacao-2 a:last-child
+{   font-size:0;
+    float:left;
+    &:before{
+        content: 'Entre';
+        font-size: 14px;
+    }
+}
+
 // HEADER - CALLS
 // ====================================================================
 body {
@@ -1161,6 +1429,7 @@ body {
     @extend %desktop-header__help;
     @extend %desktop-header__welcome;
     @extend %desktop-header__car;
+    @extend %desktop-header__car-float;
     @extend %desktop-header__search;
     @extend %desktop-header__logo;
     @extend %desktop-header__minicar;

@@ -151,12 +151,12 @@
     letter-spacing: 0;
     @include bgimage(ico-button-buy, png);
     background-repeat: no-repeat;
-    background-position: 15px center;
+    background-position: 27px 11px;
     padding-left: 45px;
     &:hover{
         @include bgimage(ico-button-buy, png);
         background-repeat: no-repeat;
-        background-position: 15px center;
+        background-position: 27px 11px;
     }
 }
 

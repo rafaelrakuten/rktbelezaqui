@@ -1,5 +1,25 @@
 ﻿// PAGE - DETALHE DO LOOK - COMPONENTS
 // ====================================================================
+%look-details__info-product{
+    #main #info-product{
+
+        .block-1{ 
+            #lblUnavailableLook{
+                display:none;
+            
+            }
+            .notifyme.form{
+                .btn.send{
+                    text-align: center;
+                    color: #fff;
+                    text-transform: uppercase;
+                }
+                    
+            }
+        }
+    }
+}
+
 %look-details__name {
     #main #info-product .name {
         @extend %text-prod-name;
@@ -251,7 +271,7 @@
             width: 93px;
         }
         .count {
-            margin-top: 1px;
+            margin-top: 0;
             vertical-align: top;
             color:$color-gray;
             font-size:0;
@@ -261,12 +281,35 @@
             .iframe{
                 @extend %text-prod-ratting-font;
                 text-decoration: underline;
+                font-size:0;
+                &:before{
+                    content:'Avalie este produto';
+                    font-size:12px;
+                    padding-left:5px;
+                }
             }
             .anchor-opinion {
                 @extend %text-prod-ratting-font;
                 width: auto;
                 text-decoration: none;
-                margin-left:5px;
+                margin-left: 5px;
+                position: relative;
+                display: inline-block;
+    
+                width: 120px;
+                text-align: left;
+                padding: 0 0 0 5px;
+                &:before{
+                  
+
+                    display: inline-block;
+                    content: 'Avalie este produto';
+                    font-size: 12px;
+                    color: #000000;
+                    text-decoration: underline;
+                    left: 20px;
+                    position: absolute;
+                }
             }
         }
         // >.iframe {
@@ -344,6 +387,9 @@
     display:none !important;
 }
 %look-details__tools {
+    .before-frete{
+        margin-top:17px;
+    }
     #info-product .tools {
         @include clearfix();
         text-align: center;
@@ -569,7 +615,7 @@
             padding-left: 30px;
             @include bgimage(ico-button-buy, png);
             background-repeat: no-repeat;
-            background-position: 22px 2px;
+            background-position: 44px 1px;
             background-size:30px;
             height:30px;
         }
@@ -604,6 +650,11 @@
         background: #FFF;
         @extend %text-look-select-look;
         display:none;
+        font-size:0;
+        &:before{
+            font-size:12px;
+            content:'Clique aqui para selecionar todos os itens';
+        }
     }
      .hplSelectAllbefore  #hplSelectAll{
          display:block;
@@ -639,6 +690,8 @@
         input {
             position: relative;
             top: 8px;
+            width:20px;
+            height:20px;
         }
         span {
             padding: 0px;
@@ -1027,11 +1080,12 @@
                  position: relative;
                  top:2px;
                  left:3px;
+                 color:#000;
              }
          }
         .fn{
             @extend %text-prod-opinion-name;
-            margin:0 10px 0 0; 
+            margin:0 3px 0 0;
             position: relative;
             top: 2px;
             text-transform:capitalize;
@@ -1067,7 +1121,7 @@
             }
         }
         .description{
-            margin-left:20px;
+            margin-left:0;
         }
         .wrap-rating{
             float:left;
@@ -1127,6 +1181,7 @@
 // PAGE - DETALHE DO LOOK - CALLS
 // ====================================================================
 body.lookDetalhe {
+    @extend %look-details__info-product;
     @extend %look-details__name;
     @extend %look-details__fabcod;
     @extend %look-details__offers;

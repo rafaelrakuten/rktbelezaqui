@@ -42,6 +42,7 @@
             }
             #info-product{
                 padding: 0px;
+                min-height:400px !important;
             }
         }
     }
@@ -64,6 +65,16 @@
         margin-right: 10px;
         height: auto;
         position: relative;
+        .stamp{
+            display:block;
+            text-align:right;
+            position: absolute;
+            top:0;
+            right:0;
+            z-index:10;
+        }
+
+       
     }
     #info-product .photo{
             &:after{
@@ -81,12 +92,17 @@
         #Zoom1{
             width:100% !important;
             max-height: 360px;
-            overflow:hidden;
+            //overflow:hidden;
         }
     }
     #info-product .thumbs > li{
         margin-bottom: 13px;
-        max-width:82px;
+        max-width:88px;
+        &.ultimo{
+            img, img:hover{
+                border:0;
+            }
+        }
     }
 }
 
@@ -98,10 +114,46 @@
         width: 65%;
         float: right;
         //margin: 0 22px 0 10px;
+
+        #ajaxDescriptionPreview{
+            border-bottom:2px solid #000;
+            margin-bottom:20px;
+        }
        
+        .col-left{
+            .veja-mais{
+                width:100%;
+                background:#f1f1f1;
+                padding:25px 30px 15px 30px;
+                float:left;
+                @include box-sizing();
+                text-align:left;
+                h4{
+                    width:100%;
+                    text-transform:uppercase;
+                    color:#000000;
+                    font-size:13px;
+                    font-weight:700;
+                }
+                .inner{
+                    width:100%;
+                    margin-top:10px;
+                    a{
+                        display:inline-block;
+                        width:100%;
+                        text-transform: capitalize;
+                        color:#000000;
+                        text-decoration: underline;
+                        font-size:12px;
+                        font-weight:700;
+                        padding:5px 0;
+                    }
+                }
+            }
+        }
         
         .stamp{
-            width: 215px;
+            width:100%;
         }
         .fab-cod{
             width:100%;
@@ -171,15 +223,19 @@
                 display: inline-block;
                 margin-left: 15px;
                 margin-left:0;
-                padding: 30px 0px 50px;
+                padding: 30px 0px 20px;
                 input{
                     width: 161px !important;
-                    margin: 0;
+                    margin: 8px 0 0 0;
                 }
                 .btn.send.ir{
                     position: relative;
                     left: -18px;
                     @include border-radius(3px);
+                    margin-top:38px;
+                }
+                > span{
+                    margin-bottom:0;
                 }
             }
         }
@@ -212,9 +268,9 @@
         clear: none;
         margin-top: 2px;
         padding-top: 0px;
-        margin-left: 105px;
-        top: 418px;
-        left: 30px;
+        margin-left: 0;
+        top: 0;
+        left: 0;
     
     }
 }

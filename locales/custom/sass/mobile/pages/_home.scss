@@ -70,6 +70,14 @@
     }
 }
 
+%home-products{
+    .list-products {
+        li{
+            position: relative;
+        }
+    }
+}
+
 
 // PAGE - HOME - CALLS
 // ====================================================================
@@ -83,6 +91,7 @@ body.home{
 	@extend %helper-hproduct__reviewaggregate;
 	@extend %helper-hproduct__buy;
     @extend %banner-home__main;
+    @extend %home-products;
     
 	.social-home{
 		display: none;

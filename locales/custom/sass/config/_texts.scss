@@ -148,7 +148,7 @@
 	font-size: 14px;
 	color: #000;
 	font-weight: 700;
-	text-transform: none;
+	text-transform:uppercase;
 	text-decoration: none;
 }
 // Price From
@@ -174,7 +174,7 @@
 // Parcel
 %text-hprod-parcel{
 	font-family: $font-one;
-	font-size: 16px;
+	font-size: 14px;
 	color: #000;
 	font-weight: 600;
 	text-transform: lowercase;
@@ -183,7 +183,7 @@
 // Parcel Strong
 %text-hprod-parcel-strong{
 	font-family: $font-one;
-	font-size: 16px;
+	font-size: 14px;
 	color: #000;
 	font-weight: 600;
 	text-transform: none;
@@ -903,7 +903,7 @@
 	color:#5cb85c;
 	background-color: #fff;
     border-radius: 0;
-    padding: 70px 15px !important;
+    padding: 7px 15px !important;
     text-transform: uppercase;
 	margin: 0 auto;
     display: block;

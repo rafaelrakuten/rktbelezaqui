@@ -804,7 +804,7 @@
 %helper-hproduct__parcel {
     .parcel,
     .list-products .hproduct .details .parcel {
-        padding-top: 10px;
+        padding-top: 0;
         @extend %text-hprod-parcel;
         text-align: $hprod-cont-align;
         strong {
@@ -854,6 +854,11 @@
             display: none;
         }
         @else {}
+
+        &.unavailable{
+            text-align: center !important;
+           
+        }
     }
 }
 

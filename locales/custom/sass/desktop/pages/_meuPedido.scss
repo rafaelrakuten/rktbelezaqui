@@ -52,6 +52,7 @@
     .basket {
         .unit-value {
             border-bottom: $basket-border;
+             border-bottom: 0;
             .regular {
                 @extend %text-basket-valor-unit-de;
             }
@@ -66,6 +67,7 @@
     .basket {
         .subtotal {
             border-bottom: $basket-border;
+            border-bottom:0;
             border-right: $basket-border;
             .regular {
                 @extend %text-basket-valor-subtotal-de;

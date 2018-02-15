@@ -121,6 +121,7 @@
         width: 100%;
         li{
             position:relative;
+            float:left;
         }
     }
 }
@@ -171,7 +172,7 @@
 
 %catalog-seo-desc {
     .categ-desc {
-        padding: 20px;
+        padding: 0 10px;
         @extend %text-seo-desc;
         &:before{
             display: none;
@@ -304,9 +305,9 @@
                     border:1px solid #fff;
                     @include border-radius(50%);
                     @media (max-width: $mobile-w) {
-                        width: 26px;
-                        height:26px;
-                        line-height: 26px;
+                        width: 22px;
+                        height:22px;
+                        line-height: 22px;
                     }
                 }
                 a.selected,
@@ -320,6 +321,40 @@
                     display:inline-block;
                     clear:both;
                     vertical-align: top;
+                }
+
+                &.prev{
+                    width:36px;
+                    a{
+                        margin-right:0;
+                        font-size:0 !important;
+                        border:0 !important;
+                        &:before{
+                            border:0 !important;
+                            width:22px;
+                            background-position: -4px 0;
+                        }
+                    }
+                }
+                &.next{
+                    width:36px;
+                    a{
+                        margin-left:0;
+                        font-size:0 !important;
+                        border:0 !important;
+                        &:after{
+                            border:0 !important;
+                            width:22px;
+                            margin-left:0;
+                            background-position:-44px -35px;
+                        }
+                    }
+                }
+
+                &.numbers{
+                    //max-width: 258px;
+                   
+                    //width: 100%;
                 }
             }
 
@@ -389,6 +424,11 @@
                     }
 
                 }
+                .next{
+                    a{
+                        margin-left:0;
+                    }
+                }
             
         }
     }
@@ -423,6 +463,11 @@
     }
 }
 
+%mobile-vitrine{
+    .open-mob-filters{
+        display:none !important;
+    }
+}
 
 // PAGE - CATALOG - CALLS
 // ====================================================================
@@ -450,4 +495,16 @@ body.look:not(.lookDetalhe) {
     @extend %catalog-see-more;
     @extend %catalog-see-category;
     @extend %pagination-look;
+}
+
+body.vitrine{
+    @extend %mobile-vitrine;
+}
+
+body.catalog.type-busca{
+    #main{
+        #divMain{
+            text-align:left;
+        }
+    }
 }

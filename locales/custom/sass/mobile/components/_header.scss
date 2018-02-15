@@ -80,6 +80,24 @@
             position: relative;
             top: 15px;
             right: 5px;
+            .qtd-cart {
+                display: inline-block;
+        
+                color: #fff;
+                -moz-border-radius: 6px;
+                -webkit-border-radius: 6px;
+                border-radius: 6px;
+                float: left;
+                font-size: 12px;
+                padding: 1px 3px;
+                margin: 5px 0 0 30px;
+                width: 15px;
+                height: 20px;
+                color: #000;
+                text-indent: 0;
+                background:transparent;
+             
+            }
             .qtd-cart.active {
                 @include border-radius(50px);
                 font-family: $font-one;
@@ -197,6 +215,7 @@
     .wrap-nav-mobile {
         width: 100%;
         background: #FFF;
+        text-align:left;
     }
     .wrap-nav-mobile #nav {
         >li {
@@ -320,12 +339,12 @@
 }
 
 %mobile-main{
-    #header + #main{
-        padding-top:42px;
-    }
-    #header.active + #main{
-        padding-top:82px;
-    }
+    // #header + #main{
+    //     //padding-top:42px;
+    // }
+    // #header.active + #main{
+    //    // padding-top:82px;
+    // }
 }   
 
 // HEADER - CALLS
@@ -340,10 +359,195 @@ body {
     @extend %mobile-header__subnav;
     @extend %mobile-header__help;
     @extend %mobile-autocomplete-mais-buscadas;
-    @extend %mobile-main;
+    //@extend %mobile-main;
 
     &.deslogado{
         @extend %mobile-header__welcome-deslogado;
+    }
+}
+
+
+
+
+/// instagram
+
+
+%instagram-title{
+	.instagram-slider{
+		.title{
+			
+				text-shadow: none;
+				padding: 0 15px;
+				margin:0 37px;
+				//margin-left: 37px;
+				background-color: #FFF;
+				display: inline-block;
+				position: relative;
+				color:#000;
+				font-size:0;
+				position: relative;
+				width:100%;
+				border-bottom:0 !important;
+
+				&:before{
+					    content: 'Acompanhe no Instagram @belezaqui';
+						text-transform: uppercase;
+						font-size: 15px;
+						width:560px;
+						display: inline-block;
+						height: 30px;
+						position: absolute;
+						left:50%;
+						margin-left:-280px;
+						z-index:10;
+						background:#fff;
+				}
+				&:after{
+					width:100%;
+					height:1px;
+					content:'';
+					display:inline-block;
+					background:#d4d4d4;
+					position: absolute;
+					bottom:5px;
+					left:0;
+				}
+				b{
+					@extend %text-heading-font;
+					text-shadow:none;
+				}
+			
+			@extend %text-heading-font;
+			text-shadow:none;
+			//&:before{
+			//	content:'';
+				//border:0;
+			//}
+		}
+	}
+	
+}
+
+
+
+
+%instagram{	
+	#main{
+		.section.instagram-slider{
+			//width:$page-w;
+			//margin:0 auto;
+
+			
+			// .list-instagram-photos{
+			// 	width:1209px;
+
+			// 	.owl-wrapper-outer{
+			// 		background: none;
+			// 	}
+
+			// 	.owl-item{
+			// 		//width:200px !important;
+			// 		background: none;					
+			// 	}				
+			// 	li{
+			// 		margin:5px;
+			// 		a{						
+			// 			width:200px;
+			// 			height:200px;
+
+			// 			img{							
+			// 				width:100%;
+			// 				height:200px;
+			// 				border:none;							
+			// 			}
+			// 		}
+			// 	}
+
+			// 	.owl-controls{
+			// 		top:100px;
+			// 		.owl-buttons{
+			// 			div{
+			// 				@include bgimg(arrows, png);
+			// 				@include opacity(1);
+			// 				&.owl-prev{
+			// 					background-position: 0px 0px;
+								
+			// 					left: -19px;
+			// 					&.disabled{
+			// 						background-position: -22px 0px;	
+			// 					}
+			// 					&:hover{
+			// 						background-position: 0px 0px;
+			// 					}
+			// 				}
+			// 				&.owl-next{
+			// 					background-position: -68px 0px;
+			// 					right: -25px;
+			// 					&.disabled{
+			// 						background-position: -46px 0px;	
+			// 					}
+			// 					&:hover{
+			// 						background-position: -68px 0px;
+			// 					}
+			// 				}
+			// 				background-repeat: no-repeat;
+			// 				width: 22px;
+			// 				height: 30px;
+			// 			}					
+			// 		}
+			// 	}
+			// }
+		}
+	}
+}
+
+%fancy-instagram{
+	.fancybox-instagram{
+		left:155px !important;
+		right:auto !important;
+		transition: all 0.3s ease;				
+	}
+}
+
+// INSTAGRAM - COMPONENTS
+// ====================================================================
+body{
+	//@extend %fancy-instagram;
+	//@extend %instagram;  
+	@extend %instagram-title; 
+	.list-instagram-photos{
+		margin-top:20px;
+		overflow: hidden;
+		
+		li{
+			display: inline-block;
+			margin: 5px;
+			width: 19%;
+			float: left;
+			margin: 0;
+			padding:0 15px;
+		    @include box-sizing();
+			a{
+				width:100%;
+				img{
+					width:100%;
+					border:0;
+				}
+			}
+			&:last-child{
+				display:none;
+			}
+        }
+        .owl-item{
+            float:left;
+            img{
+                border:0;
+            }
+        }
+    }
+    
+    .instagram-slider .list-instagram-photos.owl-carousel>.owl-controls{
+        margin-top:-10px;
     }
 }
 

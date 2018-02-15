@@ -57,16 +57,21 @@
     #info-product {
         width:100%;
     }
-    #info-product > .details {
-        @include flexbox(flex, row, wrap, space-between);
-        width: 68%;
-        float: right;
-        //padding-left: 20px;
-        //border-bottom: 1px solid #CBCBCB;
-        .block{
-            float:left;
-            width:100%;
-            background:transparent;
+    #info-product  {
+        > .details {
+            @include flexbox(flex, row, wrap, space-between);
+            width: 68%;
+            float: right;
+            //padding-left: 20px;
+            //border-bottom: 1px solid #CBCBCB;
+            .block{
+                float:left;
+                width:100%;
+                background:transparent;
+            }
+        }
+        #lblUnavailableLook{
+            display:none !important;
         }
     }
 }
@@ -86,8 +91,8 @@
             width:90%;
             input{
                 position: absolute;
-                top:-20px;
-                left:0;
+                top:4px;
+                left:-21px;
                 display:block !important;
             }
         }
@@ -134,14 +139,17 @@
         margin-top:40px;
     }
 }
-
+body.lookDetalhe .block-1 .regular:not(.percent-a-vist):not(.percent-a-vista){
+    float:left;
+    margin-top:6px;
+}
 %look-details__priceRegular {
     .regular:not(.percent-a-vist):not(.percent-a-vista) {
         @extend %text-prod-regular;
         vertical-align: middle;
         text-align:left;
         width: auto;
-        
+      
         em {
             text-decoration: none;
         }
@@ -265,7 +273,7 @@
             float:left;
             font-size:0;
             padding:0;
-            margin-left:10px;
+            margin-left:0;
             width:120px;
             > a{
                 position: absolute;
@@ -298,6 +306,10 @@
                 color: $color-gray;
                 text-decoration: none;
                 padding:0;
+                font-size: 12px;
+                color: #000000;
+                text-align:left;
+
             }   
             &:before{
                 display:inline-block;
@@ -305,7 +317,7 @@
                 font-size:12px;
                 color:#000000;
                 text-decoration: underline;
-                left:20px;
+                left:10px;
                 position: absolute;
             }
         }
@@ -347,18 +359,18 @@ body.lookDetalhe #info-product .reviewaggregate #hplAmountAssessments{
         text-align: left;
         float: left;
         padding: 0px;
-        margin-top: 25px;
+        margin-top: 20px;
         position: relative;
         top:0;
         left: 40px;
         display:inline-block;
 		&:before{
-            content:'Compartilhe';
+            content:'Compartilhe:';
             display:inline-block;
             color:#535353;
             font-size:14px;
             float:left;
-            margin:9px 15px 0 0;
+            margin:9px 5px 0 0;
         }
         .media{
             display:inline-block;
@@ -401,6 +413,25 @@ body.lookDetalhe #info-product .reviewaggregate #hplAmountAssessments{
         position: relative;
         right: 0;
         bottom: 0;
+
+        #liAvalie{
+            display:none;
+        }
+
+        #liAvaliacao{
+            float:left;
+            background: url(/static/locales/custom/img/icon-tools-rate.png);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            padding-left: 32px;
+            a{
+                font-family: "Source Sans Pro",sans-serif;
+                font-size: 12px;
+                font-weight: 500;
+                color: #000;
+                text-decoration: underline;
+            }
+        }
      
         > li{
             width:100%;
@@ -517,6 +548,10 @@ body.lookDetalhe #info-product .reviewaggregate #hplAmountAssessments{
             left: 9px;
         }
     }
+}
+
+body.lookDetalhe.nao-avaliado #info-product .tools #liAvaliacao{
+    display:none !important;
 }
 
 %look-images__zoom {
@@ -655,7 +690,7 @@ body.lookDetalhe #info-product .reviewaggregate #hplAmountAssessments{
         //display:inline-block;
         &:hover{
             @include bgimage(ico-button-buy, png) ;
-            background-position: 22px center!important;
+            background-position: 22px 18px;
             background-repeat: no-repeat!important;
         }
 
@@ -921,18 +956,19 @@ body.lookDetalhe #info-product .reviewaggregate #hplAmountAssessments{
         .price.sale.price-to {
             text-align: left;
             display: block;
-            @include fonte($font-one, 700, 16px, $color-blue);
+            @include fonte($font-one, 700, 16px, $font-color-1);
         }
         .regular {
             margin-bottom: 0px;
             text-align: left;
             @include fonte($font-one, 400, 15px, #5a5a5a);
+            float:left;
             &.percent-a-vista{
                 display: none;
             }
         }
         .price-to strong span {
-            @include fonte($font-one, 700, 16px, $color-blue);
+            @include fonte($font-one, 700, 19px, $font-color-1);
         }
     }
 }
@@ -966,7 +1002,7 @@ body.lookDetalhe #info-product .reviewaggregate #hplAmountAssessments{
        // display: none;
 
        & + .details{
-           padding-left:10px;
+           padding-left:20px;
        }
     }
 }
@@ -976,11 +1012,40 @@ body.lookDetalhe #info-product .reviewaggregate #hplAmountAssessments{
         font-size: 0px;
         display: none;
     }
+    #info-product  .block-1{
+        .notifyme {
+            label{
+                width: 270px;
+                position: relative;
+               
+                display: inline-block;
+                float: left;
+                
+            }
+            .btn.send.ir {
+                @extend %bt-prod-notifyme__send;
+                margin-top: 0px;
+                width: 82px;
+                /* float: left !important; */
+                height: 26px;
+                line-height:26px;
+                letter-spacing: 0;
+                float: left !important;
+                margin-top: 45px;
+                height: 34px;
+                margin-left: 10px;
+            }
+        }
+    }
+    #info-product .pieces .notifyme {
+        padding: 10px 0;
+    }
     #info-product .notifyme {
         @include box-sizing();
         background: #FFF;
         padding: 10px 5px;
         width: 100%;
+       
         label>span {
             height: 40px;
             &:before {
@@ -1015,10 +1080,9 @@ body.lookDetalhe #info-product .reviewaggregate #hplAmountAssessments{
             margin-top: 0px;
             width: 82px;
             /* float: left !important; */
-            height: 26px;
-            line-height:26px;
-            letter-spacing: 0;
+    
             float: right !important;
+         
         }
     }
 }
@@ -1077,6 +1141,7 @@ body.lookDetalhe #info-product .reviewaggregate #hplAmountAssessments{
         display: inline-block;
         @extend %text-hprod-price-sale;
         text-align: center;
+        margin-left:4px;
         strong span {
             @extend %text-hprod-price-sale;
             text-align: center;
@@ -1250,6 +1315,17 @@ body.lookDetalhe #info-product .reviewaggregate #hplAmountAssessments{
         }
     }
 }
+%quem-viu-tambem-cols{
+    ul{
+        margin-top:40px;
+        li{
+            width:24%;
+            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4){
+                display:inline-block;
+            }
+        }
+    }
+}
 
 // PAGE - DETALHE DO LOOK - CALLS
 // ====================================================================
@@ -1295,6 +1371,7 @@ body.lookDetalhe {
     @extend %detalhe-look__description;
     @extend %product-opinions-look;
     @extend %look-trumps;
+    @extend %quem-viu-tambem-cols;
 }
 
 // PAGE - CATALOGO DO LOOK - CALLS
